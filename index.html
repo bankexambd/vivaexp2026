@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ভাইভা রেজিস্ট্রি — Combined Bank Recruitment SO (General) Viva Experiences 2026</title>
+<style>
+/* ===== Viva Experience Archive — "Register" theme ===== */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Tiro+Bangla&family=Hind+Siliguri:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root{
+  --ink:#16233b;
+  --ink-soft:#3c4a63;
+  --paper:#f6f0e2;
+  --paper-raised:#fbf7ec;
+  --line:#d9cba4;
+  --line-strong:#b9a877;
+  --gold:#b3862c;
+  --gold-deep:#8a6417;
+  --green:#1f4d3f;
+  --green-deep:#153a2f;
+  --seal:#8c2f26;
+  --seal-deep:#6c211a;
+  --shadow: 0 1px 0 rgba(22,35,59,.06);
+  --radius: 3px;
+  --max: 1080px;
+  --mark-bg:#f2d998;
+  --mark-ink:#16233b;
+  color-scheme: light;
+}
+
+:root[data-theme="dark"]{
+  --ink:#eae3d2;
+  --ink-soft:#b7ae96;
+  --paper:#181510;
+  --paper-raised:#221e17;
+  --line:#3a3327;
+  --line-strong:#5c5138;
+  --gold:#e0b45c;
+  --gold-deep:#e8c375;
+  --green:#4c9a80;
+  --green-deep:#5cb497;
+  --seal:#e07b6c;
+  --seal-deep:#e79284;
+  --mark-bg:#7a5c1f;
+  --mark-ink:#f6f0e2;
+  color-scheme: dark;
+}
+
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  background:
+    radial-gradient(1200px 600px at 10% -10%, rgba(179,134,44,.10), transparent 60%),
+    radial-gradient(900px 500px at 110% 10%, rgba(31,77,63,.10), transparent 55%),
+    var(--paper);
+  color:var(--ink);
+  font-family:'Hind Siliguri','Fraunces',serif;
+  font-size:16px;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  transition: background-color .2s ease, color .2s ease;
+}
+
+:root[data-theme="dark"] body{
+  background:
+    radial-gradient(1200px 600px at 10% -10%, rgba(224,180,92,.06), transparent 60%),
+    radial-gradient(900px 500px at 110% 10%, rgba(76,154,128,.08), transparent 55%),
+    var(--paper);
+}
+
+/* subtle paper grain */
+body::before{
+  content:"";
+  position:fixed; inset:0; pointer-events:none; z-index:0;
+  background-image:
+    repeating-linear-gradient(0deg, rgba(22,35,59,.02) 0px, rgba(22,35,59,.02) 1px, transparent 1px, transparent 3px);
+  opacity:.5;
+}
+
+:root[data-theme="dark"] body::before{
+  background-image:
+    repeating-linear-gradient(0deg, rgba(234,227,210,.025) 0px, rgba(234,227,210,.025) 1px, transparent 1px, transparent 3px);
+}
+
+h1,h2,h3,h4{
+  font-family:'Fraunces','Tiro Bangla',serif;
+  font-weight:600;
+  color:var(--ink);
+  margin:0;
+}
+
+.mono{ font-family:'JetBrains Mono',monospace; letter-spacing:.02em; }
+
+a{ color:inherit; }
+button{ font-family:inherit; }
+
+/* ===== Layout shell ===== */
+.app{ position:relative; z-index:1; min-height:100vh; display:flex; flex-direction:column; }
+
+.topbar{
+  position:sticky; top:0; z-index:40;
+  background:linear-gradient(180deg, var(--paper-raised), color-mix(in srgb, var(--paper-raised) 92%, transparent));
+  backdrop-filter: blur(6px);
+  border-bottom:1px solid var(--line);
+}
+.topbar-inner{
+  max-width:var(--max); margin:0 auto; padding:14px 20px;
+  display:flex; align-items:center; justify-content:space-between; gap:16px;
+}
+.brand{ display:flex; align-items:center; gap:12px; cursor:pointer; }
+.brand-seal{
+  width:40px; height:40px; border-radius:50%;
+  border:2px solid var(--gold-deep);
+  display:flex; align-items:center; justify-content:center;
+  color:var(--gold-deep); font-family:'Fraunces',serif; font-weight:700; font-size:15px;
+  background:radial-gradient(circle at 35% 30%, #fff7e6, #f1e2bd 70%);
+  flex:none;
+}
+.brand-text{ display:flex; flex-direction:column; line-height:1.15; }
+.brand-title{ font-family:'Fraunces','Tiro Bangla',serif; font-weight:700; font-size:18px; }
+.brand-sub{ font-size:11.5px; letter-spacing:.06em; color:var(--ink-soft); text-transform:uppercase; }
+
+.nav{ display:flex; gap:6px; align-items:center; }
+.theme-toggle{
+  border:1px solid var(--line-strong); background:var(--paper-raised); color:var(--ink-soft);
+  cursor:pointer; width:36px; height:36px; border-radius:50%; display:flex; align-items:center;
+  justify-content:center; margin-inline-start:4px; transition:.15s; flex:none;
+}
+.theme-toggle:hover{ border-color:var(--gold-deep); color:var(--ink); }
+.theme-toggle svg{ width:17px; height:17px; }
+.nav-btn{
+  border:1px solid transparent; background:transparent; cursor:pointer;
+  padding:8px 14px; border-radius:2px; font-size:14.5px; color:var(--ink-soft);
+  font-weight:600; transition:.15s;
+}
+.nav-btn.active{ background:var(--ink); color:var(--paper-raised); }
+.nav-btn:not(.active):hover{ border-color:var(--line-strong); color:var(--ink); }
+
+main{ flex:1; }
+
+.container{ max-width:var(--max); margin:0 auto; padding:0 20px; }
+
+/* ===== Hero / register header ===== */
+.hero{
+  padding:38px 0 22px;
+  border-bottom:1px solid var(--line);
+}
+.hero-eyebrow{
+  font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--seal);
+  font-weight:700; margin-bottom:10px; display:flex; align-items:center; gap:8px;
+}
+.hero-eyebrow::before{ content:""; width:22px; height:2px; background:var(--seal); display:inline-block; }
+.hero h1{ font-size:clamp(28px,4vw,40px); line-height:1.15; max-width:760px; }
+.hero h1 em{ font-style:normal; color:var(--gold-deep); }
+.hero p{ margin-top:12px; max-width:640px; color:var(--ink-soft); font-size:15.5px; }
+
+.stat-row{
+  display:flex; gap:0; margin-top:24px; border:1px solid var(--line); border-radius:var(--radius);
+  overflow:hidden; background:var(--paper-raised); flex-wrap:wrap;
+}
+.stat{
+  flex:1; min-width:130px; padding:14px 18px; border-right:1px solid var(--line);
+}
+.stat:last-child{ border-right:none; }
+.stat b{ display:block; font-family:'JetBrains Mono',monospace; font-size:22px; color:var(--green-deep); }
+.stat span{ font-size:12px; color:var(--ink-soft); text-transform:uppercase; letter-spacing:.05em; }
+
+/* ===== Search ===== */
+.search-zone{ padding:22px 0 10px; }
+.search-box{
+  display:flex; align-items:center; gap:10px;
+  background:var(--paper-raised); border:1.5px solid var(--ink); border-radius:2px;
+  padding:12px 16px; box-shadow: 4px 4px 0 rgba(22,35,59,.08);
+}
+.search-box svg{ flex:none; color:var(--ink-soft); }
+.search-box input{
+  flex:1; border:none; outline:none; background:transparent; font-size:16px;
+  font-family:'Hind Siliguri',sans-serif; color:var(--ink);
+}
+.search-box input::placeholder{ color:#8a8368; }
+.search-clear{
+  border:none; background:var(--line); color:var(--ink); border-radius:50%;
+  width:22px; height:22px; cursor:pointer; font-size:13px; line-height:1;
+}
+
+.chip-row{ display:flex; gap:8px; flex-wrap:wrap; margin:14px 0 6px; }
+.chip{
+  border:1px solid var(--line-strong); background:transparent; color:var(--ink-soft);
+  padding:6px 13px; border-radius:100px; font-size:13px; cursor:pointer; transition:.15s;
+  font-weight:500;
+}
+.chip:hover{ border-color:var(--gold-deep); color:var(--ink); }
+.chip.active{ background:var(--green-deep); border-color:var(--green-deep); color:#fff; }
+
+.filter-row{
+  display:flex; align-items:flex-end; gap:16px; flex-wrap:wrap; margin-top:16px;
+  padding-top:14px; border-top:1px dashed var(--line-strong);
+}
+.filter-field{ display:flex; flex-direction:column; gap:5px; font-size:12px; color:var(--ink-soft); font-weight:600; text-transform:uppercase; letter-spacing:.04em; }
+.select-control{
+  font-family:'Hind Siliguri',sans-serif; font-size:14px; color:var(--ink);
+  background:var(--paper-raised); border:1px solid var(--line-strong); border-radius:2px;
+  padding:8px 12px; min-width:220px; cursor:pointer; text-transform:none; font-weight:500;
+}
+.select-control:focus-visible{ outline:2px solid var(--gold-deep); outline-offset:1px; }
+.filter-reset{
+  border:1px solid var(--seal); background:transparent; color:var(--seal); border-radius:2px;
+  padding:8px 12px; font-size:12.5px; cursor:pointer; font-weight:600; height:37px;
+}
+.filter-reset:hover{ background:rgba(140,47,38,.08); }
+
+.results-meta{
+  display:flex; align-items:baseline; justify-content:space-between; margin:18px 0 12px;
+  color:var(--ink-soft); font-size:13.5px; border-bottom:1px dashed var(--line-strong); padding-bottom:8px;
+}
+.results-meta b{ color:var(--ink); font-family:'JetBrains Mono',monospace; }
+
+/* ===== Cards ===== */
+.grid{ display:grid; grid-template-columns:repeat(auto-fill, minmax(300px,1fr)); gap:16px; padding-bottom:60px; }
+
+.card{
+  background:var(--paper-raised); border:1px solid var(--line); border-radius:var(--radius);
+  padding:16px 16px 14px; cursor:pointer; position:relative; transition:.15s; display:flex; flex-direction:column; gap:8px;
+}
+.card:hover{ border-color:var(--gold-deep); box-shadow:3px 3px 0 rgba(179,134,44,.18); transform:translateY(-1px); }
+
+.card-top{ display:flex; align-items:flex-start; justify-content:space-between; gap:8px;}
+.card-id{
+  font-family:'JetBrains Mono',monospace; font-size:11.5px; color:var(--gold-deep);
+  border:1px solid var(--gold-deep); border-radius:100px; padding:2px 9px; flex:none;
+}
+.card-tag{
+  font-size:10.5px; text-transform:uppercase; letter-spacing:.05em; color:var(--seal);
+  border:1px solid var(--seal); border-radius:2px; padding:2px 6px; opacity:.85;
+}
+.card h3{ font-size:15.5px; font-weight:600; line-height:1.35; }
+.card .meta-line{ font-size:12.5px; color:var(--ink-soft); display:flex; flex-wrap:wrap; gap:x; row-gap:4px; column-gap:10px; }
+.card .meta-line span{ display:inline-flex; align-items:center; gap:4px; }
+.card p.excerpt{ font-size:13.5px; color:var(--ink-soft); margin:0; line-height:1.55;
+  display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden; }
+.card mark{ background:var(--mark-bg); color:var(--mark-ink); padding:0 2px; border-radius:2px; }
+.card-foot{ margin-top:auto; padding-top:6px; font-size:12.5px; color:var(--gold-deep); font-weight:600; display:flex; align-items:center; gap:4px; }
+
+.empty-state{
+  text-align:center; padding:70px 20px; color:var(--ink-soft);
+}
+.empty-state h3{ margin-bottom:8px; font-size:19px; }
+
+/* ===== Modal / detail ===== */
+.overlay{
+  position:fixed; inset:0; background:rgba(20,25,35,.55); z-index:100;
+  display:flex; align-items:flex-start; justify-content:center; padding:5vh 16px;
+  overflow-y:auto; animation:fadeIn .15s ease;
+}
+@keyframes fadeIn{ from{opacity:0;} to{opacity:1;} }
+.detail{
+  background:var(--paper-raised); max-width:720px; width:100%; border-radius:4px;
+  border:1px solid var(--line); box-shadow:0 20px 60px rgba(0,0,0,.3);
+  position:relative; animation:riseIn .18s ease;
+}
+@keyframes riseIn{ from{ transform:translateY(10px); opacity:0;} to{transform:translateY(0); opacity:1;} }
+.detail-head{
+  padding:22px 26px 16px; border-bottom:1px solid var(--line);
+  display:flex; align-items:flex-start; justify-content:space-between; gap:14px;
+  background:linear-gradient(180deg, rgba(179,134,44,.06), transparent);
+}
+.detail-head-left{ display:flex; gap:14px; align-items:flex-start; }
+.detail-seal{
+  width:52px; height:52px; border-radius:50%; border:2px solid var(--seal);
+  color:var(--seal); display:flex; align-items:center; justify-content:center; flex:none;
+  font-family:'JetBrains Mono',monospace; font-weight:700; font-size:13px; transform:rotate(-8deg);
+}
+.detail-head h2{ font-size:19px; margin-bottom:4px; }
+.detail-tags{ display:flex; gap:8px; flex-wrap:wrap; margin-top:6px; }
+.tag-pill{ font-size:11px; border:1px solid var(--line-strong); color:var(--ink-soft); padding:2px 9px; border-radius:100px; }
+.close-btn{
+  border:1px solid var(--line-strong); background:var(--paper); width:32px; height:32px; border-radius:50%;
+  cursor:pointer; font-size:16px; color:var(--ink-soft); flex:none;
+}
+.close-btn:hover{ color:var(--seal); border-color:var(--seal); }
+
+.detail-meta{
+  display:flex; flex-wrap:wrap; gap:10px 22px; padding:14px 26px; font-size:13px; color:var(--ink-soft);
+  border-bottom:1px dashed var(--line-strong);
+}
+.detail-meta b{ color:var(--ink); font-weight:600; }
+
+.detail-body{ padding:20px 26px 30px; font-size:15px; color:var(--ink); line-height:1.85; }
+.detail-body p{ margin:0 0 12px; }
+.detail-body mark{ background:var(--mark-bg); color:var(--mark-ink); padding:0 2px; border-radius:2px; }
+
+/* ===== FAQ page ===== */
+.faq-hero{ padding:38px 0 10px; border-bottom:1px solid var(--line); }
+.faq-list{ padding:26px 0 70px; display:flex; flex-direction:column; gap:12px; max-width:820px; }
+.faq-item{ border:1px solid var(--line); border-radius:var(--radius); background:var(--paper-raised); overflow:hidden; }
+.faq-q{
+  width:100%; text-align:right; display:flex; align-items:center; justify-content:space-between; gap:12px;
+  padding:16px 18px; background:transparent; border:none; cursor:pointer; text-align:left;
+  font-family:'Fraunces','Tiro Bangla',serif; font-weight:600; font-size:15.5px; color:var(--ink);
+}
+.faq-q .idx{ font-family:'JetBrains Mono',monospace; color:var(--gold-deep); font-size:13px; margin-inline-end:10px; }
+.faq-q .arrow{ transition:.2s; color:var(--ink-soft); flex:none; }
+.faq-item.open .arrow{ transform:rotate(180deg); }
+.faq-a{ max-height:0; overflow:hidden; transition:max-height .25s ease; }
+.faq-item.open .faq-a{ max-height:600px; }
+.faq-a-inner{ padding:0 18px 18px 44px; color:var(--ink-soft); font-size:14.5px; line-height:1.8; }
+
+.faq-note{
+  margin-top:28px; padding:16px 18px; border-left:3px solid var(--seal); background:rgba(140,47,38,.06);
+  font-size:13.5px; color:var(--ink-soft); border-radius:2px; max-width:820px;
+}
+
+/* ===== Footer ===== */
+footer{
+  border-top:1px solid var(--line); padding:22px 0; margin-top:auto;
+  font-size:12.5px; color:var(--ink-soft); text-align:center;
+}
+
+/* ===== Scrollbar touch ===== */
+::-webkit-scrollbar{ width:10px; }
+::-webkit-scrollbar-thumb{ background:var(--line-strong); border-radius:10px; }
+
+/* ===== Responsive ===== */
+@media (max-width: 640px){
+  .topbar-inner{ padding:12px 14px; }
+  .brand-title{ font-size:16px; }
+  .hero{ padding:26px 0 18px; }
+  .stat-row{ flex-direction:row; }
+  .stat{ min-width:100px; padding:10px 12px; }
+  .stat b{ font-size:18px; }
+  .grid{ grid-template-columns:1fr; }
+  .detail-head{ flex-direction:row; }
+}
+
+/* focus visibility */
+button:focus-visible, input:focus-visible{ outline:2px solid var(--gold-deep); outline-offset:2px; }
+
+@media (prefers-reduced-motion: reduce){
+  *{ animation:none !important; transition:none !important; }
+}
+
+</style>
+</head>
+<body>
+<div id="root"></div>
+
+<script>
+window.VIVA_DATA = [{"id": 1, "displayId": "1", "board": "হাবিব স্যার এর বোর্ড (স্যার তখন উপস্থিত ছিল না)", "topic": null, "date": null, "time": null, "position": null, "university": null, "tags": [], "body": "বোর্ড: হাবিব স্যার এর বোর্ড (স্যার তখন উপস্থিত ছিল না)\nবোর্ডে ছিলেন: ২জন ম্যাম এবং আরেকজন স্যার\nসময়: সকাল ৮টায়\nসময়কাল: ৩/৪ মিনিট\nঅভিজ্ঞতা:\nসকাল ৮টায় ভাইবা ছিল, হাবিব স্যার এর বোর্ডে কিন্তু ভাগ্য ভাল স্যার তখন উপস্থিত ছিল না। ২জন ম্যাম এবং আরেকজন স্যার ছিল। আমার বিষয় ছিল কৃষি অর্থনীতি এটা নিয়েই সব প্রশ্ন ছিল। শেষে একজন ম্যাম প্রথম চয়েজ জিজ্ঞেস করছিল। সোনালি কেন সেটার উত্তর দিয়েছি আমার বিষয় এর সাথে রিলেট করে। সব মিলিয়ে ৩/৪ মিনিট রেখেছিল।\n১. কোন ভার্সিটি\n২. জিডিপি তে কৃষির অবদান কত?\n৩. গত বছর কত ছিল,আসলেই কি অবদান কমছে?\n৪. আলু থেকে ফ্রেঞ্চ ফ্রাই বানিয়ে দোকানে সার্ভ করলে সেটা কোন খাতে যাবে?\n৫. কৃষি বিপনণ অধিদপ্তর এর কাজ কী?বাজারে পন্যের দাম কিভাবে ঠিক করা হয়?কিছু পলিসির নাম বলেন।\n৬. সোনালি প্রথম চয়েজ কেন?"}, {"id": 2, "displayId": "2", "board": "২ জন", "topic": null, "date": null, "time": null, "position": null, "university": null, "tags": [], "body": "Board: Dr. Md. Kabir Ahmed Sir | বোর্ড: ২ জন | Subject: Management, DU। বোর্ড Friendly ছিল। রোল নম্বর এবং ঢাকা বিশ্ববিদ্যালয়ের Management থেকে পড়াশোনা সম্পর্কে জিজ্ঞেস করার পর Break-even Point কী, Closed Point কী, First Choice কী এবং BHBFC-কে First Choice দেওয়ার কারণ কী—এসব প্রশ্ন করেন। দেশে এত ভালো ভালো Commercial Bank থাকতে Financial Institution-কে First Choice দেওয়ার কারণ এবং BHBFC-এর কাজ ও কার্যপ্রণালি সম্পর্কে বিস্তারিত জানতে চান। এরপর বাংলাদেশে বর্তমানে মোট ব্যাংক কতটি, Hormuz প্রণালীর অবস্থান কোথায় এবং Math কয়টি হয়েছে—তা জিজ্ঞেস করেন। এরপর একটি English Translation করতে দেন: “আমি এই ৪টি প্রশ্নের উত্তর সঠিকভাবে দিতে পারলে এই চাকরির জন্য মনোনীত হবো।” External-1 Management-এর ছাত্র হিসেবে Leader ও Manager-এর মধ্যে পার্থক্য, SWOT Analysis, Delegation এবং Decentralization সম্পর্কে প্রশ্ন করেন। শেষে বোর্ড থেকে জানতে চান ছেড়ে দেওয়া হবে কি না এবং প্রার্থীকে আসতে বলেন।"}, {"id": 3, "displayId": "3", "board": "হাবিবুর রহমান স্যারের বোর্ড", "topic": null, "date": "০২ আগস্ট", "time": null, "position": "Senior Officer (General)", "university": null, "tags": [], "body": "পদ: Senior Officer (General)\nতারিখ: ০২ আগস্ট\nসময়: সকাল ০৮:০০\nবোর্ড: হাবিবুর রহমান স্যারের বোর্ড\nভাইভার সময়কাল: ৬--৭ মিনিট\nনাম, ইউনিভার্সিটি, কী করছি, হোমটাউন, কোথায় থাকি---এসব জিজ্ঞেস করলেন।\nপত্রিকা পড়েন? The Daily Star বাদে তিনটা ইংরেজি পত্রিকার নাম বলেন।\nইদানিং বাংলাদেশের আর্থিক খাতে কি কোন চেঞ্জ আসছে? কী সেটা?\nরেপো রেট কী?\n-   বাণিজ্যিক ব্যাংক যখন ঋণ বাংলাদেশ ব্যাংক এ ফেরত দেয় সেটাকে কী বলে? সেই রেটটা কত?\nবাংলাদেশ ব্যাংক এর মত আরো কয়েকটা অথরিটির নাম বলেন।\nকয়েকটা কেন্দ্রীয় ব্যাংকের নাম বলেন, যেগুলোর নামে \"ব্যাংক\" শব্দটা নেই।\nফার্স্ট চয়েজ (সোনালি)। সোনালি ব্যাংক সম্পর্কে কিছু বলেন।\nসাব্জেক্ট নিয়ে ২-৩ টা প্রশ্ন।"}, {"id": 4, "displayId": "4", "board": "আনিসুর রহমান স্যার", "topic": null, "date": "০২/০৮/২০২৬", "time": null, "position": "Senior Officer", "university": null, "tags": [], "body": "পদ: Senior Officer | তারিখ: ০২/০৮/২০২৬ | বোর্ড: আনিসুর রহমান স্যার | বিষয়: Tourism & Hospitality Management\nTourism ও Hospitality-এর মধ্যে পার্থক্য কী? ৫★ Hotel Rating কে করে এবং কীসের ভিত্তিতে করা হয়? বাংলাদেশে কয়টি ৫★ Hotel আছে? সরকারি ৫★ Hotel কয়টি এবং ঢাকায় কয়টি ৫★ Hotel আছে? Tourism-এর প্রধান Barriers কী কী? বর্তমানে কী করেন, কত Grade-এ আছেন এবং কেন Job Switch করতে চান? Sonali Bank কেন First Choice? Sonali Bank-এর ইতিহাস কী? Sonali Bank-এর Slogan কী এবং এর ব্যাখ্যা কী? আর্থিক খাতের প্রধান Challenges কী কী? Bangla QR কী? Math কয়টি হয়েছে? এরপর দুটি Math করতে দেওয়া হয়—০.০২ × ০.০০২ = ? এবং ১০০ টাকা দুইজনের মধ্যে এমনভাবে ভাগ করতে হবে যাতে একজন অন্যজনের চেয়ে ১০ টাকা বেশি পায়। শেষে Translation করতে দেওয়া হয়: “শিশুটি হাসতে হাসতে রুম থেকে বেরিয়ে গেল।”"}, {"id": 5, "displayId": "5", "board": null, "topic": "Civil Engineering", "date": null, "time": null, "position": "SO-2024", "university": "BUET", "tags": [], "body": "পদ: SO-2024\nUniversity: BUET\nDepartment: Civil Engineering\nSession: 2015--2018\n১. কোথা থেকে পড়াশোনা করেছেন? ২. সিভিল ইঞ্জিনিয়ারিং পড়েও ব্যাংকে চাকরি করতে চান কেন? ৩. FAR কী? ৪. Binding materials কী কী? ৫. FAR কি দেশের সব এলাকায় একই রকম থাকে? ৬. সোনালী ব্যাংককে প্রথম পছন্দ (First Choice) দেওয়ার কারণ কী? ৭. BACH-এর পূর্ণরূপ (Full Meaning) কী? ৮. ব্যাংকের ডিজিটাল সেবাগুলো কী কী? ৯. NPSB এবং RTGS-এর মধ্যে পার্থক্য কী? ১০. নিকাশঘর (Clearing House) কি এখনও প্রচলিত, নাকি বর্তমানে সম্পূর্ণ অটোমেটেড? ১১. সোনালী ব্যাংকের অনলাইন সেবার অ্যাপের নাম কী? ১২. বর্তমানে কী করছেন? ১৩. বাংলাদেশের ব্যাংকিং খাতের তিনটি প্রধান সমস্যা উল্লেখ করুন।.VIVA EXPERIENCE"}, {"id": 6, "displayId": "6", "board": null, "topic": "Political Science", "date": null, "time": null, "position": "SO-2024", "university": "University of Dhaka (DU)", "tags": [], "body": "পদ: SO-2024\nUniversity: University of Dhaka (DU)\nDepartment: Political Science\n১. Introduce Yourself. ২. রাষ্ট্রবিজ্ঞান পড়েও ব্যাংকে চাকরি করতে চান কেন? ৩. সোনালী ব্যাংক সম্পর্কে আপনি কী কী জানেন? প্রথম কেন? ৪. বাংলাদেশ ব্যাংকের প্রধান দায়িত্ব কী? ৫. KYC-এর পূর্ণরূপ কী এবং এর গুরুত্ব কী? ৬. NPSB ও RTGS-এর মধ্যে পার্থক্য কী? ৭. বাংলাদেশের সংবিধানের চারটি মৌলিক নীতি কী? ৮. বর্তমানে কী করছেন? ৯. বাংলাদেশের ব্যাংকিং খাতের দুটি প্রধান চ্যালেঞ্জ বলুন। ১০. আপনাকে কেন এই পদের জন্য নিয়োগ দেওয়া উচিত?"}, {"id": 7, "displayId": "7", "board": "মনোজ কুমার স্যারের বোর্ড", "topic": "হিসাববিজ্ঞান", "date": null, "time": null, "position": null, "university": null, "tags": [], "body": "বোর্ড: মনোজ কুমার স্যারের বোর্ড\nবিভাগ: হিসাববিজ্ঞান\nঅভিজ্ঞতা:\nনাম, রেজাল্ট ও বিশ্ববিদ্যালয়ের নাম জিজ্ঞেস করেছিলো।\n১. ব্যাংকের কয়েকটি সম্পদ ও দায়ের নাম বলেন। ২. বাংলাদেশের কয়েকটি অডিট ফার্মের নাম বলেন। ৩. ফিনান্সিয়াল স্টেটমেন্টগুলোর নাম বলেন। ৪. Notes to the Financial Statement এ কী দেখানো হয়? ৫. বাংলা QR সম্পর্কে বলেন। ৬. সোনালী ব্যাংক যে ট্রেজারী হিসেবে কাজ করে, এটা বাংলাদেশ ব্যাংকের ফিন্যান্সিয়াল স্টেটমেন্টে কিভাবে দেখাবে? ৭. কয়েকটি জাবেদা জিজ্ঞেস করেছিলো।"}, {"id": 8, "displayId": "8", "board": "সিরাজুল ইসলাম স্যার", "topic": null, "date": "২ আগস্ট ২০২৬", "time": null, "position": null, "university": null, "tags": [], "body": "তারিখ: ২ আগস্ট ২০২৬\nসময়: সকাল ১০:০০\nবোর্ড: সিরাজুল ইসলাম স্যার\n১. SDG-এর ৫টি Goal বলেন। ২. 3 Zero Theory কে দিয়েছেন? ৩. 3 Zero কী? ৪. HDI কী? বর্তমানে কত? ৫. HDI কীভাবে মাপা হয়? ৬. Income Inequality কীভাবে মাপা হয়? ৭. ESG Theory, Agency Theory, Dependency Theory। ৮. Owner, Stakeholder, Shareholder-এর মধ্যে পার্থক্য। ৯. Math কয়টা? ১০. Lorenz Curve কী? ১১. একটি সেতু ১০০ বছরের জন্য বানালে সেটা Sustainable হবে কিনা?"}, {"id": 9, "displayId": "9", "board": null, "topic": null, "date": null, "time": null, "position": null, "university": null, "tags": [], "body": "সময়: ১:৩০ এর স্লট\nবোর্ড চেয়ারম্যান: হাবীবুর রহমান স্যার\nচেয়ারম্যান স্যার:\n১. নাম কি? ২. ইংরেজি বলেন--- কাচা বাজার, পশুর হাট। ৩. IELTS or TOEFL করেছেন কখনো? ফুল ফর্ম জানেন? বলেন। ৪. ব্যাংকের কাজ কি? ৫. আমেরিকার কেন্দ্রীয় ব্যাংকের নাম কি? ওইখানেও কি আমাদের দেশের মতো গভর্নর থাকে? নাকি অন্য কিছু? এর নাম কি?\nExternal:\n৬. Romanticism-এর বৈশিষ্ট্য কী? ৭. সার্কভুক্ত আটটি দেশের কেন্দ্রীয় ব্যাংকের নাম বলেন। ৮. ফাস্ট চয়েজ কি? ৯. সোনালী ব্যাংকের MD আর চেয়ারম্যানের নাম কি?\nশেষে: \"ঠিক আছে, আসেন!\""}, {"id": 10, "displayId": "10", "board": null, "topic": "Computer Science and Engineering (CSE)", "date": null, "time": null, "position": "SO-2024", "university": "University of Dhaka (DU)", "tags": [], "body": "পদ: SO-2024\nUniversity: University of Dhaka (DU)\nDepartment: Computer Science and Engineering (CSE)\n১. Introduce yourself. ২. Computer Science and Engineering-এ পড়াশোনা করে ব্যাংকিং খাতে ক্যারিয়ার গড়তে আগ্রহী হলেন কেন? ৩. ডিজিটাল ব্যাংকিং বলতে কী বোঝেন? বাংলাদেশে এর বর্তমান অবস্থা সম্পর্কে বলুন। ৪. Core Banking System (CBS) কী? এর সুবিধাগুলো কী? ৫. OTP (One-Time Password) কী? এটি কেন ব্যবহৃত হয়? ৬. Phishing Attack কী? একজন ব্যাংক কর্মকর্তা হিসেবে এটি প্রতিরোধে আপনি কী করবেন? ৭. Internet Banking ও Mobile Banking-এর মধ্যে পার্থক্য কী? ৮. Database, Cloud Computing এবং Cyber Security---এই তিনটির মধ্যে কোনটি ব্যাংকিংয়ে সবচেয়ে গুরুত্বপূর্ণ বলে মনে করেন এবং কেন? ৯. Artificial Intelligence (AI) ব্যাংকিং খাতে কীভাবে ব্যবহার করা হচ্ছে? ১০. বর্তমানে কী করছেন এবং ভবিষ্যতে নিজেকে কোথায় দেখতে চান? BCS দিয়েছেন?"}, {"id": 11, "displayId": "11", "board": null, "topic": "Computer Science and Engineering (CSE)", "date": null, "time": null, "position": "SO-2024", "university": "Khulna University of Engineering & Technology (KUET)", "tags": [], "body": "পদ: SO-2024\nUniversity: Khulna University of Engineering & Technology (KUET)\nDepartment: Computer Science and Engineering (CSE)\n১. Tell us about yourself and your academic journey. ২. Why do you want to join Sonali Bank instead of pursuing a career in the IT industry? ৩. What are the major responsibilities of Bangladesh Bank? ৪. What is the difference between Debit Card and Credit Card? ৫. Explain the concept of data encryption and why it is important in banking. ৬. অনলাইন ব্যাংকিংয়ে গ্রাহকের তথ্য সুরক্ষায় কী কী ব্যবস্থা নেওয়া উচিত? ৭. আপনাকে যদি Senior Officer হিসেবে নিয়োগ দেওয়া হয়, প্রথম এক বছরে নিজেকে কীভাবে প্রমাণ করবেন? ৮. একাউন্টিং বিষয়ে কোনো অভিজ্ঞতা আছে কিনা?"}, {"id": 12, "displayId": "12", "board": null, "topic": "Biochemistry and Molecular Biology", "date": null, "time": null, "position": "SO-2024", "university": "Jahangirnagar University (JU)", "tags": [], "body": "পদ: SO-2024\nUniversity: Jahangirnagar University (JU)\nDepartment: Biochemistry and Molecular Biology\n১. Introduce Yourself. ২. বায়োকেমিস্ট্রি অ্যান্ড মলিকুলার বায়োলজি পড়েও ব্যাংকে চাকরি করতে চান কেন? ৩. সোনালী ব্যাংক কেন বাংলাদেশের অন্যতম গুরুত্বপূর্ণ রাষ্ট্রায়ত্ত ব্যাংক? ৪. বাংলাদেশ ব্যাংকের প্রধান দায়িত্ব কী? ৫. সাবজেক্টের সাথে ব্যাংকিং কিভাবে সম্পর্কিত---এই ধরনের একটি প্রশ্ন। ৬. NPSB ও RTGS-এর টাকা পাঠানোর ধরন কেমন? ৭. AML ও CFT বলতে কী বোঝায়? ৮. আপনার একাডেমিক বিষয় (Biochemistry and Molecular Biology) থেকে কী কী শিখেছেন যা ব্যাংকিং পেশায় কাজে লাগবে? ৯. বর্তমানে কী চাকরি করি? ১০. বাংলাদেশের ব্যাংকিং খাতের দুটি প্রধান চ্যালেঞ্জ বলুন।"}, {"id": 13, "displayId": "13", "board": null, "topic": "URP (Urban and Regional Planning)", "date": null, "time": null, "position": "SO-2024", "university": "Jahangirnagar University (JU)", "tags": [], "body": "পদ: SO-2024\nUniversity: Jahangirnagar University (JU)\nDepartment: URP (Urban and Regional Planning)\n১. Introduce Yourself. ২. আপনি URP কী? সাইন্সের সাবজেক্ট? ৩. একজন URP গ্র্যাজুয়েটের প্রধান কাজগুলো কী কী? ৪. আপনার Thesis কী ছিল? এটা নিয়ে প্যাঁচাল পাড়ছে। ৫. Master Plan ও Structure Plan-এর মধ্যে পার্থক্য কী? ৬. Smart City বলতে কী বোঝেন? বাংলাদেশের জন্য এটি কতটা বাস্তবসম্মত? ৭. জলবায়ু পরিবর্তনের প্রভাব মোকাবিলায় নগর পরিকল্পনার ভূমিকা কী? ৮. আপনার URP ব্যাকগ্রাউন্ড ব্যাংকের কোন কোন কাজে মূল্য সংযোজন করতে পারে?"}, {"id": 14, "displayId": "14", "board": null, "topic": "ECE (Electronics and Communication Engineering)", "date": null, "time": null, "position": "SO-2024", "university": "KUET", "tags": [], "body": "পদ: SO-2024\nUniversity: KUET\nDepartment: ECE (Electronics and Communication Engineering)\n১. Introduce Yourself. ২. ইলেকট্রনিক্স অ্যান্ড কমিউনিকেশন ইঞ্জিনিয়ারিং (ECE) পড়েও ব্যাংকে চাকরি করতে চান কেন? ৩. ব্যাংক সম্পর্কে আপনি কী কী জানেন? ৪. বাংলাদেশ ব্যাংকের প্রধান দায়িত্বগুলো কী? একটি কেন্দ্রীয় ব্যাংক কীভাবে দেশের অর্থনীতি নিয়ন্ত্রণ করে? ৫. RTGS-এর মূল কাজ কী? ৬. NPSB, BEFTN ও RTGS-এর মধ্যে পার্থক্য কী? ৭. আপনার ECE বিষয়ে শেখা কোন দক্ষতাগুলো ব্যাংকের অফিসার হিসেবে কাজে লাগবে? ৮. আপনার Thesis কোন বিষয়ের উপর ছিল? ৯. বর্তমানে কী করছেন? ১০. Cyber Security ব্যাংকিং খাতে কেন গুরুত্বপূর্ণ? একজন ব্যাংক কর্মকর্তা হিসেবে এ বিষয়ে আপনার করণীয় কী?"}, {"id": 15, "displayId": "15", "board": "04 (Rup Ratan Pine Sir)", "topic": "EEE (Electrical and Electronic Engineering)", "date": null, "time": null, "position": "SO-2024", "university": "RUET", "tags": [], "body": "পদ: SO-2024\nBoard: 04 (Rup Ratan Pine Sir)\nUniversity: RUET\nDepartment: EEE (Electrical and Electronic Engineering)\n১. Name of University. ২. Name of home district, famous person, what is the most unique thing about your district? ৩. How many rivers flow over your district? ৪. Number of SCB, last SCB কোনটা, number of banks. ৫. Name a few mobile banking apps of government-owned banks. ৬. Which are the upcoming technologies that will change the banking system? ৭. First choice bank কোনটা? ৮. Difference between Sonali Bank and Krishi Bank. ৯. Why are remittance inflows recently being stagnated?"}, {"id": 16, "displayId": "16", "board": null, "topic": null, "date": "০৩/০৮/২০২৬", "time": null, "position": null, "university": null, "tags": ["Collected"], "body": "তারিখ: ০৩/০৮/২০২৬\nসময়: সকাল ৮টা\nবিষয়: EEE\n১. বাড়ি খুলনা। খুলনার ২টা ভালো দিক, ২টা খারাপ দিক বলেন। ২. 1st Choice কী? সোনালি ব্যাংকের শাখা কয়টি? সর্বশেষ শাখা কোনটি? ৩. Primary Share ও Secondary Share কী? ৪. বাংলাদেশ কী টাইপের দেশ? বাজেটের সাইজ কত? কী টাইপের বাজেট? উন্নয়নশীল দেশ হয়েও কেন ঘাটতি বাজেট? এই ঘাটতি কীভাবে পূরণ করা যাবে? ৫. বাংলা QR Code-এর জন্য একটি স্লোগান নিজের মতো করে বানিয়ে বলেন। ৬. নিজের ২টা খারাপ দিক বলেন।\n#Collected"}, {"id": 17, "displayId": "17", "board": "01 -- Arif Hossain Khan Sir (Executive Director)", "topic": null, "date": "৩ আগস্ট", "time": null, "position": "SO Viva", "university": null, "tags": [], "body": "পদ: SO Viva\nতারিখ: ৩ আগস্ট\nসময়: সকাল ১০:০০\nবোর্ড: 01 -- Arif Hossain Khan Sir (Executive Director)\nবিষয়: Agriculture, BAU\n১. বিশ্ববিদ্যালয়ের নাম, অনুষদ? ২. বাংলাদেশ জাতীয় ক্রিকেট দলের বর্তমান ওয়ানডে অধিনায়কের নাম কী? এবং সদ্য সাবেক ওয়ানডে অধিনায়কের নাম কী? ৩. কৃষির সাব-সেক্টর কয়টি ও কী কী? ৪. Natural Vegetation vs Social Afforestation. ৫. বরেন্দ্র ভূমি কোন কোন এলাকায়? সেখানকার মাটির টাইপ কী? ৬. বাংলাদেশের মাটির বিভিন্ন ধরন। ৭. কোন এলাকায় সামাজিক বনায়ন লক্ষ্য করা যায়? ৮. অধিক সার ব্যবহারে জমির কী ক্ষতি হয়? ৯. সবুজ সার কেন দিবো? ১০. Crop Rotation."}, {"id": 18, "displayId": "18", "board": "Board--2", "topic": null, "date": null, "time": null, "position": null, "university": null, "tags": [], "body": "বোর্ড: Board--2\nবোর্ড চেয়ারম্যান: Manoj Kumar Howlader (ED)\nবিষয়: Petroleum and Mining Engineering, SUST\n১. আপনার পুরো নাম বলুন। ২. বাংলাদেশের জ্বালানি খাতের সমস্যা বলুন। ৩. বাংলাদেশে কেন সঠিক Mining হচ্ছে না? ৪. Resource উত্তোলন করার উপায় কী? ৫. Satellite-এর মাধ্যমে কীভাবে ক্ষেত্র শনাক্ত করা যায়? ৬. আপনার ইউনিভার্সিটির Vice-Chancellor-এর নাম বলুন। ৭. বর্তমানে রাষ্ট্রপতি কে? কততম? ৮. বাংলাদেশ ব্যাংকের গভর্নরের নাম এবং কততম? ৯. বাংলাদেশ ব্যাংকের প্রথম গভর্নরের নাম কী? ১০. সোনালী ব্যাংকের বিদেশে কোনো শাখা আছে কি? কয়টি এবং কোথায়? ১১. বর্তমানে ব্যাংক কতটি? ১২. সম্মিলিত ইসলামী ব্যাংকগুলোর প্রতিটির নাম এবং এগুলো মিলে স্বতন্ত্র ব্যাংকের MD কে? ১৩. ম্যাথ কয়টি হয়েছে? আগে ভাইভা দিয়েছেন কি না? ১৪. বাংলাদেশে ব্যাংকের মূল কাজ কী?"}, {"id": 19, "displayId": "19", "board": "Rafikul Islam Sir", "topic": null, "date": null, "time": null, "position": "Senior Officer", "university": null, "tags": [], "body": "পদ: Senior Officer\nSerial: 15\nবোর্ড: Rafikul Islam Sir\nবিষয়: Geology and Mining, RU\n১. মালয়েশিয়া, ভুটান এবং ব্রিটেনের কেন্দ্রীয় ব্যাংকের নাম কী? ২. ব্যাংকের Liability ও Asset-গুলোর নাম বলেন। ৩. ১, ১, ৯ এর গড় কত? ৪. ৫৩, ৫৪, ৫৫-এর গড় কত? ৫. ১ থেকে ১০ পর্যন্ত সংখ্যাগুলোর গড় কত? ৬. Petroleum System কী? ৭. বড়পুকুরিয়াতে কী পাওয়া যায়? কোন পদ্ধতিতে কয়লা উত্তোলন করা হয়? ৮. LTCC কী?"}, {"id": 20, "displayId": "20", "board": null, "topic": null, "date": null, "time": null, "position": "SO Viva", "university": null, "tags": [], "body": "পদ: SO Viva\nসময়কাল: ৩--৪ মিনিট\n১. কোন ইউনিভার্সিটি থেকে পড়েছেন? ২. এটা কি আপনার প্রথম ভাইভা? ৩. First Choice কী? ৪. সোনালী ব্যাংক কোন কোন ব্যাংক নিয়ে তৈরি হয়েছে? ৫. ব্যাংকের দুটি সমস্যা বলেন। ৬. S. Alam-এর মতো আর কোন Group আছে? ৭. ML Act আছে?"}, {"id": 21, "displayId": "21", "board": null, "topic": null, "date": null, "time": null, "position": null, "university": null, "tags": [], "body": "বিষয়: ICT\n১. Bangla QR বুঝাতে বলছে। ২. Financial Inclusion কী? ৩. Fiscal Policy কী? ৪. বাংলাদেশ ব্যাংকের (BB) Main কাজ কী? ৫. শিক্ষা ব্যবস্থা নিয়ে আমার Opinion কী? ৬. HSBC কী? ৭. আরো কিছু প্রশ্ন করছিল, মনে নেই।\nঅভিজ্ঞতা:\nMainly ১--২টা বিষয় নিয়ে বিস্তারিত জিজ্ঞাসা করছিল।"}, {"id": 22, "displayId": "22", "board": "আনিসুর রহমান স্যার", "topic": null, "date": "০৪/০৮/২০২৬", "time": null, "position": null, "university": null, "tags": [], "body": "তারিখ: ০৪/০৮/২০২৬\nবোর্ড: আনিসুর রহমান স্যার\n১. Accounting এবং Finance-এর মধ্যে কী পার্থক্য? ২. Quick Ratio কী এবং কী কাজে লাগে? ৩. সোনালী ব্যাংকের স্লোগান ও এর ব্যাখ্যা। ৪. Banking এবং Finance-এর মধ্যে কী পার্থক্য? ৫. IRR (Internal Rate of Return) কী? ৬. ব্যাংকের প্রধান Liability ও Asset কী কী? ৭. Math:\n০.৫ ÷ ০.৪\n৫ × ০.৪ ৮. বর্তমান রাষ্ট্রপতির নাম।"}, {"id": 23, "displayId": "23", "board": "৪", "topic": null, "date": null, "time": null, "position": null, "university": null, "tags": [], "body": "বোর্ড: ৪\nবোর্ড চেয়ারম্যান: সারওয়ার স্যার\n১. ব্যাংক কী? ২. আন্তর্জাতিক বাণিজ্য ব্যাংক কীভাবে কাজ করে? ৩. LC (Letter of Credit) কী? ৪. LC কোন আইনের মাধ্যমে পরিচালিত হয়? ৫. LC ছাড়া আর কীভাবে আন্তর্জাতিক বাণিজ্য পরিচালনা করা যায়? ৬. LC কেন করা হয়? (Payment ছাড়া অন্য কারণ) ৭. Incoterms কী? ৮. সোনালী ব্যাংক কোন ধরনের ব্যাংকিং সেবা দেয়? ৯. ব্যাংকের Balance Sheet-এর ৪টি Owners' Equity Item-এর নাম বলেন। ১০. Offshore Banking কী? ১১. Merchant Banking কী? ১২. General Reserve এবং Provision-এর মধ্যে পার্থক্য।\nঅভিজ্ঞতা:\nএর বাইরেও ২/১টা প্রশ্ন করেছিল, মনে নেই।"}, {"id": 24, "displayId": "24", "board": null, "topic": null, "date": "০৪/০৮/২০২৬", "time": null, "position": null, "university": null, "tags": [], "body": "তারিখ: ০৪/০৮/২০২৬\nবিষয়: কৃষি অর্থনীতি\n১. বাংলাদেশের চাষযোগ্য জমি কতটুকু? ২. কৃষি খাতের Sub-sectors গুলো কী কী? ৩. সবুজ বনায়ন কোথায় হয়েছে? ৪. Factors of Production কী কী? ৫. ২৫-এর ২৫% কত? ৬. জিডিপিতে কৃষি খাতের অবদান কত? ৭. অন্য দুটো খাতের নাম বলেন। ৮. কৃষির অবদান কেন কমছে?"}, {"id": 25, "displayId": "25", "board": "হাবিবুর রহমান স্যার", "topic": "পলিটিক্যাল সাইন্স", "date": null, "time": null, "position": null, "university": null, "tags": [], "body": "সময়: সকাল ৮টা\nবোর্ড: হাবিবুর রহমান স্যার\nবিশ্ববিদ্যালয়: চট্টগ্রাম বিশ্ববিদ্যালয় (চবি)\nবিভাগ: পলিটিক্যাল সাইন্স\nনাম?\nবিশ্ববিদ্যালয়?\nচবি ক্যাম্পাসে এতো অজগর 🐍🐍 কেন?\nজাহাঙ্গীরনগর বিশ্ববিদ্যালয়ে আপনার বিভাগ কী নামে পরিচিত?\nব্যাংকের মূল কাজ কী?\nবাণিজ্যিক ব্যাংক তাদের পুরো টাকা লোন দেয় কিনা? কেন দেয় না?\nCRR বুঝেন কি?\nবর্তমান গভর্নরের নাম কী? তার আগের গভর্নর কে?\nসাইন্সের ছাত্র ছিলেন ইন্টার পর্যন্ত? গণিতে এতো গরিব কেনো? 😤\nদেখি IQ Test করি! ১১৩ × ১১৩ − ১ = ?\nঅভিজ্ঞতা:\nশেষ প্রশ্নের উত্তর দেওয়ার পর চেয়ারম্যান স্যার বললেন, \"হয় নি! হয় নি!! বাসায় গিয়ে করিয়েন 🙃\""}, {"id": 26, "displayId": "26", "board": null, "topic": null, "date": null, "time": null, "position": null, "university": null, "tags": [], "body": "১. কী নাম? ২. মাস্টার্সের রেজাল্ট কী? ৩. ইংরেজি সাহিত্যের যুগ বিভাগ বলেন। ৪. Romantic Age কত সাল থেকে? ৫. Romantic Age-এর কবিদের নাম বলেন। ৬. সুকান্ত ভট্টাচার্য কত বছর বেঁচে ছিলেন? ৭. আপনি কী করেন? ৮. চেক ডেবিট করতে কী কী খেয়াল করেন? ৯. ক্যাশে টাকা বেশি হলে কী করেন?"}, {"id": 27, "displayId": "27", "board": "হাবিবুর রহমান স্যার", "topic": null, "date": "০৪/০৮/২০২৬", "time": null, "position": null, "university": null, "tags": [], "body": "তারিখ: ০৪/০৮/২০২৬\nসময়: সকাল ৮:০০\nবোর্ড: হাবিবুর রহমান স্যার\n১. নাম, ভার্সিটির নাম, সাবজেক্ট, ব্যাংকে কেন? ২. চীনের কেন্দ্রীয় ব্যাংকের নাম কী? ৩. চীনের মুদ্রার নাম কী? ৪. বর্তমানে কী করছেন?\nশেষে: \"ধন্যবাদ। আসতে পারেন।\""}, {"id": 28, "displayId": "28", "board": "Board--3", "topic": null, "date": "০৪/০৮/২০২৬", "time": null, "position": null, "university": null, "tags": [], "body": "তারিখ: ০৪/০৮/২০২৬\nবোর্ড: Board--3\nঅভিজ্ঞতা:\nসালাম দিয়ে ঢুকার পর বসতে বললো। বসলাম।\n১. নিজের পড়াশোনা নিয়ে বলেন তো। ২. Central Bank আর BSEC-এর কাজের তফাৎ বলেন। ৩. Capital Market-এ কারা আছে? ৪. ২টা ম্যাথ (মুখে মুখে করা যায়) ধরলো। ৫. Population কী? ৬. Sample কী? ৭. Information আর Data-এর তফাৎ বলুন। ৮. SD (Standard Deviation) কী? ৯. Bank Rate আর Call Money Rate বলতে কী বুঝায়? ১০. Listed Company মানে কী? ১১. জেলা নিয়ে হাবিজাবি কিছু জিজ্ঞেস করলো।\nঅভিজ্ঞতা:\nগ্রুপের অনেকের ভাইভা অভিজ্ঞতা জানার আগ্রহ ছিলো, তাই ভাবলাম এটাও হয়ত উপকারে আসতে পারে।"}, {"id": 29, "displayId": "29", "board": null, "topic": null, "date": "০৪/০৮/২০২৬", "time": null, "position": null, "university": null, "tags": [], "body": "তারিখ: ০৪/০৮/২০২৬\n১. নাম কী? ২. বিশ্ববিদ্যালয়ের নাম। ৩. এগ্রোনমিতে মাস্টার্স করেছেন। Agriculture ও Agronomy-এর মধ্যে পার্থক্য কী? ৪. জলবায়ু সংকট মোকাবেলায় কৃষিতে কী কী পদক্ষেপ নেওয়া হয়েছে? ৫. প্রথম চয়েস কী? ৬. কৃষি ব্যাংক ছেড়ে সোনালী কেন? ৭. সোনালী ব্যাংক কী কী কাজ করে? ৮. সোনালী ব্যাংক এমন কী কাজ করে যা অন্য ব্যাংক করে না? ৯. বাংলাদেশ বর্তমানে কততম অর্থনীতির দেশ?\nMath:\nমোট ৪টি ম্যাথ হয়েছিল।\nChecking-এর সময় Profit-Loss-এর একটি ম্যাথ করতে দিয়েছে।"}, {"id": 30, "displayId": "30", "board": null, "topic": null, "date": null, "time": null, "position": "SO-2024", "university": null, "tags": [], "body": "পদ: SO-2024\n১. SAARC-এর সদস্য রাষ্ট্রগুলোর নাম বলুন। ২. SAARC-এর সর্বশেষ সদস্য দেশের নাম, তার মুদ্রা ও কেন্দ্রীয় ব্যাংকের নাম বলুন। ৩. মূল্যস্ফীতি (Inflation) কী? এর কারণ ও প্রভাব ব্যাখ্যা করুন। ৪. চেয়ারম্যানের নাম কী? ৫. দশমিক সম্পর্কিত গণিত।"}, {"id": 31, "displayId": "31", "board": "মনোজ কুমার হাউলাদার (Executive Director, বাংলাদেশ ব্যাংক)", "topic": null, "date": null, "time": null, "position": null, "university": null, "tags": [], "body": "বোর্ড: মনোজ কুমার হাউলাদার (Executive Director, বাংলাদেশ ব্যাংক)\nস্লট: ১:৩০\nসময়: ৭--৮ মিনিট\nঅভিজ্ঞতা:\nস্যার শুরু করলেন, \"মোঃ ইয়াছিন আপনি?\"\n১. কোথা থেকে পড়েছেন?\nAnswered.\n২. মাস্টার্স করেননি?\nAnswered.\n৩. আচ্ছা রাষ্ট্র পড়েছেন? বলুন তো রাষ্ট্রের উপাদানগুলো কী কী?\nAnswered.\n৪. আমাদের দেশের প্রধান কে?\nAnswered.\n৫. রাষ্ট্রের স্তম্ভগুলো কী কী বলতে পারবেন?\nAnswered.\n৬. গণতন্ত্র তো নিশ্চয় পড়েছেন? গণতন্ত্রের একটা সমস্যা বলতে পারবেন? আচ্ছা, গণতন্ত্র তো Majority-কে গুরুত্ব দেয়। কখন অল্প সংখ্যক Majority নিয়ে গণতন্ত্রে ক্ষমতায় আসা যায়?\nপ্রথম দিকের উত্তর দিতে পেরেছি। শেষেরটা পারিনি।\n৭. আচ্ছা সংসদ না থাকলে রাষ্ট্রপতি অনেক সময় অর্ডার দেন। এগুলাকে কী বলে? এগুলা কি আইনে রূপান্তর করা যায়? কীভাবে?\nAnswered.\n৮. আপনার প্রথম চয়েজ কী?\nBHBFC বলেছি। স্যার উত্তর পছন্দ করেননি। লজিক নেন নাই।\nExternal--1:\n৯. আচ্ছা দেশের অর্থনীতিতে দুই ধরনের Policy গ্রহণ করা হয়। এগুলোর নাম বলতে পারবেন? কারা করে? কেন করে?\nAnswered.\nChairman Sir:\n১০. আপনার ম্যাথ কয়টা হয়েছে?\nAnswered.\nExternal--2:\n১১. আচ্ছা Complex Number কী বলতে পারবেন?\nAnswered."}, {"id": 32, "displayId": "32", "board": "হাবিবুর রহমান স্যার", "topic": null, "date": null, "time": null, "position": null, "university": null, "tags": [], "body": "বিষয়: Finance and Banking\nবোর্ড: হাবিবুর রহমান স্যার\nঅভিজ্ঞতা:\nপ্রথমে জিজ্ঞেস করেন---আপনি কোথা থেকে লেখাপড়া করেছেন? কোন বিষয় নিয়ে? বাসা কোথায়?\n১. ব্যাংক কাকে বলে? ২. মধ্যস্থতাকারী আর্থিক প্রতিষ্ঠান হিসেবে ব্যাংক কাদের মধ্যে মধ্যস্থতা করে? ৩. ব্যাংক কীভাবে Risk কমায়? ৪. বৈদেশিক বাণিজ্য বা LC-এর ক্ষেত্রে ব্যাংক কীভাবে কাজ করে? ৫. অর্থনৈতিক ক্ষেত্রে ব্যাংকের প্রধান চ্যালেঞ্জগুলো কী? ৬. দক্ষিণ এশিয়ার মধ্যে কোন দেশের মুদ্রার নাম Dollar?"}, {"id": 33, "displayId": "33", "board": "রূপ রতন পাইন স্যার", "topic": null, "date": null, "time": null, "position": "Senior Officer", "university": null, "tags": ["so_viva"], "body": "পদ: Senior Officer\nবোর্ড প্রধান: রূপ রতন পাইন স্যার\nসময়: প্রায় ৯--১০ মিনিট\nপরিবেশ: অত্যন্ত বন্ধুত্বপূর্ণ ও আন্তরিক (Friendly Board)\nঅভিজ্ঞতা:\nশুরুতেই আমাকে একটু নার্ভাস দেখে বোর্ড মেম্বারদের একজন হেসে বললেন, \"আমরা এখানে একদম ফ্রেন্ডলি কথা বলবো, নার্ভাস হওয়ার কিছু নেই।\" উনাদের এই একটি কথায় সব নার্ভাসনেস কেটে যায়।\n১. ব্যক্তিগত ও একাডেমিক\nIntroduce yourself.\nআপনার বিশ্ববিদ্যালয় এবং পঠিত বিষয় কী?\nআপনার সাবজেক্টের জ্ঞান (Soil Science) ব্যাংকিংয়ে কীভাবে কাজে লাগাবেন?\nবর্তমানে কী করছেন?\n২. জেলাভিত্তিক প্রশ্ন (চট্টগ্রাম)\n-   চট্টগ্রামে যে একটি বড় ইকোনমিক জোন হচ্ছে, সেটির নাম কী এবং এটি কোথায় অবস্থিত? (বঙ্গবন্ধু শেখ মুজিব শিল্প নগর / মিরসরাই)\n৩. ডিজিটাল ব্যাংকিং (বাংলা QR)\nদেয়ালে ঝোলানো বাংলা QR কোডটির পরিচয় কী?\nএর কাজের ধরণ কী?\n-   প্রচলিত অন্যান্য QR কোডের সাথে বাংলা QR-এর মূল পার্থক্য কী? (Interoperability বা সর্বজনীনতা)\n৪. বিষয়ভিত্তিক (Academic)\nঅনার্স বিষয় থেকে ২টি মৌলিক প্রশ্ন।\n৫. উপস্থিত বুদ্ধিমত্তা ও Analytical\n-   ভাইভা বোর্ডের মেম্বারদের উপস্থিতি এবং রুমের পরিবেশ নিয়ে তাৎক্ষণিকভাবে একটি Analytical Formula সাজাতে বলা হয়েছিল। (শুরুতে একটু থমকে গেলেও স্যারেরা হালকা ইঙ্গিত দেওয়ার সাথে সাথে ধরে ফেলি, আর উনারাও হেসে বললেন--- \"হ্যাঁ, এটাই তো উত্তর!\")\n৬. Spoken English\nForeign Remittance নিয়ে ইংরেজিতে ২--৩টি বাক্য বলতে বলা হয়েছিল।\n#so_viva"}, {"id": 34, "displayId": "34", "board": "মনোজ কুমার হাওলাদার", "topic": null, "date": "৪ আগস্ট, ২০২৬", "time": null, "position": "SO Viva", "university": null, "tags": [], "body": "পদ: SO Viva\nতারিখ: ৪ আগস্ট, ২০২৬\nসময়: ১:৩০ PM\nগ্রুপ: ৪\nবোর্ড: মনোজ কুমার হাওলাদার\nবিষয়: Economics\nঅভিজ্ঞতা:\nনাম আর অনার্সের বিষয় জিজ্ঞেস করার পর জিজ্ঞেস করেছে যে মাস্টার্স করেছি কিনা, কোথা থেকে করেছি, রেজাল্ট কী ছিলো।\n১. Economics-এ Demand কী? আমাকে বুঝাও। ২. এমন একটা উদাহরণ দাও যেটা আমি চাই কিন্তু Demand না। ৩. Giffen Goods কী? উদাহরণ দাও। ৪. Marginal Utility কী? (এরপর একটি Marginal Utility-এর গ্রাফ আঁকতে দিয়েছে।) ৫. এই গ্রাফের Shape এমন কেন? ৬. Market সম্পর্কে ধারণা আছে? বলো তো Perfect Competition কী? (আমি প্রায় সব Assumption-ই বলেছিলাম, তবে একটা ভুলে গিয়েছিলাম, ওটা স্যার নিজেই ধরিয়ে দিয়েছেন।) ৭. Monopolistic Market কী? ৮. Isoquant কী? ৯. Diminishing Marginal Returns কী? এটা Diminishing কেন? ১০. ম্যাথ কয়টা হয়েছে? (বলেছি ৫টা। এরপর মুখে মুখে একটা অংক করতে দিয়েছে, ওটা পারিনি। পরে আরেকজন স্যার আরেকটা অংক দিয়েছেন, ওটা পেরেছি।) ১১. First Choice কী ছিল?\nআরও একটা প্রশ্ন করেছিলেন, ওটা ভুলে গেছি।\nঅভিজ্ঞতা:\nবোর্ডের সবাই খুবই Helpful ছিলেন। Definition কোনোটাই তেমন Exact বলতে না পারলেও মোটামুটি ধারণাগুলো বলতে পেরেছি। স্যারদের দেখে Satisfied-ই মনে হলো।\nখাতা চেকিং\nপ্রথমে জিজ্ঞেস করেছে এটা প্রথম ভাইভা কিনা। বললাম, হ্যাঁ।\nতারপর বললো ম্যাথ কয়টা হলো। বললাম, ৫টা।\n-   তারপর উনি একটা ম্যাথ করতে দিলেন: একটা ট্রেন ঘণ্টায় ৬০ কিলোমিটার বেগে একটা পোল ৯ সেকেন্ডে অতিক্রম করলে ট্রেনটির দৈর্ঘ্য কত? --- পারলাম।\n-   তারপর বললেন, \"চক্রপাণি\"-র ব্যাসবাক্যটা কী হবে? বললাম, \"চক্র পাণিতে যার\", এখানে পাণি বলতে হাত বুঝানো হয়েছে।\nএরপর ভাইভার জন্য শুভকামনা জানিয়ে পাঠিয়ে দিলেন।\nখাতার কোনো নম্বর দেখতে পারিনি।"}, {"id": 35, "displayId": "35", "board": "রফিকুল ইসলাম স্যার", "topic": null, "date": null, "time": null, "position": null, "university": null, "tags": [], "body": "বিষয়: IR\nবোর্ড: রফিকুল ইসলাম স্যার\nবোর্ডে ছিলেন: রফিকুল ইসলাম স্যারসহ মোট ৪ জন (External ৩ জন)\nঅভিজ্ঞতা:\nশুরুতেই একটি মজার প্রশ্ন করেছিলেন।\n১. আপনার নাম ও রোল বলুন। ২. আপনার রোলের সবগুলো Digit Multiply করলে উত্তর কত হবে? (আমার রোলে ০ ছিল, তাই উত্তর Zero বলেছি।) ৩. GDP কী? ৪. GNP কী? ৫. বিভিন্ন Central Bank-এর নাম। ৬. মুদ্রাস্ফীতি কী? ৭. মূল্যস্ফীতি কী? ৮. বাংলা মাসগুলোর নাম। ৯. আরবি মাসগুলোর নাম। ১০. বাংলাদেশ ব্যাংক কবে প্রতিষ্ঠিত হয়? ১১. বাংলাদেশ ব্যাংক কোন Order-এর মাধ্যমে পরিচালিত হয়? ১২. বাংলাদেশ ব্যাংক কোন Act-এর মাধ্যমে পরিচালিত হয়? ১৩. বাজেটের আকার কত? ১৪. বর্তমানে কোন Fiscal Year চলছে? １５. Women Empowerment কী? ১৬. একটি ব্যাংক প্রতিষ্ঠা করতে কত Capital লাগে? ১৭. Masters করেছি কিনা? ১৮. বর্তমানে কোনো Job-এ আছি কিনা? ১৯. Passing Year কত?\nঅভিজ্ঞতা:\nWomen Empowerment ছাড়া Subject Related তেমন কিছু ধরেনি।\nNB: আমি সব পারিনি। It was 50-50 for me. But board friendly ছিল।"}, {"id": 36, "displayId": "36", "board": null, "topic": null, "date": null, "time": null, "position": "SO Viva", "university": null, "tags": [], "body": "পদ: SO Viva\n১. First Choice কী? (ICB) ২. ICB-এর কাজ কী? ৩. ICB-এর কাঠামো কী? এটি নিয়ন্ত্রণ করে কে? ৪. বাজেট কী? ৫. আমাদের বাজেট কোন ধরনের? কেন? ৬. Surplus Budget করলে কী সমস্যা হতে পারে? ৭. বাজেটের টাকা কীভাবে এবং কোন কোন খাত থেকে সংগ্রহ করা হয়? অভ্যন্তরীণ উৎসের বাইরে বাকি উৎসগুলো কী কী? ৮. অর্থ মন্ত্রণালয়ের বিভাগ কয়টি এবং কী কী? ৯. Project Evaluation-এর Method কয়টি এবং কী কী? ১০. IRR-এর সূত্র। ১১. ম্যাথ কয়টা হয়েছে? ১২. ০.২ × ০.২ = কত? ১৩. বাংলাদেশ ব্যাংকের Payment System সম্পর্কে বলুন। ১৪. বাংলা QR কী?"}, {"id": 37, "displayId": "37", "board": "Board--3", "topic": "Tourism & Hospitality Management (DU)", "date": null, "time": null, "position": "SO-2024", "university": null, "tags": [], "body": "পদ: SO-2024\nDepartment: Tourism & Hospitality Management (DU)\nবোর্ড: Board--3\nবোর্ড চেয়ারম্যান: আনিসুর রহমান স্যার\n১. নামের অর্থ কী? ২. Department কী? Tourism ও Hospitality-এর মধ্যে পার্থক্য কী? ৩. Five-Star Hotel Rating করে কে এবং কিসের ভিত্তিতে? ৪. বাংলাদেশে কয়টি Five-Star Hotel আছে? ৫. সরকারি Five-Star Hotel কয়টি? ৬. ঢাকায় কয়টি Five-Star Hotel আছে? ৭. Tourism-এর Barrierগুলো কী কী? সমাধান কী? ৮. বর্তমানে কী করেন? ৯. কত গ্রেড? ১০. কেন Job Switch করবেন? ১১. সোনালী ব্যাংক কেন First Choice? ১২. সোনালী ব্যাংকের ইতিহাস। ১৩. সোনালী ব্যাংকের স্লোগান ও এর ব্যাখ্যা। ১৪. সোনালী ব্যাংকের দুইটি কাজ। ১৫. ব্যাংক খাতের প্রধান Challengeগুলো কী? সমাধান কী? ১৬. বাংলা QR কী? ১৭. ম্যাথ কয়টা হয়েছে?\nMath:\n০.২ × ০.০০২ = ?\n১০০ টাকা দুইজনকে ভাগ করে দেন, একজন ১০ টাকা বেশি পাবে।\nTranslation:\nশিশুটি হাসতে হাসতে রুম থেকে বেরিয়ে গেল।"}, {"id": 38, "displayId": "38", "board": "হাবিবুর রহমান স্যার", "topic": null, "date": null, "time": null, "position": "Senior Officer (2023 Based)", "university": null, "tags": [], "body": "পদ: Senior Officer (2023 Based)\nসময়: সকাল ৮:০০\nবোর্ড: হাবিবুর রহমান স্যার\nঅভিজ্ঞতা:\nবোর্ড মোটামুটি Friendly ছিল। তবে মাস্টার্স শেষ হওয়ার পরও অনেক দিন Jobless কেন---এ বিষয়ে বিস্তারিত জানতে চেয়েছেন।\n১. কোন বিশ্ববিদ্যালয় থেকে পড়াশোনা করেছেন? Subject কী? ২. Applied Mathematics তো অনেক কঠিন। তাহলে Applied Mathematics এবং Mathematics-এর মধ্যে পার্থক্য কী? ৩. কেন্দ্রীয় ব্যাংকের (Central Bank) প্রধান কাজ বলুন। ৪. Equity এবং Equal To-এর মধ্যে পার্থক্য কী? ৫. আপনার First Choice কোন ব্যাংক? কয়টি শাখা এবং Vision কী? ৬. মনে করুন, আপনি সোনালী ব্যাংকে Recommended হলেন। ব্যাংক আপনাকে Salary কীভাবে দিবে? ৭. পূর্বের কোন কোন ব্যাংকের সমন্বিত রূপ SBPLC? ৮. Sin 90°-এর মান কত? কেন? ৯. Cylinder-এর আয়তনের সূত্র বলুন। ১০. আপনি তো Applied Mathematics-এর স্টুডেন্ট। বর্তমানে ফিলিস্তিনের যে সংঘাত চলছে, ইসরায়েল যে ক্ষেপণাস্ত্র নিক্ষেপ করছে, তাদের ক্ষেপণাস্ত্র আরও কিভাবে দূর পর্যন্ত নিক্ষেপ করা যায়---পদার্থবিজ্ঞানের ভাষায় তা বলুন। ১১. আপনার একাডেমিক পড়াশোনা কখন শেষ হয়েছে? ১২. আপনার ২০২২--২০২৬ সালের দীর্ঘ Gap কেন? এতদিন Applied Mathematics পড়েও চাকরিতে আসতে দেরি হলো কেন? ১৩. আজকে কী দিবস? এর প্রতিপাদ্য বলতে পারবেন? ১৪. অনুবাদ করুন: \"আমি তো চা-ই খাই না, তার উপর কফি।\"\nশেষে:\n\"ধন্যবাদ, আপনি আসতে পারেন।\""}, {"id": 39, "displayId": "39", "board": null, "topic": null, "date": null, "time": null, "position": null, "university": null, "tags": [], "body": "১. নাম কী? ২. রোল কত? ৩. রোলের সবগুলো Digit একটার সাথে আরেকটা Multiply করলে কত হবে? ৪. মাস্টার্স করতেছেন? ৫. কবে করবেন? ৬. ক্রিকেট খেলেন? খেলা দেখেন? ৭. First Choice কোন ব্যাংক? ৮. PLC-এর মানে কী? ৯. Public ও Private-এর মধ্যে পার্থক্য বলেন। ১০. সবচেয়ে বেশি পণ্য রপ্তানি হয় কোথায়? ১১. আমদানি করা হয় কোথা থেকে? ১২. আমদানির ২য় অবস্থানে কোন দেশ? ১৩. সবচেয়ে বেশি ওষুধ রপ্তানি হয় কোন দেশে? ১৪. তিনটি ক্রমিক সংখ্যার গড় ৬০। বড় আর ছোট সংখ্যার মধ্যে পার্থক্য কত?"}, {"id": 40, "displayId": "40", "board": "হাবিবুর রহমান স্যার", "topic": null, "date": "০২ আগস্ট", "time": null, "position": null, "university": null, "tags": [], "body": "তারিখ: ০২ আগস্ট\nসময়: সকাল ০৮:০০\nবোর্ড: হাবিবুর রহমান স্যার\nসময়কাল: ৬--৭ মিনিট\nনাম, ইউনিভার্সিটি, কী করছি, হোমটাউন, কোথায় থাকি।\nপত্রিকা পড়েন? The Daily Star বাদে তিনটা ইংরেজি পত্রিকার নাম বলেন।\nইদানিং বাংলাদেশের আর্থিক খাতে কী পরিবর্তন এসেছে? কী সেটা?\nRepo Rate কী?\n-   বাণিজ্যিক ব্যাংক যখন ঋণ বাংলাদেশ ব্যাংকে ফেরত দেয়, সেটাকে কী বলে? সেই Rate কত?\nবাংলাদেশ ব্যাংকের মতো আরও কয়েকটি Authority-এর নাম।\nকয়েকটি Central Bank-এর নাম, যেগুলোর নামে \"Bank\" শব্দটি নেই।\nFirst Choice (Sonali)। সোনালী ব্যাংক সম্পর্কে কিছু বলেন।\nSubject নিয়ে ২--৩টি প্রশ্ন।"}, {"id": 41, "displayId": "41", "board": "রফিকুল ইসলাম স্যার", "topic": null, "date": "০৪/০৮/২০২৬", "time": null, "position": null, "university": null, "tags": [], "body": "তারিখ: ০৪/০৮/২০২৬\nবিষয়: রাষ্ট্রবিজ্ঞান\nবোর্ড: রফিকুল ইসলাম স্যার\n১. নাম, রোল, কোন বিশ্ববিদ্যালয়, বিষয়। ২. মাস্টার্স শেষ করেছেন? ৩. BCS Viva কোথাও দিয়েছেন কিনা? ৪. ব্যাংকে আসতে চান কেন? আপনার বিষয় থেকে কেন? ৫. রাষ্ট্রের অঙ্গ কয়টি? ৬. প্লেটোর রিপাবলিক। ৭. রাষ্ট্রের মূল দর্শন। ৮. সক্রেটিস থেকে ছাত্রদের ক্রম। ৯. গণতন্ত্র সম্পর্কে Aristotle-এর বিখ্যাত উক্তি। ১০. গণতন্ত্রের Negative Side বলেন। ১১. বাংলাদেশ ব্যাংক কত সালে প্রতিষ্ঠিত? কোন Order-এ? বেসরকারি ব্যাংক কোন আইনে? আইন ও অধ্যাদেশের পার্থক্য কী? ১২. সম্মিলিত ইসলামী ব্যাংকগুলোর বর্তমান অবস্থা হওয়ার ৩টি কারণ বলেন। ১৩. এগুলো কি সাধারণ কারণ, নাকি আপনি কাদের দায়ী মনে করেন? ১৪. বিদেশি ব্যাংক কয়টি? ১৫. এর মধ্যে Global কয়টি? ১৬. City Bank-এর বানান। ১৭. GDP, GNP, বাজেটের আকার, Rate। ১৮. Job করেন কিনা?"}, {"id": 42, "displayId": "42", "board": null, "topic": null, "date": null, "time": null, "position": null, "university": null, "tags": [], "body": "বিষয়: Civil Engineering\n১. কোথা থেকে পড়াশোনা? ২. Civil পড়ে ব্যাংকে কেন? ৩. FAR কী? ৪. Binding Materials কী? ৫. FAR কি দেশের সব জায়গায় সমান? ৬. সোনালী First Choice কেন? ৭. BACH-এর Full Meaning। ৮. Bank-এর Digital Services। ৯. NPSB vs RTGS। ১০. নিকাশঘর (Clearing House) এখন আছে নাকি সম্পূর্ণ Automated? ১১. সোনালী ব্যাংকের Online Service App-এর নাম। ১২. বর্তমানে কী করছেন? ১৩. ব্যাংক খাতের তিনটি সমস্যা বলেন।"}, {"id": 43, "displayId": "43", "board": "Board–3", "topic": null, "date": null, "time": null, "position": null, "university": null, "tags": [], "body": "Day: 2\nBoard: Board–3\nDuration: 5–8 minutes\nঅভিজ্ঞতা:\nঅনুমতি নিয়ে প্রবেশ করে সালাম দিলাম। বসতে বললে বসলাম।\nChairman: নাম কি তোমার? Chairman: নামটা পরিচিত মনে হচ্ছে!! Sir 2: তো এখন কোথায়? Sir 2: শাসনকাল জানো?\nSir 2: বাসা কোথায়? বলার পর, কী জন্য বিখ্যাত?Sir 2: আরো আছে উল্লেখযোগ্য...আমি: বললাম। Sir 2: ভিতরে দেখেছো কোন দেশের নাগরিক বেশি? (ময়নামতি ওয়ার সেমিট্রি-এর ব্যাপারে) আমি: Sorry.Sir 2: BARD-এর প্রতিষ্ঠাতা কে জানো? আমি: বললাম। Sir 4: তিনি কি বাঙালি? আমি: ভুল বলছি।Sir 4: না জানলে আন্দাজে বলবা না, তিনি বাঙালি না।\nআমি: দুঃখিত স্যার, জেনে নিব। Sir 3: তো পড়ালেখা কোথায়?\nআমি: বললাম। (পাশ থেকে চেয়ারম্যান স্যার, পরিসংখ্যানের ছাত্র বলে Sir 4-কে ইঙ্গিত করলেন) Sir 4: বাংলাদেশের গড় আয়ু বলতে পারবে? আমি: বললাম। Sir 3: এত বেশি আগে থেকেই ছিল? আমি: না স্যার, ধীরে ধীরে বৃদ্ধি পাচ্ছে। Sir 4: কেন, কারণ কী? Chairman: Choice প্রথমে কোনটা দিয়েছো?\nChairman: ভাল choice দিয়েছো। কিন্তু অন্য যে ব্যাংক ছিল সেগুলো থেকে সোনালী আলাদা কেন?\nআমি: ভুল বললাম (আন্দাজি মারলাম, তাই সবাই অবাক হয়ে...) Chairman: আরো specific বলা দরকার ছিল। (সরকারি হিসাব নিষ্পত্তি টাইপের কিছু একটা বললো মনে হয়) যাই হোক, জেনে নিও। আসতে পারো। আমি: জ্বি স্যার, ধন্যবাদ। সালাম দিয়ে বের হলাম। অভিজ্ঞতা:\nরিযিকের মালিক তো উপরওয়ালা। ব্যাংক চাকরির ১ম ভাইবা ছিল আমার। গ্রুপ থেকে হেল্প নিয়েছি বলে, দায়বদ্ধতা থেকে লিখা।"}, {"id": 44, "displayId": "44", "board": "০২", "topic": null, "date": "১৫/১০/২০২৫", "time": null, "position": null, "university": null, "tags": [], "body": "তারিখ: ১৫/১০/২০২৫ | বোর্ড: ০২ | চেয়ারম্যান: মাহবুব স্যার\nভেতরে গিয়ে সালাম দিলাম। বসতে বললেন। প্রশ্ন: ১. আপনার বাড়ি কোথায়? ২. পড়াশোনা কোথায় করেছেন? ৩. পরিসংখ্যানে Sample কী? ৪. Stratified Sampling বলতে কী বুঝেন? ৫. উদাহরণ দিতে পারবেন? (পারি নাই) ৬. Cluster আর Strata-এর মাঝে পার্থক্য কী? ৭. Measures of Dispersion কী? ৮. CV বলতে কী বুঝেন? ৯. CPI কী? (পারি নাই) ১০. শান্তিতে Nobel Prize পেয়েছে? ১১. Maria Corina Machado-এর দলের নাম কী জানেন? (পারি নাই) ১২. ভেনেজুয়েলার রাজধানীর নাম কী? (মাথা কাজ করতেসিলো না) ১৩. দুইটি দেশের Central Bank-এর নাম বলুন যাদের নামে Bank শব্দটি নেই। ১৪. সিঙ্গাপুরের মুদ্রার নাম কী? ১৫. মার্কিন যুক্তরাষ্ট্রের মুদ্রার নাম কী? পরে চেয়ারম্যান স্যার বললেন, \"ছেড়ে দেই, নাকি???\" এরপর বললেন, \"ওকে ঠিক আছে, আপনি যান তাহলে, Thank You.\" আমিও Thank You দিয়ে, সালাম দিয়ে চলে আসলাম।"}, {"id": 45, "displayId": "45", "board": null, "topic": "Statistics", "date": null, "time": null, "position": null, "university": null, "tags": [], "body": "Subject: Statistics\nপ্রশ্ন: ১. Why do we use Normal Distribution? ২. What is Multiple Correlation? Give an example. What is Regression Analysis? ৩. Y = mx + c — Draw the line. If m = 0, what will happen? Explain with real-life example and draw the line. ৪. Draw a Normal Curve. ৫. ATM, CRM. ৬. Bank Cheque. ৭. NPL. ৮. What will you check when giving loan to an individual? ৯. Sonali Bank. ১০. Bank Merge."}, {"id": 46, "displayId": "46", "board": null, "topic": null, "date": null, "time": null, "position": null, "university": null, "tags": [], "body": "প্রশ্ন: ১. নাম, ভার্সিটি, সাবজেক্ট, মাস্টার্সের রেজাল্ট। ২. Variance কী? ৩. Standard Deviation কী? ৪. Symbol কী? ৫. Reserve কত? ৬. Reserve কোথায় থাকে? ৭. কী থাকে? ৮. Monetary ও Fiscal Policy কী? ৯. Monetary Policy-এর উদাহরণ।"}, {"id": 47, "displayId": "47", "board": null, "topic": null, "date": null, "time": null, "position": null, "university": null, "tags": [], "body": "প্রশ্ন: ১. Introduce yourself. ২. What is Big Data with example? ৩. Ratio and Interval Scale? Main difference with example? ৪. Why bank related to Statistics? Define it. ৫. Chattogram-based banks-এর নাম। ৬. Why choice you bank? ৭. What did S. Alam Group do? ৮. What should we do with them?"}, {"id": 48, "displayId": "48", "board": null, "topic": null, "date": null, "time": null, "position": null, "university": null, "tags": [], "body": "সময়: ৬–৭ মিনিট। প্রশ্ন: ১. Normal Distribution-এর Kurtosis, Skewness। ২. Standard-এ কীভাবে নিয়ে যাবে? ৩. Sample-এর Characteristics বলো। ৪. First Choice কী? এর Slogan? (পারি নাই) ৫. Sonali-এর MD and Chairman-এর নাম কী? (একটা যেটা বলেছি, Sir বললো wrong choice করছো) ৬. Dollar কোন কোন দেশের Currency? ৭. Asia থেকে বলো। (পারি নাই) ৮. Malaysian Central Bank-এর নাম কী? (পারি নাই)। Board-এর মন্তব্য: \"[ঘুলাইতে ছিলাম] Sir বললো, যত কম বলবা তো তত ভালো।\" এরপর Board বলেছে, \"First-এ তো ভালো বলসো, এখন তো শেষ করে দিলা।\" Madam বলেছে, \"Sir, ছেড়ে দেন।\" Statistics নিয়ে আরও দুইটা প্রশ্ন করেছিল, হয়তো পারি নাই।"}, {"id": 49, "displayId": "49", "board": "নুরুন নাহার ম্যামের বোর্ড", "topic": null, "date": "১৩/০৯/২০২৫", "time": null, "position": null, "university": null, "tags": [], "body": "তারিখ: ১৩/০৯/২০২৫ | সময়: সকাল ১০টা | বোর্ড: নুরুন নাহার ম্যামের বোর্ড | সময়কাল: ৫–৭ মিনিট। প্রশ্ন: ১. নাম কী এবং কোথায় পড়াশোনা করেছেন? ২. মাস্টার্স কেন করেননি, করবেন কিনা? ৩. বর্তমানে কী করছেন? ৪. নামের অর্থ কী? ৫. What is Econometrics? ৬. What is Multiple Regression? ৭. Give a practical example. ৮. Linear Programming কী? ৯. Null Hypothesis কী? ১০. Null Hypothesis reject হলে কী হয়? ১১. আমরা কখন Null Hypothesis ব্যবহার করি এবং কেন করি? ১২. Senior Officer-এ Job হবে—এখানে Null Hypothesis reject হওয়ার possibility কত? ১৩. First Choice কী? ১৪. Senior Officer Post-এ সোনালী ব্যাংকে কতটি পদ ছিল? ১৫. সম্প্রতি নেপালে কী ঘটেছে? ১৬. বর্তমানে কেউ কি দায়িত্ব নিয়েছে না দায়িত্বহীন রয়েছে? ১৭. যিনি দায়িত্ব নিয়েছেন তার নাম কী? পেশায় কী ছিলেন? ১৮. উনি নেপালের কততম নারী প্রধানমন্ত্রী? ১৯. উনার বয়স কত? ২০. একটা Simple Math। শেষে: \"ঠিক আছে আপনি আসতে পারেন।\""}, {"id": 50, "displayId": "50", "board": null, "topic": null, "date": null, "time": null, "position": null, "university": null, "tags": [], "body": "প্রশ্ন: ১. আমরা Population থেকে Sample নিয়ে কী বের করি? ২. Descriptive Statistics-এর Measures গুলো বলুন। ৩. Dispersion কী? ৪. Regression Analysis কী? ৫. কীভাবে Estimate করি? ৬. OLS কী? ৭. OLS-এর ৪টি Assumption বলুন। ৮. Multicollinearity কী? ৯. Autocorrelation কী? ১০. Why do we choose n > k? ১১. What is DF? ১২. Standard Normal Variate কী? এর Mean ও Variance কত? ১৩. 2-stage Regression কী? ১৪. Empathy vs Sympathy কী? ১৫. একটি Mobile-এর দাম ৪০,০০০ টাকা হলে ১০% Depreciation ঘটলে ৩ years পর কত হবে দাম?"}, {"id": 51, "displayId": "51", "board": null, "topic": null, "date": null, "time": null, "position": "Cash Officer", "university": null, "tags": [], "body": "পদ: Cash Officer | তারিখ: ১৩/১১/২০২৫। প্রশ্ন: ১. Conditional Probability কী? ২. Probability Math। ৩. Dependent ও Independent Variable in Regression। ৪. OLS Assumption। ৫. Multicollinearity, Autocorrelation কী? ৬. Autocorrelation Test। ৭. Commercial Bank কী কী করে? ৮. Bank-এ ৫ লাখ জমা দিলে সেটা Bank-এর Asset নাকি Liability? ৯. সেটা Bank কী করবে? ১০. Bank যখন সেটা Use করবে সেটা Asset নাকি Liability? ১১. ৫ কোটি কেউ Bank-এ রাখলে Bank কি পুরোটা Invest করতে পারবে?"}, {"id": 52, "displayId": "52", "board": null, "topic": null, "date": null, "time": null, "position": "OC-2022", "university": null, "tags": [], "body": "পদ: OC-2022 | তারিখ: ১৬/১১/২০২৫। প্রশ্ন: ১. বাংলাদেশের একজন Statistician-এর নাম বলো। ২. Standard Deviation-এর সূত্র। এক জায়গায় Square আরেক জায়গায় Root থাকে কেন—জানা আছে? ৩. Bivariate Equation কী, একটা Example দাও। ৪. Y = mx + C-তে m কী? ৫. m যদি 0 হয় তবে কী হয়? (এটা নিয়ে কিছুক্ষণ পেঁচাইসে। ওই প্রশ্নটাই বুঝি নাই আমি।) ৬. Correlation কী, Regression কী, Multiple Regression কী—প্রতিটির Example দিয়ে বুঝাও। ৭. Multicollinearity নিয়ে ধারণা দিতে পারবেন? ৮. First Choice কী? কেন? আপনি তো তাইলে সুযোগসন্ধানী। ৯. BDBL কি সবসময় BDBL ছিল? BDBL কী ধরনের Bank? ১০. Math কয়টা হইছে? ১১. 0! কত? ১২. 0⁰ কত হয়? ১৩. পরিসংখ্যানের একটা Criticism আছে—ওইটা কী? ওটা বলার সঙ্গে সঙ্গে ওরা সবাই হেসে উঠলো। তারপর উঠে যাওয়ার সময় Madam জিজ্ঞেস করলো, \"এখন কোথাও Job করতেছেন?\""}, {"id": 53, "displayId": "53", "board": null, "topic": null, "date": "১৬/১১/২০২৫", "time": null, "position": "Officer Cash 2022 Based", "university": null, "tags": [], "body": "পদ: Officer Cash 2022 Based | তারিখ: ১৬/১১/২০২৫ | Group: 4 | Serial: 11 | বোর্ড: Monaj Sir। প্রশ্ন: ১. Sonali Bank-এর শাখা। ২. Chairman। ৩. MD-এর নাম। ৪. Sonali Bank-এর History। ৫. Sonali Bank-এর কাজ কী? ৬. কীভাবে নিকাশঘর কাজ করে? ৭. State Bank of India এবং State Bank of Pakistan-এর মধ্যে পার্থক্য কী? ৮. Cash Officer-এর কাজ কী? ৯. Bank-এর Liabilities কী কী? ১০. Subjective Question। ১১. জেলা থেকে Question। ১২. Math হয়েছে কয়টা? অভিজ্ঞতা: এগুলিই জিজ্ঞেস করেছে। Board Friendly ছিল।"}, {"id": 54, "displayId": "54", "board": null, "topic": null, "date": "১৮/১১/২০২৫", "time": null, "position": null, "university": null, "tags": [], "body": "তারিখ: ১৮/১১/২০২৫ | সময়: সকাল ৮টা | Group: 02 | Serial: 01 | বোর্ড: নুরুন্নাহার ম্যাম। প্রশ্ন: ১. নাম কী? ২. কোন University? ৩. কোন Subject? ৪. Result কত? ৫. Department-এ Position কত? ৬. প্রথম Choice কোনটা? ৭. তার History বলো। ৮. শাখা কয়টা? ৯. Bank কী? ১০. কী কাজ করে? ১১. উদ্দেশ্য কী? ১২. বাংলাদেশ ব্যাংকের বর্তমান Governor কে? কততম? ১৩. Central Bank কী? ১৪. এর কাজ কী? ১৫. Reserve কী? ১৬. কীভাবে আয় হয়? ১৭. কীভাবে কাজ করে? ১৮. ভারত ও পাকিস্তানের মুদ্রার নাম বলো। ১৯. দেশে অবস্থিত এমন ৩টি Foreign Bank-এর নাম বলো। ২০. Math কয়টা হইছে?"}, {"id": 55, "displayId": "55", "board": "Kabir Sir", "topic": null, "date": "১৮/১১/২০২৫", "time": null, "position": null, "university": null, "tags": [], "body": "তারিখ: ১৮/১১/২০২৫ | বোর্ড: Kabir Sir | Group: 1 | Subject: Statistics। অভিজ্ঞতা: নাম, ভার্সিটি তারপর— প্রশ্ন: ১. First Viva? ২. __-তে হয়নি কেন? ৩. গতবার কী কী প্রশ্ন করছিলাম বলো তো? ৪. পারছিলা? ৫. আচ্ছা Big Data আবার বোঝাও? ৬. r কী বোঝায়? ৭. বন্যা হওয়ার ফলে প্রবৃদ্ধি বাড়ছে—এমন একটা গবেষণায় r-এর মান 0.7 আসছে। এখানে r কী বোঝাচ্ছে? ৮. R Square কী? R Square = 0.7 কী বোঝায়? ৯. গবেষণা যেন Biased না হয় সেজন্য তুমি কী করবে? (এখানে একটু হাবিজাবি আরও Questions ছিল।) ১০. তোমার First Choice কী? ১১. কেন? ১২. তোমার চাকরিটা হওয়ার Probability কত? (এখানেও একটু অন্যভাবে আরও কিছু Questions করছে।) ১৩. কিছু General Knowledge থেকে। (মনে নাই) ১৪. পত্রিকা পড়ো? ১৫. Recently একটা Conference হইছে। জানো? ১৬. IMF Recently বাংলাদেশের উপর কয়েকটা বিষয়ে নাখোশ। সেগুলা কী কী? ১৭. ক্রমিক সংখ্যার গড়। ১৮. পদ্মা সেতুর দৈর্ঘ্য কত? ১৯. Math। ২০. কয়টা Math হইছে?"}, {"id": 56, "displayId": "56", "board": "Habibur Sir", "topic": "Economics", "date": "৪ আগস্ট, ২০২৬", "time": null, "position": "SO Viva", "university": null, "tags": [], "body": "পদ: SO Viva | তারিখ: ৪ আগস্ট, ২০২৬ | সময়: ১:৩০ PM | Group: 2 | Subject: Economics | Board: Habibur Sir\nপ্রশ্ন: ১. Bank কত প্রকার? ২. আপনার এলাকায় (উত্তরবঙ্গ) একটা Bank কার্যক্রম পরিচালনা করে, কী নাম? ৩. Same কাজ দেশের অন্য Region-এ কোন Bank করে? ৪. Utility Curve-এর ওপর নাম কী? ৫. Indifference Curve কাকে বলে? ৬. উত্তরবঙ্গে কোন ফসল ভালো হয়, specificভাবে উত্তরবঙ্গে? ৭. বাংলাদেশের Budget কেমন? ৮. ঘাটতি Budget কেন হয়? ৯. এটা Create করা হয় কেন? ১০. First Choice কী? ১১. Sonali Bank-এর কাজ কী? ১২. Krishi Bank-এর কাজ কী? ১৩. দুটি দুই ধরনের Bank কেন?"}, {"id": 57, "displayId": "57", "board": "৩ (কবীর স্যার মেবি?)", "topic": null, "date": "৯/৮/২০২৬", "time": null, "position": null, "university": null, "tags": [], "body": "তারিখ: ৯/৮/২০২৬ | সময়: সকাল ৮টা | বোর্ড: ৩ (কবীর স্যার মেবি?)\nপ্রশ্ন: ১. Bank Rate, Repo Rate, Policy Rate। ২. Repo-এর Full Meaning কী? ৩. Sonali Bank ও Agrani Bank-এর একটা বিশেষ পার্থক্য। ৪. Bank কীভাবে আয় করে? ৫. বাংলাদেশের Budget কী ধরনের; ঘাটতি Budget কেন করা হয়? ৬. ৫টি Foreign Bank-এর নাম। ৭. HSBC-এর Full Form। ৮. Subjective প্রশ্ন কিছু (Veterinary Medicine)। ৯. জেলা সম্পর্কিত কিছু প্রশ্ন। ১০.\nঅভিজ্ঞতা: Board Friendly ছিল।\nশেষ কথা: সব কিছুর মালিক সৃষ্টিকর্তা।"}, {"id": 58, "displayId": "58", "board": "01", "topic": null, "date": null, "time": null, "position": null, "university": null, "tags": [], "body": "Board: 01 | Chairman: Habibur Rahman Sir\nপ্রশ্ন: ১. কোন বিশ্ববিদ্যালয় থেকে পড়াশোনা শেষ করছেন? ২. প্রথম Choice কী? ৩. Citi Bank NA এবং বাংলাদেশের City Bank-এর বানান। ৪. কয়েকটি Foreign Bank-এর নাম বলেন। ৫. Malaysia-এর Central Bank-এর নাম কী? ৬. Malaysia-এর মুদ্রার নাম কী? ৭. প্রথম Choice কী? ৮. Bank-এর কাজ কী?"}, {"id": 59, "displayId": "59", "board": "Habibur Rahman Sir", "topic": null, "date": null, "time": null, "position": null, "university": null, "tags": [], "body": "Board: Habibur Rahman Sir\nপ্রশ্ন: ১. University & Subject? ২. প্রথম Choice? ৩. PLC-এর পূর্ণরূপ কী? ৪. Sonali Bank PLC বলে কেন? ৫. Sonali Bank-এর Chairman এবং MD-এর নাম কী? ৬. Math। ৭. আরও কয়েকটি প্রশ্ন ছিল।"}, {"id": 60, "displayId": "60", "board": "৩ (কবীর স্যার মেবি?)", "topic": null, "date": "৯/৮/২০২৬", "time": null, "position": null, "university": null, "tags": [], "body": "তারিখ: ৯/৮/২০২৬ | সময়: সকাল ৮টা | বোর্ড: ৩ (কবীর স্যার মেবি?)\nপ্রশ্ন: ১. Bank Rate, Repo Rate, Policy Rate। ২. Repo-এর Full Meaning কী? ৩. Sonali Bank ও Agrani Bank-এর একটা বিশেষ পার্থক্য। ৪. Bank কীভাবে আয় করে? ৫. বাংলাদেশের Budget কী ধরনের; ঘাটতি Budget কেন করা হয়? ৬. ৫টি Foreign Bank-এর নাম। ৭. HSBC-এর Full Form। ৮. Subjective প্রশ্ন কিছু (Veterinary Medicine)। ৯. জেলা সম্পর্কিত কিছু প্রশ্ন।\nঅভিজ্ঞতা: Board Friendly ছিল। সব কিছুর মালিক সৃষ্টিকর্তা।"}, {"id": 61, "displayId": "61", "board": "২", "topic": "Public Administration", "date": "৯/৮/২০২৬", "time": null, "position": null, "university": null, "tags": [], "body": "তারিখ: ৯/৮/২০২৬ | সময়: ১০:০০ AM | বোর্ড: ২ | Subject: Public Administration\nপ্রশ্ন: ১. Local Government। ২. Mayor-এর বাংলা কী? ৩. গ্রাম আদালত আইন—কয়জন সদস্য, জরিমানার পরিমাণ। ৪. Difference between Public Administration and Management। ৫. Hawthorne Experiment। ৬. Motivation Theories। ৭. Organizational Behaviour Theory। ৮. Public Policy।\nঅভিজ্ঞতা: No bank-related question."}, {"id": 62, "displayId": "62", "board": "Habibur Rahman Sir", "topic": null, "date": null, "time": null, "position": null, "university": null, "tags": [], "body": "Board: Habibur Rahman Sir\nপ্রশ্ন: ১. University & Subject? ২. প্রথম Choice? ৩. PLC-এর পূর্ণরূপ কী? ৪. Sonali Bank PLC বলে কেন? ৫. Sonali Bank-এর Chairman এবং MD-এর নাম কী? ৬. Math। ৭. আরও কয়েকটি প্রশ্ন ছিল।"}, {"id": 63, "displayId": "63", "board": "01", "topic": null, "date": null, "time": null, "position": null, "university": null, "tags": [], "body": "Board: 01 | Chairman: Habibur Rahman Sir\nপ্রশ্ন: ১. কোন বিশ্ববিদ্যালয় থেকে পড়াশোনা শেষ করছেন? ২. প্রথম Choice কী? ৩. Citi Bank NA এবং বাংলাদেশের City Bank-এর বানান। ৪. কয়েকটি Foreign Bank-এর নাম বলেন। ৫. Malaysia-এর Central Bank-এর নাম কী? ৬. Malaysia-এর মুদ্রার নাম কী? ৭. প্রথম Choice কী? ৮. Bank-এর কাজ কী?"}, {"id": 64, "displayId": "64", "board": "… Roy (ED)", "topic": "Applied Mathematics (DU)", "date": "৯/৮/২০২৬", "time": null, "position": null, "university": null, "tags": [], "body": "তারিখ: ৯/৮/২০২৬ | Group: 2 | SL: 13 | Board: … Roy (ED) | Subject: Applied Mathematics (DU)\nপ্রশ্ন: ১. Masters করেছেন? CGPA কত? ২. Bank-এর Main 3টি কাজ কী? ৩. Bank কীভাবে Profit করে—এক কথায় বুঝান। ৪. First Choice কী? ৫. Bank-এ কী কী ধরনের Account করা যায়? ৬. (0.03)³ করলে কত হয়? ৭. 0.1 − 0.09 কত? ৮. চলে আসার সময় Math কয়টা জিজ্ঞেস করেছিল।\nঅভিজ্ঞতা: আরও কিছু প্রশ্ন ছিল, মনে নেই। Board Friendly ছিল এবং তাদের সন্তুষ্ট মনে হয়েছে।"}, {"id": 65, "displayId": "65", "board": "Habibur Rahman Sir", "topic": "Finance", "date": null, "time": null, "position": null, "university": null, "tags": [], "body": "Board: Habibur Rahman Sir | Subject: Finance\nপ্রশ্ন: ১. রান্নাঘর আর কাঁচাবাজারের ইংরেজি। ২. Kitchen Cabinet। ৩. University-তে Finance ছাড়া কী কী Subject পড়িয়েছে? ৪. Bank-এর Asset ও Liability। ৫. BB কী কী Commercial Bank থেকে টাকা নেয়? ৬. BB যে টাকা অন্য Bank থেকে নেয়, তা Asset না Liability?"}, {"id": 66, "displayId": "66", "board": "Arief Sir", "topic": "CSE", "date": "৯/৮/২০২৬", "time": null, "position": null, "university": null, "tags": [], "body": "তারিখ: ৯/৮/২০২৬ | সময়: ১:৩০ PM | Subject: CSE | Board: Arief Sir\nপ্রশ্ন: ১. University কোনটা ছিল? ২. CGPA এত ভালো সত্ত্বেও IT নয় কেন? ৩. (আঙুল ঘুরিয়ে বাকিদের সঙ্গে নিজেকে Connect করে) এই Network তৈরি করতে কী কী লাগে? ৪. Router আসলে কী কাজ করে? ৫. Switch ও Router-এর কাজ—দুটি করে। ৬. Hub ব্যবহার করলে কী হতো? ৭. BHBFC-এর কাজ কী? (প্রথম Choice BHBFC ছিল না।)"}, {"id": 67, "displayId": "67", "board": "০৩", "topic": "Textile Engineering", "date": "০৯/০৮/২০২৬", "time": null, "position": null, "university": null, "tags": [], "body": "তারিখ: ০৯/০৮/২০২৬ | বোর্ড: ০৩ | Department: Textile Engineering\nপ্রশ্ন: ১. University-এর নাম। ২. Industry-তে ব্যবহার করা হয় এমন কয়েকটি Machine-এর নাম। ৩. একটি গোলগলা T-shirt বানাতে কোন Machine ব্যবহার হয়? ৪. Textile Machine-এর Fitness Certificate কারা দেয়? (জানা ছিল না) ৫. বাংলাদেশে Green Factory কতটি? ৬. কারা এই Certificate দেয়? ৭. Sustainable Finance বলতে কী বুঝায়? ৮. কয়েকটি Sustainable Goal বলেন (SDG Goals)। ৯. ১ম Choice কী এবং এটি কী ধরনের Bank? ১০. Commercial Bank-এর কাজ কী এবং কেন এদের Commercial Bank বলে? (সুদের হারের পার্থক্য থেকে আয় করে বলছিলাম—উত্তর নেয়নি) ১১. এখন Banking খাতের প্রধান সমস্যা কী? ১২. সম্প্রতি সময়ে কী ধরনের সংকট আছে? ১৩. সম্মিলিত ইসলামী Bank কোন কোন Bank নিয়ে গঠিত?"}, {"id": 68, "displayId": "68", "board": null, "topic": null, "date": null, "time": null, "position": null, "university": null, "tags": [], "body": "প্রশ্ন: ১. কোন চাকরি করেন? ২. Private Company-তে চাকরি দিলে করবেন? ৩. কেন করবেন না? ৪. সত্যি কথা বলবেন—Unilever-এর Country Director-এর Position Offer করা হলো, Salary ৪০ লাখ টাকা। করবেন তো? ৫. Commercial Bank-এর কাজ। ৬. Letter of Credit কী? ৭. Importer যদি টাকা পরিশোধ না করে, তাহলে Bank কী করবে? ৮. যুক্তরাষ্ট্রের Central Bank। ৯. Civil Engineering হয়ে Bank-এ কেন আসতে চান? ১০. ESG কী?"}, {"id": 69, "displayId": "69", "board": null, "topic": null, "date": null, "time": null, "position": null, "university": null, "tags": [], "body": "প্রশ্নসমূহ: ১. আপনার Roll Number-এর Digit-গুলোর Product কত? ২. আপনার First Choice কী? ৩. আপনি কি Sonali Bank PLC-এর Logo দেখেছেন? ৪. কী দেখেছেন? ৫. এখানে “SMART” বলতে কী বোঝায়? ব্যাখ্যা করতে পারবেন? ৬. কয়েক ধরনের Deposit Account-এর নাম বলতে পারবেন? ৭. কে Current Account খুলতে পারেন? ৮. আপনার কি Bank Account আছে? ৯. KYC-এর Full Form কী? ১০. সম্প্রতি Banking Sector-এ কী চালু/প্রবর্তন করা হয়েছে? ১১. আপনি কি Bangla QR ব্যবহার করেন? ১২. কোনটি সঠিক—“To Daffodils” নাকি “Daffodils”? ১৩. “To Daffodils” এবং “Daffodils” কে লিখেছেন?"}, {"id": 70, "displayId": "70", "board": "Kabir Sir", "topic": "Geography & Environment", "date": null, "time": null, "position": null, "university": null, "tags": [], "body": "Subject: Geography & Environment | Board: Kabir Sir | সময়: আনুমানিক ৫–৬ মিনিট\nপ্রশ্নসমূহ: ১. আপনার নাম কী, University কোনটি, কোন Subject? ২. যুক্তরাষ্ট্র Geopolitics-এ কী কী সুবিধা পেয়ে থাকে? ৩. Alps পর্বতমালা কোথায়, Sahara মরুভূমি কোথায়? ৪. Himalaya পর্বতমালা কোন ধরনের? ৫. সুন্দরবনের বাংলাদেশ অংশের আয়তন কত? ৬. কোন বনভূমিকে পৃথিবীর প্রাণ বলা হয় এবং কেন? ৭. Commercial Bank-এর কাজ কী কী? ৮. LC সম্পর্কে বলেন। ৯. মরা কটাল ও তেজ কটাল কী?\nনোট: Moment-এ আরও কিছু প্রশ্ন করা হয়েছিল, এই মুহূর্তে মনে পড়ছে না।"}, {"id": 71, "displayId": "71", "board": "Kader Sir", "topic": "Finance", "date": null, "time": null, "position": null, "university": null, "tags": [], "body": "SO Viva — 2025 ভিত্তিক\nBoard: Kader Sir\nSubject: Finance\nপ্রশ্নসমূহ: ১. Money কী? ২. M3 ও M4 কী? ৩. Notes to Financial Statement-এ কী কী থাকে? ৪. Contingent Liability কী? ৫. Bank-এর Asset ও Liability কী? ৬. LC কেন করা হয়? ৭. Garnish Effect কী?\nনোট: আরও কিছু প্রশ্ন করা হয়েছিল, তবে মনে নেই।"}, {"id": 72, "displayId": "72", "board": "Md. Anis Ur Rahman Sir", "topic": null, "date": null, "time": null, "position": null, "university": null, "tags": [], "body": "Board: Md. Anis Ur Rahman Sir\nসময়: ১৫–১৬ মিনিট\nপ্রশ্নসমূহ: নাম; University; এরপর Subjective Question দিয়ে শুরু।\n১. আপনি Bank-এ চাকরি করলে কীভাবে আপনার Engineering জ্ঞান Bank-এ কাজে লাগাবেন?\n২. Bangla QR নিয়ে বিস্তারিত বলতে বলেছে—বক্তব্যের মতো করে, যা যা জানি বলতে বলেছে।\n৩. Bangla QR ব্যবহার করেছি কি না এবং কোথায় ব্যবহার করেছি।\n৪. First Choice শুনে জিজ্ঞেস করেছে—কেন Sonali Bank? অন্য Bank-এও তো অনেক গ্রাহক, তাহলে Sonali Bank-ই কেন?\n৫. Sonali Bank কেন বিশ্বস্ত? কার কাছে বিশ্বস্ত?\n৬. Bank-এর কর্মকর্তা তো অনেক সময় টাকা নিয়ে চলে যায়, তাহলে কীভাবে বিশ্বস্ত হলো?\n৭. এক্ষেত্রে কে দায়ী? এটাকে Bank-এর কোনো ধরনের সমস্যা নাকি সেই Officer-এর সমস্যা—কোনটা বলা যেতে পারে?\n৮. Sonali Bank কী এমন Special কিছু করে?\n৯. Math দুইটা মুখে মুখে করতে দিয়েছে। দুটাই হয়েছে।\nঅভিজ্ঞতা: এরপর “Best of Luck” বলে আসতে বলেছে।"}, {"id": 73, "displayId": "73", "board": "Habibur Rahman Sir", "topic": null, "date": null, "time": null, "position": null, "university": null, "tags": [], "body": "Board: Habibur Rahman Sir\nপ্রশ্নসমূহ: ১. কোথায় আছেন? Posting কোথায়? ২. কয়েকটি Regulatory Institution-এর নাম। ৩. BSEC-এর কাজ কী? ৪. রাষ্ট্রায়ত্ত কোন Bank-এর Share Share Market-এ আছে? ৫. ১৭ টাকা কত টাকার ১৭ শতাংশ?"}, {"id": 74, "displayId": "74", "board": "Md. Anis Ur Rahman Sir", "topic": null, "date": null, "time": null, "position": null, "university": null, "tags": [], "body": "Board: Md. Anis Ur Rahman Sir\nসময়: ১৫–১৬ মিনিট\nপ্রশ্নসমূহ: নাম; University; এরপর Subjective Question দিয়ে শুরু।\n১. আপনি Bank-এ চাকরি করলে কীভাবে আপনার Engineering জ্ঞান Bank-এ কাজে লাগাবেন?\n২. Bangla QR নিয়ে বিস্তারিত বলতে বলেছে—বক্তব্যের মতো করে, যা যা জানি বলতে বলেছে।\n৩. Bangla QR ব্যবহার করেছি কি না এবং কোথায় ব্যবহার করেছি।\n৪. First Choice শুনে জিজ্ঞেস করেছে—কেন Sonali Bank? অন্য Bank-এও তো অনেক গ্রাহক, তাহলে Sonali Bank-ই কেন?\n৫. Sonali Bank কেন বিশ্বস্ত? কার কাছে বিশ্বস্ত?\n৬. Bank-এর কর্মকর্তা তো অনেক সময় টাকা নিয়ে চলে যায়, তাহলে কীভাবে বিশ্বস্ত হলো?\n৭. এক্ষেত্রে কে দায়ী? এটাকে Bank-এর কোনো ধরনের সমস্যা নাকি সেই Officer-এর সমস্যা—কোনটা বলা যেতে পারে?\n৮. Sonali Bank কী এমন Special কিছু করে?\n৯. Math দুইটা মুখে মুখে করতে দিয়েছে। দুটাই হয়েছে।\nঅভিজ্ঞতা: এরপর “Best of Luck” বলে আসতে বলেছে।"}, {"id": 75, "displayId": "75", "board": "Kabir Sir", "topic": null, "date": "১০/০৮/২০২৬", "time": null, "position": null, "university": null, "tags": [], "body": "Board: Kabir Sir\nতারিখ: ১০/০৮/২০২৬\nসময়: সকাল ৮টা\nপ্রশ্নসমূহ: ১. নাম কী? ২. Roll কত? ৩. Roll-এর Digit-গুলোর গুণফল কত? ৪. এখন কী করেন? ৫. Joining হয়নি? ৬. First Choice কী? ৭. Senior Officer (General) এবং Senior Officer (Cash)—কোনটা বেছে নেবেন? ৮. কেন? ৯. Sonali Bank কী ধরনের Bank? ১০. এর মালিক কে? ১১. Sonali Bank-এর ৩টা প্রধান কাজ বলুন। ১২. Textile Engineering-এর জ্ঞান Banking খাতে কীভাবে কাজে লাগাবেন? ১৩. ঋণ দেওয়ার সময় একটি Textile Mill কীভাবে যাচাই করবেন? ১৪. Lead Certificate কত প্রকার? কারা দেয়? ১৫. একটি Math জিজ্ঞাসা করেছিল।"}, {"id": 76, "displayId": "76", "board": "Habibur Rahman Sir", "topic": null, "date": "১০/০৮/২০২৬", "time": null, "position": null, "university": null, "tags": [], "body": "Board: Habibur Rahman Sir\nতারিখ: ১০/০৮/২০২৬\nসময়: বিকাল ১:৩০টা\nসময়কাল: ৬–৭ মিনিট\nপ্রশ্নসমূহ: ১. নাম কী? কোন University থেকে Graduation করেছেন? ২. Subjective Question। ৩. আপনার Engineering জ্ঞান Bank-এ কাজে লাগাবেন কীভাবে? ৪. Commercial Bank-এর Main কাজগুলো বলেন। ৫. Central Bank-এর কাজ বলেন। ৬. Central Bank সরাসরি সাধারণ মানুষকে ঋণ দেয় না কেন? ৭. রাজস্ব নীতি ও মুদ্রানীতি সম্পর্কে বলেন। এই দুইটি কারা প্রণয়ন করেন? ৮. Foreign Bank কয়টি? ২–৩টির নাম বলেন। ৯. সংকোচনমূলক ও সম্প্রসারণমূলক মুদ্রানীতি সংক্ষেপে বুঝান। ১০. Central Bank টাকা ছাপানোর মাধ্যমে Liquidity Crisis সমাধান করলে কী সমস্যা হতে পারে?"}, {"id": 77, "displayId": "77", "board": null, "topic": "Fisheries", "date": null, "time": null, "position": null, "university": null, "tags": [], "body": "সময়: বিকাল ১:৩০টা\nSubject: Fisheries\nপ্রশ্নসমূহ: ১. নাম। ২. Subject। ৩. University। ৪. Fisheries-এর GDP-তে অবদান। ৫. BFRI থেকে উদ্ভাবিত মাছের জাত এবং Pangas সম্পর্কে জানতে চেয়েছে। ৬. First Choice কী ও কেন? ৭. Fisheries পড়ে Bank-এ কেন? ৮. Sonali Bank-এর শাখা কতগুলো? ৯. কৃষি ক্ষেত্রে অবদান রাখা Bank এবং এগুলো কোন Region-এ? ১০. শখ কী? ১১. Carp মাছ কেন বেশি চাষ হয়? ১২. Carp কি শুধু Artificial Feed-ই খাবে? ১৩. আরও কিছু প্রশ্ন ছিল, মনে নেই।"}, {"id": 78, "displayId": "78", "board": "Shamsuddin Sir (ED)", "topic": null, "date": null, "time": null, "position": null, "university": null, "tags": [], "body": "Board: Shamsuddin Sir (ED)\nBanking: ১. একজন Banker-এর কোন গুণ অবশ্যই থাকা উচিত? ২. Commercial Bank-এর কাজ কী? ৩. Central Bank-এর কাজ কী কী? ৪. বাংলাদেশে অবস্থানরত ৫টি Foreign Bank-এর নাম বলুন।\nPhysics: ৫. প্লবতার সূত্র কী?\nBiology: ৬. Nucleus-এর ভিতরে কী কী থাকে?\nCSE: ৭. ICT-তে কী কী Component থাকে? ৮. Motherboard-এ কী কী থাকে? ৯. Semiconductor Diode-এর গঠনপ্রণালি বলুন।"}, {"id": 79, "displayId": "79", "board": "Habib Sir, Board-1", "topic": "Economics", "date": null, "time": null, "position": null, "university": null, "tags": [], "body": "Board: Habib Sir, Board-1\nসময়: সকাল ৮টা\nSubject: Economics\nপ্রশ্নসমূহ: ১. Graduation কবে শেষ করেছেন? মাথায় আছে কিছু? ২. Trade-এর একটা Short Form জিজ্ঞেস করেছিল। ৩. Marshall Law। ৪. Money Supply—M1, M2, M3 প্রত্যেকটা বর্ণনা করেন। ৫. Supply Curve Vertical থাকলে কী হয়? ৬. National Income কী? Equation বলেন। ৭. বর্তমানে কী করছেন? ৮. First Choice? ৯. Sonali Bank-এর কাজ কী? ১০. কখনো গিয়েছেন? ১১. Branch কয়টা? ১২. সর্বশেষ শাখা? ১৩. আপনার Bank ও Sonali Bank-এর মধ্যে পার্থক্য?\nনোট: এছাড়াও প্রত্যেকটা প্রশ্নের সঙ্গে অনেক Follow-up Question জিজ্ঞেস করেছিল।"}, {"id": 80, "displayId": "80", "board": "Habib Sir, Board-1", "topic": "Finance", "date": "১১/০৮/২০২৬", "time": null, "position": null, "university": null, "tags": [], "body": "Board: Habib Sir, Board-1\nতারিখ: ১১/০৮/২০২৬\nসময়: সকাল ৮টা\nSubject: Finance\nপ্রশ্নসমূহ: ১. NPV নিয়ে আলোচনা টাইপ Question। ২. Fictitious Assets। ৩. Crowding Out Effect। ৪. Crowdfunding। ৫. Private Placement। ৬. First Choice। ৭. Intangible Asset—এটি নিয়ে আরও Conceptual Question। ৮. Math কয়টা হয়েছে? ৯. কোথাও Job করি কি না?\nঅভিজ্ঞতা: সব মিলিয়ে Board Friendly ছিল।"}, {"id": 81, "displayId": "81", "board": "04", "topic": "Physics", "date": null, "time": null, "position": null, "university": null, "tags": [], "body": "Board: 04 | Chairman: Sarwar Sir | Subject: Physics\nপ্রশ্নসমূহ: ১. What is Ohm's Law? ২. What is Semiconductor? ৩. Application of Semiconductor? ৪. Famous Scientist from DU Physics? ৫. Einstein-এর parallel কে ছিলেন? (S. N. Bose) ৬. Nobel Prize না পেলে S. N. Bose Nobel Prize পেতেন? ৭. First Choice কী? ৮. Sonali Bank-এর কয়টি Branch? ৯. দেশের বাইরে কোথায় কোথায় Branch আছে? ১০. Math কয়টা হয়েছে? (কেন মাত্র ৩টা?) ১১. আর কোথায় Viva দিয়েছেন? ১২. BCS Exam দিয়েছেন কি না? ১৩. কতদূর গিয়েছেন?\nশেষে: একজন Madam বললেন, “Job preparation Physics থেকে পুরো different। ভালোভাবে preparation নেন।”"}, {"id": 82, "displayId": "82", "board": "04", "topic": "Textile", "date": "১১/০৮/২০২৬", "time": null, "position": null, "university": null, "tags": [], "body": "তারিখ: ১১/০৮/২০২৬ | Board: 04 | Serial: 02 | Subject: Textile\nপ্রশ্নসমূহ: ১. আপনার নাম? ২. আপনি Textile-এ পড়াশোনা করেছেন? ৩. BUTEX থেকে? ৪. কত সালে পাশ করেছেন? (২০২৫) ৫. কোথাও Job করছেন? ৬. কেন? আগে তো শুনতাম পাশ করার আগেই আপনাদের Job হয়ে যায়। এখন কি আর আগের মতো নেই? ৭. তাহলে আপনি Job-এ ঢুকছেন না কেন? Job-এ ঢুকলে আত্মবিশ্বাস বাড়বে। Job-এর পাশাপাশি BCS দেন, অন্য Job-এর চেষ্টা করেন—সমস্যা কী? (এটা নিয়ে অনেকক্ষণ প্রশ্ন করেছে) ৮. বর্তমানে Textile Sector-এর Challenges কী কী? ৯. USA Reciprocal Tariff কেন আরোপ করেছে? ১০. USA-তে আমরা কত Import করি আর কত Export করি?\nExternal 2: ১১. First Choice কোন Bank? ১২. কেন? ১৩. Sonali Bank-এর Branch কতটি? ১৪. বিদেশে কোনো Branch আছে? ১৫. MD Sir-এর নাম জানেন?\nশেষে: “ঠিক আছে, আসেন।”"}, {"id": 83, "displayId": "83", "board": null, "topic": null, "date": null, "time": null, "position": null, "university": null, "tags": [], "body": "তারিখ: ১১/০৮/২০২৬, সময়: সকাল ১০টা, বিষয়: Agriculture। Introduce yourself বলতে বলেন। কৃষির Sub-sector গুলো কী কী? কৃষির অবদান কমছে কেন? কৃষিতে Mechanization-এর বর্তমান অবস্থা কী? কৃষিখাতে পর্যাপ্ত শ্রমিক পাওয়া যাচ্ছে না কেন? কয়েকটি Global Bank-এর নাম বলতে বলেন। First Choice কী এবং কেন? সোনালী ব্যাংকের বিদেশে কয়টি শাখা আছে, কী কী এবং বিদেশে সোনালী ব্যাংকের শাখাকে কী বলে? মুখে মুখে দুটি Math করতে দেন—(০.০২)³ = কত এবং ০.০২ × ০.০০১ = কত? Singapore-এর Central Bank-এর নাম ও মুদ্রার নাম কী? এশিয়ায় Dollar ব্যবহার করে এমন দুটি দেশের নাম কী? Dollar-কে আর কী কী নামে ডাকা হয়? Greenback কাকে বলে? World Bank সম্পর্কেও কয়েকটি প্রশ্ন করেন।"}, {"id": 84, "displayId": "84", "board": "Deputy Governor, Dr. Md. Kabir Ahmed", "topic": null, "date": null, "time": null, "position": null, "university": null, "tags": [], "body": "বোর্ড: Deputy Governor, Dr. Md. Kabir Ahmed | সময়: প্রায় ১০ মিনিট | বিষয়: Computer Science। বিশ্ববিদ্যালয় ও পড়াশোনা সম্পর্কে জিজ্ঞেস করার পর বলেন, “Computer Science-এর কিছু মনে আছে নাকি সরকারি চাকরির প্রস্তুতিতে সব ভুলে গেছেন?” এরপর SSC Result প্রকাশের সময় ব্যবহৃত “Server Down” বলতে কী বোঝায় এবং কী কী কারণে Server Down হতে পারে—তা জিজ্ঞেস করেন। Banking sector-এ ব্যবহৃত কিছু Software-এর নাম জানতে চান। Word, Excel, LaTeX বলার পর স্যার RTGS ও BEFTN-এর কথা গ্রহণ করেন এবং RTGS কী, এর মাধ্যমে সর্বোচ্চ ও সর্বনিম্ন কত টাকা Transfer করা যায়—তা জিজ্ঞেস করেন। এরপর BEFTN-এর Full Form জানতে চান। First Choice কী, এত ব্যাংক থাকতে সেটিই কেন First Choice, পছন্দের প্রতিষ্ঠান কী নিয়ে কাজ করে এবং ব্যাংক এত টাকা কোথা থেকে পায় যে Loan ও Investment করতে পারে—এসব প্রশ্ন করেন। First Choice হিসেবে BHBFC বলায় প্রতিষ্ঠানটি কে পরিচালনা করে, Full Form কী, শাখা সারা দেশে আছে কি না এবং কী কী প্রকল্প নিয়ে কাজ করে—তা জানতে চান। পরে কোথায় থাকেন, বাসা কোথায়, বাসা থেকে এসেছেন নাকি কোথাও ছিলেন, নাস্তা করে এসেছেন কি না, কোথাও চাকরি করেন কি না এবং আবার First Choice কোনটি বলেছিলেন—এসব ব্যক্তিগত প্রশ্ন করেন। শেষে বলেন, “ঠিক আছে, আসুন।”"}, {"id": 85, "displayId": "85", "board": null, "topic": null, "date": "১১/০৮/২০২৬, সময়: সকাল ৮টা", "time": null, "position": null, "university": null, "tags": [], "body": "তারিখ: ১১/০৮/২০২৬, সময়: সকাল ৮টা, Serial: ১৪, Board: কবীর স্যার, Subject: Applied Mathematics, RU। বোর্ড সাধারণত প্রার্থীদের প্রায় ১০ মিনিট করে রাখছিল; তবে শেষের ৩–৪ জনকে তুলনামূলক কম সময়, প্রায় ৩–৪ মিনিট করে রাখা হয়েছে। প্রার্থীকে নাম কী, বর্তমানে কী করেন এবং কোন Subject পড়েছেন—এসব জিজ্ঞেস করার পর Bernoulli Equation সম্পর্কে প্রশ্ন করেন। Iran–Israel যুদ্ধে Missile কোনো নির্দিষ্ট Law মেনে চলে কি না—এবং Israel-এর Missile Defence System-এর নাম কী—তা জিজ্ঞেস করেন।"}, {"id": 88, "displayId": "88", "board": "ED—Shamsuddin Ahamed", "topic": null, "date": null, "time": null, "position": null, "university": null, "tags": [], "body": "সময়: সকাল ১০টা | বোর্ড: ED—Shamsuddin Ahamed | বিষয়: Agriculture\nনাম, পড়াশোনা ও Subject এবং Roll Number জানতে চাওয়া হয়। এরপর Agriculture-এর ব্যাপক ধারণাকে কী কী ভাগে ভাগ করা যায়, খাদ্যের উপাদান কী কী, শর্করা কোন কোন খাবারে পাওয়া যায় এবং একটি উদাহরণ দেওয়ার পর আরও কোথায় শর্করা পাওয়া যায়—এসব জিজ্ঞেস করেন। গম, ভুট্টা ও চালের শর্করার মধ্যে পার্থক্য কী, বাংলাদেশে গমের চাষ কেমন, দেশে কোথায় ভুট্টা বেশি চাষ হয় এবং সেখানে গিয়েছেন কি না—তা জানতে চান। সরকার Budget-এর সময় Agriculture Sector-এ Subsidy দেয়—এ বছর কত Subsidy দেওয়া হয়েছে, কোন কোন ক্ষেত্রে Subsidy দেওয়া হয় এবং কেন দেওয়া হয়—এসব প্রশ্ন করেন। এরপর বাংলাদেশে কতটি Foreign Bank আছে এবং তাদের নাম, কয়েকটি Regulatory Authority-এর নাম, বর্তমানে কোথায় আছেন এবং Math কয়টি হয়েছে—এসব জানতে চান। আরও কিছু প্রশ্ন করেছিলেন, তবে মনে নেই।"}, {"id": 89, "displayId": "89", "board": "Dr. Md. Habibur Rahman Sir", "topic": null, "date": null, "time": null, "position": null, "university": null, "tags": [], "body": "Board: Dr. Md. Habibur Rahman Sir | Serial No.: 01\nনাম, University ও Subject সম্পর্কে জানতে চান। বর্তমানে কোথায় Job করছেন—এটি জিজ্ঞেস করেন। এরপর Central Bank-এর কাজ কী, Monetary Policy-এর সংজ্ঞা, Inflation-এর সংজ্ঞা এবং কীভাবে Inflation পরিমাপ করা হয়—এসব প্রশ্ন করেন। সম্প্রতি Policy Rate-এ কী পরিবর্তন হয়েছে, কেন করা হয়েছে এবং এর ফলে Economy-তে কী ধরনের প্রভাব পড়তে পারে—তা জানতে চান। এরপর Money Supply, Narrow Money ও Broad Money-এর সংজ্ঞা জিজ্ঞেস করেন। Subjective প্রশ্ন করেন। এরপর Lender of Last Resort কী এবং কেন Central Bank-কে Lender of Last Resort বলা হয়—এ বিষয়ে প্রশ্ন করেন। শেষে Math কয়টি হয়েছে জানতে চান এবং একটি Math Solve করতে দেন।"}, {"id": 90, "displayId": "90", "board": null, "topic": null, "date": "১১/০৮/২০২৬", "time": null, "position": null, "university": null, "tags": [], "body": "তারিখ: ১১/০৮/২০২৬, বোর্ড: ড. হাবিবুর রহমান স্যার, Serial No-01। নাম, বিশ্ববিদ্যালয়, Subject এবং বর্তমানে কোথায় Job করছেন—এসব দিয়ে শুরু হয়। এরপর Central Bank-এর কাজ, Monetary Policy-এর সংজ্ঞা, Inflation-এর সংজ্ঞা এবং Inflation কীভাবে Measure করা হয়—জিজ্ঞেস করা হয়। সম্প্রতি Policy Rate-এ কী পরিবর্তন হয়েছে, কেন হয়েছে এবং এর ফলে Economy-তে কী ধরনের প্রভাব পড়তে পারে—এ বিষয়ে প্রশ্ন করা হয়। Money Supply এবং Narrow Money ও Broad Money-এর সংজ্ঞা জানতে চাওয়া হয়। এরপর Subjective Questions করা হয় এবং Lender of Last Resort কী ও কেন প্রয়োজন—এ বিষয়ে প্রশ্ন করা হয়। শেষে Maths কয়টি হয়েছে এবং একটি Math Solve করতে বলা হয়।"}, {"id": 91, "displayId": "91", "board": null, "topic": null, "date": "১১/০৮/২০২৬, সময়: দুপুর ১:৩০", "time": null, "position": null, "university": null, "tags": [], "body": "তারিখ: ১১/০৮/২০২৬, সময়: দুপুর ১:৩০, বোর্ড: হাবিবুর রহমান স্যার, বিষয়: Civil Engineering। Foundation-এর বিভিন্ন প্রকার, Caisson Foundation কখন ব্যবহার করা হয়, Padma Bridge-এ কোন ধরনের Foundation ব্যবহার করা হয়েছে এবং FAR কী—এসব প্রশ্ন করা হয়। ঢাকার সব জায়গায় FAR একই হবে কি না এবং ভিন্ন হলে তার কারণ কী—এটিও জানতে চাওয়া হয়। এরপর Bangladesh Bank কী ধরনের Institution, Bangladesh Bank-এর কাজ কী, টাকা কে ছাপায় এবং টাকা ছাপানোর পর কীভাবে তা বাজারে আসে—এসব প্রশ্ন করা হয়। শেষে The Daily Star ছাড়া তিনটি English Newspaper-এর নাম বলতে বলা হয়।"}, {"id": 92, "displayId": "92", "board": null, "topic": null, "date": null, "time": null, "position": null, "university": null, "tags": [], "body": "তারিখ: ১১/০৮/২০২৬, Group-2, Serial-14, ED: Shamsuddin Ahmed। কোথা থেকে পড়াশোনা করেছেন এবং বর্তমানে কোথায় আছেন—এসব প্রশ্ন দিয়ে শুরু হয়। এরপর Clearing-এর কয়েকটি Tools-এর নাম জানতে চাওয়া হয়। BACH-এর পূর্ণরূপ, BEFTN ও RTGS-এর মধ্যে পার্থক্য এবং তাদের Settlement Time সম্পর্কে প্রশ্ন করা হয়। Differentiation ও Integration-এর বাস্তব প্রয়োগ কোথায় হয়—এটি জানতে চাওয়া হলে Integration-এর ব্যবহার সম্পর্কে উত্তর দেওয়া হয়। এরপর Computer কোন Number System অনুসরণ করে এবং Decimal ও Binary System কীভাবে কাজ করে—তা ব্যাখ্যা করতে বলা হয়। পরে Keyboard-এ ‘Q’ টাইপ করলে সেটি কীভাবে Process হয়—এ বিষয়ে প্রশ্ন করা হয়। শেষের দিকে বোর্ডের একজন সদস্য Mathematics-এর শিক্ষার্থী হিসেবে প্রার্থীর Basic Computer Knowledge-এর বিষয়টি বিবেচনা করেন। ভাইভাটি প্রায় ৪–৫ মিনিট স্থায়ী হয়।"}, {"id": 93, "displayId": "93a", "board": null, "topic": null, "date": null, "time": null, "position": null, "university": null, "tags": [], "body": "তারিখ: ১২/০৮/২০২৬, সময়: সকাল ৮টা, Group-2, Serial-14, বিষয়: নগর ও অঞ্চল পরিকল্পনা বিভাগ, বোর্ড: জনাব হাবিবুর রহমান। অনুমতি নিয়ে প্রবেশ করে পরিচয় ও বর্তমানে কী করেন—এ ধরনের প্রাথমিক প্রশ্ন করা হয়। এরপর Housewife-এর পরিবর্তে আরও ভালো/Professional কোন শব্দ ব্যবহার করা যায়—এটি জানতে চাওয়া হয়। কালভার্ট কেন তৈরি করা হয় এবং এর মূল উপকারিতা কী—এ বিষয়ে প্রশ্ন করা হয়। Sustainable Development-এর সংজ্ঞা, এর কয়েকটি Criteria এবং SDG কে প্রবর্তন করেছে—এসব জানতে চাওয়া হয়। নারী ক্ষমতায়ন কী, SAARC-এর সর্বশেষ সদস্য কোন দেশ, সেই দেশের Central Bank-এর নাম ও Currency কী—এ বিষয়ে প্রশ্ন করা হয়। বাংলাদেশে Foreign Bank আছে কি না, দুটি Global Bank-এর নাম এবং দক্ষিণ-পূর্ব এশিয়ার কোন কোন দেশ Dollar ব্যবহার করে—এসব জিজ্ঞেস করা হয়। সর্বাধিক Reserve-এর Bank কোনটি, DAP কী এবং এটি ব্যাখ্যা করতে বলা হয়। শেষে বাংলাদেশ ব্যাংকে এর আগে কতবার Viva দিয়েছেন এবং কোনোবার Recommended হয়েছেন কি না—এগুলো জানতে চাওয়া হয়।"}, {"id": 93, "displayId": "93b", "board": "৩ সদস্য", "topic": "English", "date": null, "time": null, "position": null, "university": null, "tags": [], "body": "Department: English\nসময়: সকাল ১০টা\nGroup: 02 | Serial: 13\nBoard: ৩ সদস্য\nনাম ও পরিচয় দিয়ে শুরু। Chairman জিজ্ঞেস করেন, “Animal Farm—এটি কোন ধরনের writing?” উত্তর দেওয়া হয় Political Satire। এরপর Animal Farm-এর গল্প সম্পর্কে বলতে বলেন। পরে The Merchant of Venice সম্পর্কে সংক্ষেপে বলতে বলেন। এরপর বর্তমানে কোথাও চাকরি করা হচ্ছে কি না এবং এটি কততম viva—এসব জানতে চান। First Choice কী এবং Sonali Bank-এর Chairman ও MD-এর কাজ কী—জিজ্ঞেস করেন। Sonali Bank কী ধরনের ব্যাংক এবং বিদেশের সঙ্গে কী ধরনের কার্যক্রম পরিচালনা করে—এ নিয়েও প্রশ্ন করেন। Foreign exchange ও foreign trade-এর ক্ষেত্রে Sonali Bank-এর ভূমিকা এবং LC সম্পর্কে বিস্তারিত বলতে বলেন। এরপর Sonali Bank-এর মতো আরও কোন কোন রাষ্ট্রায়ত্ত ব্যাংক আছে এবং সবগুলোর পূর্ণ নাম বলতে বলেন। BASIC Bank PLC-এর শেষে PLC হবে কি না এবং BASIC-এর full form জানতে চান। পরে China-এর state/central bank-এর নাম ও মুদ্রার নাম এবং USA-এর dollar-এর বিকল্প নাম কী কী—জিজ্ঞেস করেন। Greenback ও Petrodollar কেন বলা হয়, সেটিও জানতে চান। USA-এর central bank-এর নাম এবং প্রধানের পদবী সম্পর্কেও প্রশ্ন করেন। শেষে বিশ্ববিদ্যালয়ের নাম জানতে চেয়ে বিশ্ববিদ্যালয়ের সঙ্গে সম্পর্কিত বিখ্যাত ব্যক্তিত্ব, তেভাগা আন্দোলন, এর অংশীদারিত্বের অনুপাত এবং হাজী দানেশের কবর কোথায়—এসব প্রশ্ন করেন। বের হওয়ার আগে কয়টি Math হয়েছে জানতে চান এবং মুখে মুখে (0.02)⁴ করতে দেন। এছাড়া বাড়ি থেকে পঞ্চগড়ের দূরত্বও জিজ্ঞেস করেন। বোর্ডের আগের প্রার্থীদের মার্কিং আনুমানিক ১৮–২১-এর মধ্যে ছিল।"}, {"id": 94, "displayId": "94", "board": "হাবিবুর রহমান স্যার", "topic": null, "date": "১২/০৮/২০২৬", "time": null, "position": null, "university": null, "tags": [], "body": "তারিখ: ১২/০৮/২০২৬\nবিষয়: কৃষি\nসময়: দুপুর ১:৩০টা\nবোর্ড: হাবিবুর রহমান স্যার\nনাম এবং বর্তমানে কী করছেন—এ দিয়ে শুরু। এরপর জিজ্ঞেস করেন, “আপনি তো Officer General পদে Sonali Bank-এ সুপারিশপ্রাপ্ত, আজ আবার viva দিতে এলেন কেন?” উত্তরে ৯ম গ্রেডের জন্য চেষ্টা করার কথা বলা হয়। এরপর মাস্টার্সের subject জানতে চান। কৃষির খাত কয়টি এবং কী কী—জিজ্ঞেস করেন। বাংলাদেশের বনজ সম্পদের পরিমাণ কত, কত থাকা উচিত এবং বর্তমান সরকারের বৃক্ষরোপণ কর্মসূচি বাস্তবায়িত হলে বনভূমির পরিমাণ কতটা বাড়তে পারে—এসব নিয়ে প্রশ্ন করেন। এরপর Sonali, Agrani ইত্যাদি ব্যাংকগুলো কোন প্রতিষ্ঠান পরিচালনা করে এবং সেই প্রতিষ্ঠানের অন্যান্য প্রধান কাজ কী—জিজ্ঞেস করেন। মুদ্রানীতি কী এবং কেন করা হয়—এটিও জানতে চান। এরপর “তফসিলভুক্ত ব্যাংক” বলা হয়—এই তফসিলটি কোথায় আছে?—এমন একটি প্রশ্ন করেন, যা প্রার্থী বুঝতে পারেননি। পরে বলেন, “আচ্ছা, আপনি তো নারী। নারীর ক্ষমতায়নকে একটি শব্দে প্রকাশ করুন।” এরপর Sonali Bank-এ সুপারিশপ্রাপ্ত হওয়ায় ব্যাংকটির শাখা কয়টি এবং বর্তমানে MD কে—জিজ্ঞেস করেন। শেষে ধন্যবাদ দিয়ে চলে যেতে বলেন। বের হওয়ার সময় আবার জিজ্ঞেস করেন, “Math কয়টা হয়েছে?”—উত্তর: ৩টি।"}, {"id": 95, "displayId": "95", "board": "উল্লেখ নেই", "topic": null, "date": "১৩/০৮/২০২৬", "time": null, "position": null, "university": null, "tags": [], "body": "তারিখ: ১৩/০৮/২০২৬\nবিষয়: Mathematics\nবোর্ড: উল্লেখ নেই\nঅনুমতি নিয়ে প্রবেশের পর সালাম ও পরিচয় পর্বে রাজশাহী বিশ্ববিদ্যালয় থেকে Mathematics-এ পড়াশোনা এবং ২০২৩ সালের ডিসেম্বর মাসে Master’s শেষ করার বিষয়টি জানান। এরপর বর্তমানে কী করছেন এবং Master’s শেষ হওয়ার পর কী করেছেন—এ বিষয়ে প্রশ্ন করা হয়। ২০২৩ সালভিত্তিক Officer Cash পদে Primary Selection-এর কথা জানান এবং এর আগে কয়েকটি চাকরির viva দেওয়ার কথা বলেন। পরে informal কাজ হিসেবে tuition করিয়েছেন কি না জানতে চান। এরপর Mathematics থেকে প্রশ্ন শুরু হয়—সিলিন্ডারের ক্ষেত্রফল ও আয়তন, গোলকের আয়তন ও ক্ষেত্রফল, Golden Ratio, ১ থেকে ১০০ পর্যন্ত স্বাভাবিক সংখ্যার যোগফল, ১ থেকে ১০ পর্যন্ত সংখ্যার যোগফল এবং ১ থেকে ১০০ পর্যন্ত মোট কতটি ৯ আছে—এসব জিজ্ঞেস করা হয়। এরপর First Choice জানতে চাইলে Sonali Bank PLC বলেন। Sonali Bank-এর তিনটি গুরুত্বপূর্ণ কাজ বলতে বলেন। প্রথমে আমানত গ্রহণ, ঋণ প্রদান, সরকারি agent/treasury কার্যক্রম এবং tax-VAT-রাজস্ব সংগ্রহের কথা বললে board আরও গুরুত্বপূর্ণ কাজ জানতে চায় এবং foreign trade facilitation-কে গুরুত্বপূর্ণ কার্যক্রম হিসেবে উল্লেখ করে। এরপর Sonali Bank-এর বর্তমান শাখা সংখ্যা এবং সর্বশেষ শাখার নাম জানতে চান। পরে Febinose series সম্পর্কে জিজ্ঞেস করলে উত্তর দিতে পারেননি। এরপর Bangla QR সম্পর্কে বিস্তারিত বলতে বলেন এবং এর সংজ্ঞা ও ব্যবহার ব্যাখ্যা করেন। শেষে board viva শেষ করে আসতে বলে।"}, {"id": 96, "displayId": "96", "board": "কবির স্যার", "topic": null, "date": "১৩/০৮/২০২৬", "time": null, "position": null, "university": null, "tags": [], "body": "তারিখ: ১৩/০৮/২০২৬\nবিষয়: Banking and Insurance\nবোর্ড: কবির স্যার\nপ্রথমে বাংলাদেশে প্রচলিত Insurance Act সম্পর্কে প্রশ্ন করা হয়। এরপর IDRA কাদের regulate করে এবং বাংলাদেশে আর কী ধরনের insurance রয়েছে—এসব জিজ্ঞেস করা হয়। উত্তর নিয়ে কিছুটা cross-questioning হয় এবং পরে কবির স্যার উত্তরটি ব্যাখ্যা করেন। এরপর বাংলাদেশে মোট কতটি insurance company রয়েছে—এটি জানতে চাওয়া হয়। দ্বিতীয় external একজন banker-এর কী কী গুণ থাকা উচিত—এ বিষয়ে প্রশ্ন করেন। এরপর বাংলাদেশের banking industry-এর সবচেয়ে বড় সমস্যা কী—জিজ্ঞেস করলে NPL বলা হয়। পরে NPL-এর পেছনে bad governance এবং bad governance-এর পেছনে political influence-এর কথা বলা হয়। এ পর্যায়ে board উত্তরটি সংশোধন করে এবং viva-তে রাজনৈতিক মন্তব্য এড়িয়ে objective ও policy-oriented ভাষায় banking sector-এর সমস্যা তুলে ধরার পরামর্শ দেয়। এরপর কবির স্যার বিশ্ববিদ্যালয় ও হল-সংক্রান্ত কিছু ব্যক্তিগত প্রশ্ন করেন এবং রাজনীতি করা হয় কি না জানতে চান। সংক্ষিপ্ত viva শেষে আসতে বলা হয়। ইংরেজি অংশে প্রাপ্ত নম্বর ১২ দেখা যায়।"}, {"id": 97, "displayId": "97", "board": "আনিসুর রহমান স্যার", "topic": null, "date": "১৩/০৮/২০২৬", "time": null, "position": null, "university": null, "tags": [], "body": "তারিখ: ১৩/০৮/২০২৬\nসময়: সকাল ৮টা\nগ্রুপ: ২ | সিরিয়াল: ১\nবোর্ড: আনিসুর রহমান স্যার\nসময়কাল: ১৫–১৮ মিনিট\nনাম, বিশ্ববিদ্যালয় ও subject দিয়ে শুরু। এরপর Agriculture, Forestry ও Botany-এর কাজের ক্ষেত্র এবং পারস্পরিক পার্থক্য নিয়ে প্রায় ৩ মিনিট আলোচনা হয়। সুন্দরবনে গেলে গাছের বয়স কীভাবে নির্ণয় করা যায়—এটি জিজ্ঞেস করা হয়; পরে বোঝা যায়, board মূলত carbon isotope ব্যবহারের বিষয়টি জানতে চেয়েছিল। এরপর First Choice কোন ব্যাংক জানতে চান। Sonali Bank কোন আইন দ্বারা গঠিত, বর্তমান MD ও Chairman কে, Chairman আগে banker ছিলেন কি না, Sonali Bank-এর মোট শাখা এবং বিদেশে শাখা কয়টি—এসব প্রশ্ন করেন। এরপর ভারতের বৃহত্তম ব্যাংক এবং পাকিস্তানের বৃহত্তম ব্যাংকের নাম জানতে চান। পরে প্রার্থীর নিজ জেলার বাড়ি কোথায়, মৌলভীবাজারে কয়টি উপজেলা ও তাদের নাম, বৃহত্তর সিলেটের জেলাগুলো, সুনামগঞ্জের পার্শ্ববর্তী জেলা এবং ওই দুই জেলার মধ্যে কী মিল—এসব জেলা-ভিত্তিক প্রশ্ন করা হয়। শেষে 0.1 থেকে 0.9 বিয়োগ করতে দেন, যেখানে উত্তর ভুল হয়। Board প্রতিটি প্রশ্নের পর কিছুক্ষণ সময় নিয়ে পরবর্তী প্রশ্ন করছিল এবং সামগ্রিকভাবে যথেষ্ট friendly ছিল।"}, {"id": 98, "displayId": "98", "board": "DG Habibur Rahman Sir", "topic": null, "date": "১৩/০৮/২০২৬", "time": null, "position": "Senior Officer", "university": null, "tags": [], "body": "তারিখ: ১৩/০৮/২০২৬\nপদ: Senior Officer\nবোর্ড: DG Habibur Rahman Sir\nসময়কাল: ৬–৭ মিনিট\nHRM বিষয়ে পড়াশোনা ও বিশ্ববিদ্যালয় সম্পর্কে জানতে চান। এরপর একটি situational HR question করেন—ধরা যাক, একজন employee অভিযোগ করল যে অন্য একজন employee প্রতিদিন late করে আসে; HR Manager হিসেবে কী কী পদক্ষেপ নেওয়া হবে। এরপর First Choice এবং কেন Sonali Bank—জিজ্ঞেস করেন। Sonali Bank বিশেষভাবে কোন দুটি গুরুত্বপূর্ণ কাজ করে, Monetary Policy কী, বাংলাদেশ ব্যাংক সম্প্রতি কী পরিবর্তন এনেছে, Budget কী, deficit budget কী এবং কেন করা হয়—এসব প্রশ্ন করেন। Balanced budget না করে deficit budget করলে কী সুবিধা এবং balanced budget রাখলে কী সমস্যা হতে পারে—এ নিয়েও follow-up করেন। এরপর BBS-এর প্রকাশিত সাম্প্রতিক মূল্যস্ফীতির হার, GDP-এর আকার এবং ১ বিলিয়নে কত মিলিয়ন—জিজ্ঞেস করেন। শেষে আসতে বলেন।"}, {"id": 99, "displayId": "99", "board": null, "topic": null, "date": "১২/০৮/২০২৬", "time": null, "position": null, "university": null, "tags": [], "body": "তারিখ: ১২/০৮/২০২৬\nবিষয়: Textile Engineering\nসময়: সকাল ৮টা\nগ্রুপ: ৪ | সিরিয়াল: ৪\nসময়কাল: ১০–১২ মিনিট\nসালাম ও পরিচয় পর্বের পর নাম, roll, বিশ্ববিদ্যালয় এবং BUETEX কোথায়—জিজ্ঞেস করা হয়। Master’s করেছেন কি না, না করলে কেন করেননি এবং ভবিষ্যৎ পরিকল্পনা কী—জানতে চান। বর্তমানে কোথাও কর্মরত আছেন কি না জানতে চাইলে BKB-তে কর্মরত থাকার কথা বলেন। এরপর পদ, চাকরির অভিজ্ঞতা, branch কোথায়, জেলা পর্যায়ে নাকি ইউনিয়ন পর্যায়ে, branch-এর deposit এবং last fiscal year-এর deposit, NPL ও profit সম্পর্কে প্রশ্ন করেন। Branch-এর NPL কেমন, কর্মকর্তা কতজন এবং তাঁদের কাজ কী, NPL বেড়ে গেলে কী ক্ষতি হয় এবং NPL কমানোর উপায় কী—এসব জানতে চান। Daily transaction, vault limit, limit exceed করলে কী করতে হয় এবং কী কী কারণে limit cross হতে পারে—এ নিয়েও বিস্তারিত প্রশ্ন করা হয়। Branch-এর NGO ও বড় depositors-এর নাম জানতে চান। Cash section-এ বসলে সবচেয়ে গুরুত্বপূর্ণ গুণ কী—জিজ্ঞেস করলে সততা ও সতর্কতার কথা বলা হয়; এরপর কী কী সতর্কতা অবলম্বন করতে হয়, কখনো জাল টাকা পাওয়া গেছে কি না এবং পেলে কী ব্যবস্থা নিতে হবে—জানতে চান। অতিরিক্ত cash পাওয়া গেলে কোন GL head-এ রাখা হয় এবং পরে কীভাবে adjustment করা হয়—এটিও প্রশ্ন করেন। একজন customer account খুলতে এলে কী কী বিষয় জানা জরুরি, AML, STR কখন দেওয়া হয়, TP-এর full form কী এবং কীভাবে TP set করা হয়—এসব banking compliance প্রশ্ন করেন। এরপর Textile Engineering-এর জ্ঞান Senior Officer (General) হিসেবে কীভাবে কাজে লাগানো যাবে, গত পাঁচ বছরে RMG sector-এর অবস্থা, গত বছর sector নিম্নমুখী হওয়ার কারণ, বিশ্ববাজারে বাংলাদেশের textile competitors এবং তাদের অবস্থান—জিজ্ঞেস করেন। Reciprocal tariff textile sector-এর জন্য ক্ষতিকর কি না, textile-এর সঙ্গে banking-এর relationship কী, textile industry-কে loan দেওয়ার আগে কীভাবে যাচাই করা হবে এবং LC কী—এসব প্রশ্ন করেন। শেষে Foundation Training হয়েছে কি না জানতে চান।"}, {"id": 100, "displayId": "100", "board": "হাবিবুর রহমান স্যার", "topic": null, "date": "১৫/০৮/২০২৬", "time": null, "position": null, "university": null, "tags": [], "body": "তারিখ: ১৫/০৮/২০২৬\nসময়: সকাল ১০টা\nবোর্ড: হাবিবুর রহমান স্যার\nবিষয়: English\nপ্রবেশের পর নাম ও educational background জানতে চান। এরপর বর্তমানে কোথাও চাকরি করা হচ্ছে কি না, কোনো চাকরির offer পাওয়া গেছে কি না, বাড়ি কোথায় এবং বাবার বাড়িতে থাকেন নাকি নিজের বাড়িতে—এসব ব্যক্তিগত প্রশ্ন করেন। পরে ব্যাংককে একটি মধ্যস্থতাকারী প্রতিষ্ঠান বলা হয় কেন এবং ব্যাংক কাদের মধ্যে মধ্যস্থতা করে—এ বিষয়ে প্রশ্ন করেন। ব্যাংক কেন এই মধ্যস্থতার কাজ করে—এর অর্থনৈতিক কারণ ব্যাখ্যা করতে বলেন। এরপর পান ব্যবসায়ীরা কেন পান দোকান নিয়ে বসেন—উদাহরণের মাধ্যমে ব্যবসার উদ্দেশ্য ও লাভের বিষয়টি বোঝাতে বলেন। ব্যাংক কীভাবে income করে—জিজ্ঞেস করলে interest rate-এর difference বা spread-এর কথা বলা হয়; এরপর foreign trade-এ ব্যাংকের ভূমিকা ও LC সম্পর্কে প্রশ্ন করেন। বাংলাদেশের বর্তমান Governor-এর নাম, চলতি মাসের remittance কত এসেছে, foreign exchange reserve কত এবং reserve কোন হিসাব অনুযায়ী প্রকাশ করা হয়—এসব জানতে চান। এরপর BPM6 কী এবং এর পূর্ণরূপ কী—জিজ্ঞেস করেন। পরে IMF কী এবং IMF কেন ঋণ দেয়—এ বিষয়ে প্রশ্ন করেন।"}, {"id": 101, "displayId": "101", "board": "চেয়ারম্যান—ডেপুটি গভর্নর সারোয়ার হোসেন", "topic": null, "date": "১৫/০৮/২০২৬", "time": null, "position": null, "university": null, "tags": [], "body": "তারিখ: ১৫/০৮/২০২৬\nসময়: দুপুর ১:৩০টা\nগ্রুপ: ৩\nসিরিয়াল: ১৩\nবোর্ড: চেয়ারম্যান—ডেপুটি গভর্নর সারোয়ার হোসেন\nসময়কাল: ৫–৬ মিনিট\nবোর্ডে চারজন ছিলেন, তবে মূলত চেয়ারম্যান স্যার ও আরেকজন সদস্য প্রশ্ন করেন। বোর্ড friendly ছিল। প্রথমে subject, university এবং ব্যাংকে কেন আসতে চান—জিজ্ঞেস করা হয়। Engineering background ব্যাংকে কীভাবে কাজে লাগবে এবং degree-এর যথাযথ প্রয়োগ হবে কি না—এ বিষয়ে প্রশ্ন করেন। উত্তরে engineering-এর পাশাপাশি management, logical analysis, decision-making এবং risk management-এর সঙ্গে সম্পর্ক ব্যাখ্যা করা হয়। এরপর Padma Bridge-এর দৈর্ঘ্য এবং ঘণ্টায় ৬০ কিলোমিটার বেগে কত সময়ে পার হওয়া যাবে—এমন একটি practical math দেওয়া হয়। First Choice কী, BHBFC-এর Chairman কে, BHBFC কী কাজ করে এবং অন্যান্য ব্যাংকও housing loan দেওয়ার পর BHBFC-এর বিশেষত্ব কোথায়—এসব প্রশ্ন করা হয়। অন্য external Beam ও Column-এর পার্থক্য, ০.৫ ÷ ০.৪, এবং cement কেনার সময় কী কী বিষয় যাচাই করবেন—এসব জানতে চান। বিদেশি cement quality-তে ভালো হলে বাংলাদেশে বেশি import করা হয় না কেন—এমন follow-up question করেন এবং cement-এর setting-সংক্রান্ত বিষয় আলোচনায় আসে। শেষে আসতে বলা হয়। অভিজ্ঞতার ভিত্তিতে প্রার্থী পরামর্শ দিয়েছেন—subjective preparation, First Choice এবং essential banking knowledge-এ বিশেষ গুরুত্ব দেওয়া উচিত, কারণ ওই দিনের বোর্ড অনেক candidate-কে মূলত subjective questions-ই করেছে।"}, {"id": 102, "displayId": "102", "board": null, "topic": null, "date": "১৫/০৮/২০২৬", "time": null, "position": null, "university": null, "tags": [], "body": "তারিখ: ১৫/০৮/২০২৬\nসময়: দুপুর ১:৩০টা\nগ্রুপ: ৩\nসিরিয়াল: ১০\nবিষয়: Nutrition and Food Science\nসময়কাল: ৩–৪ মিনিট\nনাম, subject ও university দিয়ে শুরু। এরপর সাম্প্রতিক আলোচিত microplastic কী এবং এটি মানবদেহে কী ধরনের ক্ষতি করতে পারে—জিজ্ঞেস করেন। Plastic-এর পরিবর্তে কোন ধরনের উপকরণ ব্যবহার করা ভালো, মাটির তৈরি পাত্র ও ceramic কেমন এবং ceramic কী দিয়ে তৈরি—এসব follow-up question করেন। এরপর শরীরে Vitamin D কীভাবে তৈরি হয় এবং শরীরের জন্য কত পরিমাণ Vitamin D প্রয়োজন—জিজ্ঞেস করেন। পরে essential minerals-এর নাম জানতে চান। এরপর ভারত ও পাকিস্তানের central bank-এর নাম জিজ্ঞেস করেন; Pakistan-এর central bank-এর উত্তর ভুল হয়। বাংলাদেশে ভারতের কোন ব্যাংক রয়েছে, সেটি কী ধরনের ব্যাংক এবং এর মূল উদ্দেশ্য কী—জিজ্ঞেস করেন। শেষে একটি train-related mathematics problem দেন। মুখে মুখে করতে বলা হলে প্রার্থী জানান যে খাতায় হিসাব করতে হবে এবং উত্তর দিতে পারেননি। এরপর board viva শেষ করে আসতে বলে। সময়কাল পূর্ববর্তী candidate-এর তুলনায় অনেক কম—প্রায় ৩–৪ মিনিট।"}, {"id": 103, "displayId": "103", "board": null, "topic": null, "date": "২৩/০৮/২০২৬, সময়: সকাল ৯টা", "time": null, "position": null, "university": null, "tags": [], "body": "তারিখ: ২৩/০৮/২০২৬, সময়: সকাল ৯টা, বোর্ড: হাবিবুর রহমান স্যার। নাম, বাড়ি, Subject ও University দিয়ে শুরু। এরপর ঢাল (Slope) কী, ঢালের সর্বোচ্চ ও সর্বনিম্ন মান এবং ব্যাংকে Mathematics-এর জ্ঞান কীভাবে কাজে লাগাবেন—এসব প্রশ্ন করা হয়। Calculus-এর বাস্তব প্রয়োগ সম্পর্কেও জানতে চান। এরপর কতটি Math হয়েছে, CRR ও SLR-এর অর্থ, Bill ও Bond-এর পার্থক্য, Banking sector-এর বর্তমান সমস্যা ও সমাধান এবং Bangladesh Bank-এর hierarchy সম্পর্কে প্রশ্ন করেন। NBR নিয়ে সরকারের পরিকল্পনা এবং কিছু ব্যক্তিগত প্রশ্নও করা হয়। Viva duration প্রায় ৫–৮ মিনিট।"}, {"id": 104, "displayId": "104", "board": null, "topic": null, "date": "২৩/০৮/২০২৬, সময়: সকাল ৮টা", "time": null, "position": null, "university": null, "tags": [], "body": "তারিখ: ২৩/০৮/২০২৬, সময়: সকাল ৮টা, বোর্ড: আনিসুর রহমান স্যার। নাম, Department, University ও বর্তমানে কী করেন—এসব দিয়ে শুরু। চাকরি করার কারণে job-related কিছু প্রশ্ন করা হয়। First Choice কী, Sonali Bank-এর MD-এর নাম, একীভূতকরণে গঠিত সম্মিলিত ইসলামী ব্যাংক কয়টি ব্যাংক নিয়ে গঠিত ও ব্যাংকগুলোর নাম, শেয়ারবাজার নিয়ন্ত্রণকারী প্রতিষ্ঠান, বীমা খাতের নিয়ন্ত্রক প্রতিষ্ঠান এবং IDRA-এর Chairman-এর নাম জানতে চাওয়া হয়। Viva প্রায় ৪–৫ মিনিট স্থায়ী হয়।"}, {"id": 105, "displayId": "105", "board": null, "topic": null, "date": "২৪/০৮/২০২৬", "time": null, "position": null, "university": null, "tags": [], "body": "তারিখ: ২৪/০৮/২০২৬, বোর্ড: ড. এম. ডি. কবির আহমদ স্যার। নাম, Subject ও University দিয়ে শুরু করে শিক্ষার উৎস কী—জিজ্ঞেস করা হয়। এরপর Bank কী, Bank কীভাবে লাভ করে এবং Money Market ও Capital Market বলতে কী বোঝায়—এসব প্রশ্ন করা হয়। Viva সময়কাল প্রায় ৪–৫ মিনিট।"}, {"id": 106, "displayId": "106", "board": null, "topic": null, "date": "২২/০৮/২০২৬, সময়: সকাল ৮টা", "time": null, "position": null, "university": null, "tags": [], "body": "তারিখ: ২২/০৮/২০২৬, সময়: সকাল ৮টা, বোর্ড: ৪, সিরিয়াল: ৩, বিষয়: Management। প্রথমে Management-এর X Theory সম্পর্কে বিস্তারিত বলতে এবং এর নেতিবাচক দিকগুলো দূর করার সুপারিশ জানতে চাওয়া হয়। এরপর Y Theory, Maslow-এর Need Hierarchy Theory এবং Self-actualization Need সম্পর্কে প্রশ্ন করা হয়। Management-এর জনক কে, Management ও Administration-এর পার্থক্য এবং MoB সম্পর্কে জানতে চান। এরপর বর্তমানে কোন Desk-এ কাজ করেন ও কী কী কাজ করেন, CDD, EDD, KYC, STR ও CTR সম্পর্কে বিস্তারিত প্রশ্ন করা হয়। একজন Banker হিসেবে নিজেকে Honest মনে করেন কি না—Yes or No—জিজ্ঞেস করে Honest বললে তার উদাহরণ দিতে বলেন। এরপর ১০০ টাকা এমনভাবে দুজনের মধ্যে ভাগ করতে বলেন যাতে একজন অন্যজনের চেয়ে ৩ টাকা বেশি পায়। শেষে রৌমারী বাড়ি হওয়ায় Bangladesh–India 2001 conflict সম্পর্কে প্রশ্ন করা হয়। সকল প্রশ্ন চেয়ারম্যান স্যার করেন।"}, {"id": 107, "displayId": "107", "board": null, "topic": null, "date": "২২/০৮/২০২৬, Group-01", "time": null, "position": null, "university": null, "tags": [], "body": "তারিখ: ২২/০৮/২০২৬, Group-01, বোর্ড: হাবিবুর রহমান স্যার, বিষয়: Psychology। শুরুতেই একটি Math দেওয়া হয়, দুইবার জিজ্ঞেস করার পরও শেষ অংশটি বুঝতে পারেননি। এরপর External আরও দুটি Math দেন; একটি সময় নিয়ে সমাধান করা হয় এবং সময় নেওয়া নিয়ে মন্তব্য করেন। Clinical Psychology কী—জিজ্ঞেস করা হয়। এরপর বাংলাদেশে কতটি Foreign Bank আছে ও কী কী, সম্মিলিত ইসলামী ব্যাংকগুলোর নাম, Capital Market কে নিয়ন্ত্রণ করে এবং Security ও Securities-এর পার্থক্য জানতে চাওয়া হয়। শেষে কতটি Math হয়েছে—জিজ্ঞেস করলে চারটি বলা হয়। প্রার্থীর মতে, মুখে মুখে Math এবং Security বনাম Securities প্রশ্ন নিয়ে কিছুটা Mocking করা হয়েছিল।"}, {"id": 108, "displayId": "108", "board": null, "topic": null, "date": "২২/০৮/২০২৬", "time": null, "position": null, "university": null, "tags": [], "body": "তারিখ: ২২/০৮/২০২৬, বোর্ড: আনিসুর রহমান স্যার, বিষয়: Law, সিরিয়াল: ১৫, সময়: প্রায় ৫ মিনিট। First Choice কী, Sonali Bank কী ধরনের Bank, রাষ্ট্রায়ত্ত Bank বলতে কী বোঝায় এবং সরকার চাইলেই এসব Bank থেকে যেকোনো সময় ঋণ নিতে পারে কি না—জিজ্ঞেস করা হয়। রাষ্ট্রায়ত্ত Bank কীভাবে গঠিত হয়, বিশেষ করে Shareholding-এর বিষয়, বাংলাদেশে রাষ্ট্রায়ত্ত Bank কয়টি এবং Sonali Bank-এ সরকারের Share কত—এসব প্রশ্ন করা হয়। অন্য কোনো Bank-এ সরকারের Share কম কি না—জিজ্ঞেস করেন। এরপর Money Laundering কী, কীভাবে হয় এবং Predicate Offence সম্পর্কে জানতে চান। টাকা ভর্তি একটি ব্যাগ নিয়ে দেশের বাইরে গেলে সেটি Money Laundering হবে কি না এবং Money Laundering-এর কয়েকটি পদ্ধতি বলতে বলেন। Confiscate, Seize ও Freeze-এর অর্থ এবং কোন আইনের অধীনে এগুলো করা হয়—জিজ্ঞেস করেন। কয়েকটি Banking-related আইনের নামও জানতে চান। শেষে কয়টি Math হয়েছে এবং মাত্র দুইটি Math দিয়ে চাকরি হবে কি না—এমন প্রশ্ন করেন। বর্তমানে কী করেন এবং এটি ব্যাংকে প্রথম Viva কি না—জিজ্ঞেস করে শেষ করেন।"}, {"id": 109, "displayId": "109", "board": null, "topic": null, "date": "২২/০৮/২০২৬", "time": null, "position": null, "university": null, "tags": [], "body": "তারিখ: ২২/০৮/২০২৬, বোর্ড: আনিসুর রহমান স্যার, বিষয়: English, সিরিয়াল: ১৫, সময়: প্রায় ৫ মিনিট। কোথায় পড়াশোনা করেছেন—এটি দিয়ে শুরু করে বিদ্যুৎ ও জ্বালানি মন্ত্রীর নাম, পরিকল্পনা মন্ত্রীর নাম এবং রাষ্ট্রপতির নাম জিজ্ঞেস করা হয়। এরপর ০.০১ + ০.০০১ + ০.১ যোগ করতে দেওয়া হয়। “রোগী আসার আগেই ডাক্তার মারা গেল”—বাক্যটির ইংরেজি অনুবাদ করতে বলা হয়। First Choice কী, কয়েকটি Foreign Bank-এর নাম এবং HSBC-এর পূর্ণরূপ জানতে চাওয়া হয়। প্রার্থীর মতে, প্রায় ৫০% প্রশ্নের উত্তর দিতে পেরেছেন এবং অভিজ্ঞতাটি বেশ Unpredictable ছিল।"}, {"id": 110, "displayId": "110", "board": null, "topic": null, "date": "২০/০৮/২০২৬, সময়: সকাল ১০টা, বিষয়: Law", "time": null, "position": null, "university": null, "tags": [], "body": "তারিখ: ২০/০৮/২০২৬, সময়: সকাল ১০টা, বিষয়: Law, বোর্ড: ডেপুটি গভর্নর সারোয়ার হোসেন। Money Laundering-এর Predicate Offence, Contract-এর Essentials, Negotiable Instrument-এর মূল বিষয় এবং Money Laundering-এর Investigation কে করে—এসব প্রশ্ন করা হয়। এরপর Ancient Law সম্পর্কে বলতে বলেন, Court Practice করেন কি না জানতে চান এবং আইন বিষয়ে দুজন Ancient Philosopher-এর নাম বলতে বলেন। Bank Company Act সর্বশেষ কোন সালে সংশোধিত হয়েছে এবং Code of Hammurabi কোন সময়কার—এসব প্রশ্ন করা হয়। শেষে কতটি Math হয়েছে—জিজ্ঞেস করেন।"}, {"id": 111, "displayId": "111", "board": null, "topic": null, "date": "১৮/০৮/২০২৬, সময়: সকাল ৮টা", "time": null, "position": null, "university": null, "tags": [], "body": "তারিখ: ১৮/০৮/২০২৬, সময়: সকাল ৮টা, বোর্ড: আনিসুর রহমান, ডিজি। সময় প্রায় ৮–১০ মিনিট। বোর্ডে তিনজন পুরুষ সদস্য ছিলেন এবং দুজন প্রশ্ন করেন। নাম, বিশ্ববিদ্যালয় ও বিষয় দিয়ে শুরু করে ঢাকা বিশ্ববিদ্যালয়ের রাষ্ট্রবিজ্ঞান বিষয়ে পড়াশোনা নিয়ে কয়েকজন প্রথিতযশা রাষ্ট্রবিজ্ঞানীর নাম জানতে চাওয়া হয়। এরপর রাষ্ট্রপতি নির্বাচন, ফ্লোর ক্রসিং, এ ব্যবস্থার সুবিধা-অসুবিধা, ভারত-বাংলাদেশ সম্পর্ক ও পররাষ্ট্রনীতি এবং ভারতের সঙ্গে চাল আমদানির মতো বিষয়ে আলোচনা করা হয়। যুক্তরাষ্ট্রে ফ্লোর ক্রসিং আছে কি না—এটিও জানতে চাওয়া হয়। চেয়ারম্যান স্যার রাষ্ট্রবিজ্ঞানের শিক্ষার্থী হিসেবে আরও বিশ্লেষণধর্মী মতামত প্রত্যাশা করেছিলেন। শেষে Math করার প্রসঙ্গ উঠলেও অন্য একজন স্যার বলেন যে রাষ্ট্রবিজ্ঞানের শিক্ষার্থীর ক্ষেত্রে Math প্রয়োজন নেই। বোর্ড আন্তরিক ও আলোচনা-ভিত্তিক ছিল।"}, {"id": 112, "displayId": "112", "board": null, "topic": null, "date": null, "time": null, "position": null, "university": null, "tags": [], "body": "Senior Officer 2024-এর ভাইভায় হাবিবুর রহমান স্যারের বোর্ডে ছিলেন, যদিও স্যার তখন উপস্থিত ছিলেন না বলে ধারণা করা হয়। শুরুতেই “Tell me about yourself” বলা হয়। এরপর Accounting ও Bookkeeping-এর পার্থক্য, Accounting-এর কাজ, ব্যাংকিং খাতে Accounting-এর ব্যবহার এবং ব্যাংক কীভাবে আয় করে—এসব প্রশ্ন করা হয়। উত্তর থেকে ধারাবাহিকভাবে Follow-up প্রশ্ন করা হয়। Data ও Information-এর পার্থক্য, Accounting Information-এর কাজ এবং ব্যবহারকারীরা Accounting Information ব্যবহার করে কী ধরনের সিদ্ধান্ত নেয়—এসব জানতে চাওয়া হয়। এরপর Bangladesh Bank-এর কাজ, শুধু Monetary Policy নির্ধারণ করে নাকি বাস্তবায়নও করে, Fiscal Policy কী, Deficit Budget কী এবং ঘাটতি কীভাবে অর্থায়ন করা হয়—এসব প্রশ্ন করা হয়। Decision-making ধরনের আরও কয়েকটি প্রশ্ন এবং কয়েকটি Math করা হয়; প্রার্থী জানিয়েছেন, Math-গুলো মোটামুটি সবই পেরেছেন।"}, {"id": 113, "displayId": "113", "board": null, "topic": null, "date": null, "time": null, "position": null, "university": null, "tags": [], "body": "গ্রুপ-১, সিরিয়াল-১৪; বোর্ড: Arief Hossain (ED), মোট চারজন সদস্য। সময় প্রায় ১২ মিনিট। প্রবেশের পর আইন ও সংবিধানকেন্দ্রিক প্রশ্ন দিয়ে শুরু হয়। একজনকে ভেতরে প্রবেশে নিষেধ করা হলে কোন আইন বা ক্ষমতার ভিত্তিতে তা করা যায়, Act, Order ও Ordinance-এর পার্থক্য, সংসদে আইন কী আকারে পাস হয়, রাষ্ট্রপতি Bill স্থগিত করতে পারেন কি না এবং Ordinance এখনও কিছু আইনের নামে কেন ব্যবহৃত হয়—এসব প্রশ্ন করা হয়। সামরিক শাসনের সময় আইন ও বৈধতা, Parliament ও Constitution-এর অবস্থান এবং আইন কীভাবে প্রণীত হয়—এগুলো নিয়েও বিস্তারিত আলোচনা হয়। এরপর SAARC-ভুক্ত দেশগুলোর Central Bank, Afghanistan-এর সদস্যপদ ও মুদ্রা, Myanmar-এর Central Bank ও মুদ্রা, Malaysia-এর মুদ্রা, USA-এর Central Bank ও মুদ্রা এবং এশিয়ার কোন কোন দেশে Dollar ব্যবহৃত হয়—এসব জানতে চাওয়া হয়। কয়েকটি Constitutional Institution-এর নাম, তাদের বেতন কীভাবে দেওয়া হয় এবং সংবিধানে Budget শব্দের পরিবর্তে কীভাবে বার্ষিক রাষ্ট্রীয় আয়-ব্যয়ের বিষয়টি উল্লেখ করা হয়েছে ও সংশ্লিষ্ট Article—এসব প্রশ্ন করা হয়। রাষ্ট্রায়ত্ত বাণিজ্যিক ব্যাংক কোন আইনের অধীনে পরিচালিত হয়, কয়টি Math হয়েছে এবং অন্য কোথাও Viva দিয়েছেন কি না—জিজ্ঞেস করে শেষ করা হয়।"}, {"id": 114, "displayId": "114", "board": null, "topic": null, "date": "১৮/০৮/২০২৬, গ্রুপ-৩, সিরিয়াল-৬", "time": null, "position": null, "university": null, "tags": [], "body": "তারিখ: ১৮/০৮/২০২৬, গ্রুপ-৩, সিরিয়াল-৬, বোর্ড: সিরাজ স্যার। বিষয়: Statistics। Sampling Technique-এর বিভিন্ন ধরন, Stratified Random Sampling-এর উদাহরণ এবং SRS-এর পূর্ণরূপ জানতে চাওয়া হয়। Census ও Survey-এর পার্থক্য ও উদাহরণ নিয়েও প্রশ্ন করা হয়। এরপর First Choice কী, কেন, অন্যান্য ব্যাংকের সঙ্গে এর পার্থক্য কোথায় এবং পূর্বে কোথায় চাকরি করেছেন ও কী ধরনের কাজ করেছেন—এসব জানতে চাওয়া হয়। Banking-এর RTGS কী এবং কেন এর নাম RTGS—জিজ্ঞেস করা হয়। এরপর কয়টি Math হয়েছে, তিনটি সংখ্যার গড় ৭৯ হলে সংখ্যাগুলো কী হতে পারে, ০.২-এর ঘন, এবং ৪, ৫ ও ৬ সেমি বাহুবিশিষ্ট ত্রিভুজ আদৌ গঠন করা সম্ভব কি না—এসব Math করা হয়।"}, {"id": 115, "displayId": "115", "board": null, "topic": null, "date": null, "time": null, "position": null, "university": null, "tags": [], "body": "বিষয়: Physics; বোর্ড: হাবিবুর রহমান স্যার। ব্যাংকের Asset ও Liability কী কী, Newton-এর দ্বিতীয় সূত্র, Singapore-এর মুদ্রার নাম, দেশের অর্থমন্ত্রী, রাষ্ট্রপতি ও প্রধানমন্ত্রীর নাম এবং Sonali Bank-এর MD-এর নাম—এসব প্রশ্ন করা হয়।"}, {"id": 116, "displayId": "116", "board": null, "topic": null, "date": null, "time": null, "position": null, "university": null, "tags": [], "body": "নাম, বিশ্ববিদ্যালয় ও Department: CSE দিয়ে শুরু। First Choice Sonali Bank বলার পর Sonali Bank-এর কয়েকটি CBS সম্পর্কে জানতে চাওয়া হয়। ব্যাংক কীভাবে লাভ করে এবং Loan ও Investment-এর মধ্যে পার্থক্য কী—এসব প্রশ্ন করা হয়। Budget কী, কে Budget প্রণয়ন করে, অর্থ মন্ত্রণালয়ের কয়টি বিভাগ এবং কোন বিভাগ Budget-এর সঙ্গে যুক্ত—এসব জানতে চাওয়া হয়। এরপর কয়টি Math পেরেছেন এবং তিনটি Math মুখে মুখে করতে দেওয়া হয়—দুটি ক্রমিক সংখ্যা-ভিত্তিক এবং ০.০১ × ০.০১।"}, {"id": 117, "displayId": "117", "board": null, "topic": null, "date": null, "time": null, "position": null, "university": null, "tags": [], "body": "কবির স্যারের বোর্ডে ছিলেন, তবে স্যার মিটিংয়ের কারণে অনুপস্থিত ছিলেন। বিশ্ববিদ্যালয়, পাশের সময় এবং Master’s না করার কারণ জানতে চাওয়া হয়। এরপর Periodic Table কী, Atomic Number ও Mass Number কী, সর্বশেষ আবিষ্কৃত/নামযুক্ত মৌল কোনটি, Inert Gas কী এবং Refrigerator-এ কোন ধরনের refrigerant ব্যবহৃত হয়—এসব প্রশ্ন করা হয়। CFC কী এবং এটি পরিবেশে কী ক্ষতি করে, Ozone Layer কী, Oxygen ও Ozone-এর পার্থক্য—এসব নিয়েও Follow-up করা হয়। এরপর কয়টি Math হয়েছে জিজ্ঞেস করে ১ টাকায় ৫টি কলা কিনে ৪টি বিক্রি করলে লাভ না ক্ষতি এবং কত শতাংশ লাভ—জিজ্ঞেস করা হয়। Padma Bridge-এর দৈর্ঘ্য এবং ৬০ কিমি/ঘণ্টা বেগে গাড়ি চললে সেতুটি অতিক্রম করতে কত সময় লাগবে—এটিও জিজ্ঞেস করা হয়। শেষে চাকরি করেন কি না জানতে চেয়ে Best of Luck বলা হয়।"}, {"id": 118, "displayId": "118", "board": null, "topic": null, "date": null, "time": null, "position": null, "university": null, "tags": [], "body": "বোর্ড: ২, সিরিয়াল: ২; বিষয়: English; চেয়ারম্যান: Arief Hossain Khan (ED); সময় প্রায় ৫–৬ মিনিট। নাম, বিশ্ববিদ্যালয় এবং English Literature-এ ভালো CGPA অর্জন করা কঠিন কি না—এসব দিয়ে শুরু। “আমরা পাঁচ বোন”—এর Translation করতে বলা হয়। এরপর “To Daffodils” ও “Daffodils” একই কবিতা কি না, কারা লিখেছেন এবং Daffodil কী ও কখন ফোটে—এসব প্রশ্ন করা হয়। পৃথিবীর সবচেয়ে বড় Flower Garden কোথায় এবং বাংলাদেশে কোথায়—এটিও জানতে চাওয়া হয়। এরপর তফসিলি ব্যাংক ও Islamic Bank-এর সংখ্যা, Traditional Bank-এর সঙ্গে Islamic Bank-এর পার্থক্য, CRR ও SLR কী এবং Islamic Bank-এর ক্ষেত্রে এগুলোর হার—এসব প্রশ্ন করা হয়। সম্মিলিত ইসলামী ব্যাংক বাদে অন্যান্য Islamic Bank-এর নাম বলতে বলা হয়। এরপর First Choice Sonali Bank কেন এবং English নিয়ে পড়াশোনা করেও Sonali Bank কেন নিয়োগ দেবে—এসব প্রশ্ন করা হয়। Sonali Bank-এর অনেক শাখা থাকায় প্রত্যন্ত অঞ্চলে Posting হলে কী করবেন—এটিও জানতে চাওয়া হয়।"}, {"id": 119, "displayId": "119", "board": null, "topic": null, "date": "১৯/০৮/২০২৬", "time": null, "position": null, "university": null, "tags": [], "body": "তারিখ: ১৯/০৮/২০২৬, বোর্ড: ০৪; চেয়ারম্যান: Md. Shakhawat Hossain (ED); বিষয়: Applied Chemistry & Chemical Engineering; সময় প্রায় ৫–৬ মিনিট। দেশের বাড়ি কোথায় জানতে চেয়ে Lalon-এর দেশের মানুষ হিসেবে একটি Lalon Geeti এবং একজন Lalon Geeti শিল্পীর নাম বলতে বলা হয়। এরপর Engineering পড়ে ব্যাংকে কেন আসতে চান, First Choice কী, PLC-এর অর্থ এবং Sonali Bank ও Bangladesh Bank-এর কাজ জানতে চাওয়া হয়। Sonali Bank-এর Digital Platform/CBS-এর নাম এবং Digital Banking Service-এর কয়েকটি উদাহরণ জানতে চাওয়া হয়; NPSB, RTGS ও EFT উল্লেখ করা হয়। বর্তমান চাকরি সম্পর্কিত প্রশ্নও করা হয়। শেষে অবসর সময়ে কী করেন এবং “আমার ভাইয়ের রক্তে রাঙানো একুশে ফেব্রুয়ারি” গানের সুরকার কে—জিজ্ঞেস করা হয়। বোর্ড Friendly ছিল।"}, {"id": 120, "displayId": "120", "board": null, "topic": null, "date": null, "time": null, "position": null, "university": null, "tags": [], "body": "তারিখ: ১৯/০৮/২০২৬; বিষয়: Finance & Banking; সময় প্রায় ১৬–২০ মিনিট। লিখিত পরীক্ষার খাতা প্রায় ১০ মিনিট ধরে দেখা হয় এবং খাতায় ব্যবহৃত quotation, “Dutch Disease” ও English Grammar নিয়ে প্রশ্ন করা হয়। এরপর Finance-এর ব্যবহার, Public Finance, Personal Finance ও Government Budget-এর পার্থক্য এবং Budget ঘোষণার পর অর্থসংস্থানের বিষয় নিয়ে বিস্তারিত প্রশ্ন করা হয়। বাংলাদেশের Budget কেন Deficit, উন্নত দেশ ও উন্নয়নশীল দেশের Budget-এর পার্থক্য, সরকারের প্রধান ব্যয়ের খাত, Operating Cost কমানো, Development Project বন্ধ করা এবং Inflation-এর বর্তমান কারণ—এসব নিয়ে আলোচনা হয়। Bangladesh Bank-এর Functions, বছরে Monetary Policy কতবার ঘোষণা করা হয়, Bank Rate, Policy Rate, SDF ও SLF এবং এগুলোর পার্থক্য জানতে চাওয়া হয়। Islamic Bank-এর জন্য কিছু নিয়ম আলাদা কেন এবং সেক্ষেত্রে সবাই Islamic Banking-এ চলে যাবে কি না—এ ধরনের Conceptual Follow-up করা হয়। Fiscal Policy, Banking Sector-এর regulator, অর্থ মন্ত্রণালয়ের সংশ্লিষ্ট বিভাগ, Bank ও Customer-এর relationship, Credit Creation, LC, Banker’s Acceptance, Capital Budgeting, IRR, NPV, MIRR, Loan Servicing, Provision, Write-off, CAPEX এবং Financial Model তৈরির পদ্ধতি—এসব নিয়েও বিস্তারিত প্রশ্ন করা হয়।"}, {"id": 121, "displayId": "121", "board": null, "topic": null, "date": null, "time": null, "position": null, "university": null, "tags": [], "body": "নাম, পড়াশোনা, First Choice এবং Math-এর সংখ্যা জানতে চাওয়া হয়। তিনটি ধারাবাহিক সংখ্যার যোগফল ১১২০ হলে প্রথম ও শেষ সংখ্যার পার্থক্য কত—এটি জিজ্ঞেস করা হয়। এরপর বাংলাদেশে কী ধরনের ব্যাংক আছে, Sonali Bank কী ধরনের Bank, Bangladesh-এর Central Bank-এর নাম, এশিয়ার কয়েকটি দেশের Central Bank, পাঁচটি Foreign Bank এবং এশিয়ার কোন কোন দেশের মুদ্রার নাম Dollar—এসব জানতে চাওয়া হয়। বর্তমানে কী করছেন—জিজ্ঞেস করে Viva শেষ করা হয়।"}, {"id": 122, "displayId": "122", "board": null, "topic": null, "date": null, "time": null, "position": null, "university": null, "tags": [], "body": "তারিখ: ১৯/০৮/২০২৬, সময়: সকাল ১০টা, বোর্ড-১। বিষয়: Econometrics। Econometrics পড়েছেন কি না, এর সংজ্ঞা, Mathematics কীভাবে Econometrics-এর অংশ, Causal Effect এবং Causation বনাম Correlation-এর পার্থক্য জানতে চাওয়া হয়। Correlation-এর range এবং Causal Effect নির্ণয়ে ব্যবহৃত কয়েকটি Econometric Model-এর নামও জানতে চাওয়া হয়। এরপর Money-এর Functions, Monetary Policy-তে Repo Rate বাড়ানোর পরও Inflation না কমলে Bangladesh Bank কী করতে পারে, Fiscal Policy কে প্রণয়ন করে, GDP কীভাবে পরিমাপ করা হয় এবং কোন ধরনের উৎপাদন GDP-তে অন্তর্ভুক্ত হয় না—এসব প্রশ্ন করা হয়। CRR কী, বর্তমান CRR-এর হার এবং CRR ৪% থেকে ১০% করা হলে অর্থনীতিতে কী প্রভাব পড়বে—জিজ্ঞেস করা হয়। শেষে SLR, বাংলাদেশের Budget-এর ধরন এবং Deficit Budget করার মূল উদ্দেশ্য সম্পর্কে প্রশ্ন করা হয়।"}, {"id": 123, "displayId": "123", "board": null, "topic": null, "date": null, "time": null, "position": null, "university": null, "tags": [], "body": "তারিখ: ১৯/০৮/২০২৬, বোর্ড-১; বিষয়: Economics; হাবিবুর রহমান স্যার একাই প্রশ্ন করেন। PPF, Inflation ও GDP বিস্তারিতভাবে, Calculation, Firm-এর Profit Calculation এবং Bank-এর Profit—এসব প্রশ্ন করা হয়। এরপর First Choice, Chairman ও MD-এর নাম, সম্মিলিত পাঁচটি ব্যাংকের নাম এবং Math নিয়ে প্রশ্ন করা হয়। Time-related একটি Math-ও দেওয়া হয়। বিষয়ভিত্তিক প্রশ্নে অনেক Follow-up ছিল এবং প্রার্থীর মতে স্যারকে সন্তুষ্ট করা কঠিন ছিল।"}, {"id": 124, "displayId": "124", "board": null, "topic": null, "date": null, "time": null, "position": null, "university": null, "tags": [], "body": "বোর্ড: Husne Ara Shikha, Bangladesh Bank-এর Executive Director; বোর্ড-২, সিরিয়াল-৪; বিষয়: Leather Engineering। First Choice Sonali ও Agrani Bank। Sonali Bank কী ধরনের Bank এবং রাষ্ট্রায়ত্ত বাণিজ্যিক ব্যাংকের পাঁচটি কাজ জানতে চাওয়া হয়। Leather Export-এ Bank কীভাবে ভূমিকা রাখে, FDI কী এবং এর কয়েকটি অসুবিধা, Shoe-এর Size কীভাবে নির্ধারণ করা হয়—এসব প্রশ্ন করা হয়। এরপর Leather Industry-এর Export Performance কীভাবে বাড়ানো যায়, ETP ও CETP এবং LWG সম্পর্কে জানতে চাওয়া হয়। একসময় Leather Sector-এর Export Earnings বেশি থাকলেও বর্তমানে কমে যাওয়ার প্রধান কারণও জিজ্ঞেস করা হয়। Viva প্রায় ৬–৭ মিনিট এবং বোর্ড Friendly ছিল।"}, {"id": 125, "displayId": "125", "board": null, "topic": null, "date": "১৯/০৮/২০২৬, সময়: ১:৩০;", "time": null, "position": null, "university": null, "tags": [], "body": "তারিখ: ১৯/০৮/২০২৬, সময়: ১:৩০; বোর্ড: হাবিবুর রহমান স্যার। Style, Fashion ও Fad-এর পার্থক্য, Market Penetration Pricing ও Prestigious Pricing, Pricing বেশি হওয়া Ethical না Unethical এবং কেন—এসব প্রশ্ন করা হয়। Break-even Point-এর Point of Incidence, Fixed Cost ও Variable Cost per Unit সম্পর্কেও জানতে চাওয়া হয়। এরপর দেশের Marketing করা যায় কি না—জিজ্ঞেস করা হয়। সমসাময়িক প্রশ্ন হিসেবে Football World Champion, আগের Championship এবং পাঁচবার Champion হওয়া দেশ সম্পর্কেও প্রশ্ন করা হয়। অর্থবছর কখন থেকে কখন, নতুন অর্থবছর কখন থেকে কার্যকর হবে এবং বর্তমানে কী করছেন—এসব জানতে চাওয়া হয়।"}, {"id": 126, "displayId": "126", "board": null, "topic": null, "date": "১৯/০৮/২০২৬; বোর্ড-০৪; বিষয়: Civil Engineering;", "time": null, "position": null, "university": null, "tags": [], "body": "তারিখ: ১৯/০৮/২০২৬; বোর্ড-০৪; বিষয়: Civil Engineering; বোর্ড: Md. Sawkatul Alam Sir। Civil-এর চাকরি ছেড়ে Bank-এ কেন আসতে চান এবং Government Job কেন চান—জিজ্ঞেস করা হয়। Bridge ও Metro Rail-এর পার্থক্য, Metro Rail-এর Rail Line-এ Gap আছে কি না, Metro Rail Project-এ কোন কোন ধরনের Engineer কাজ করেন এবং Architect ও Civil Engineer-এর পার্থক্য জানতে চাওয়া হয়। বহুতল ভবনের ক্ষেত্রে Architect ও Civil Engineer-এর মধ্যে কে আগে Design করেন—এটিও প্রশ্ন করা হয়। Budget, Personal Budget ও Government Budget-এর পার্থক্য, Exterior ও Interior Wall Plaster-এর Cement-Sand Ratio, Bank-এর পদক্রম এবং BCS Administration Cadre-এর পদক্রম নিয়েও প্রশ্ন করা হয়।"}, {"id": 127, "displayId": "127", "board": null, "topic": null, "date": null, "time": null, "position": null, "university": null, "tags": [], "body": "তারিখ: ২০/০৮/২০২৬, সকাল ৮টা; বোর্ড-৪, সিরিয়াল-৪; বিষয়: Statistics। মূলত Subjective প্রশ্ন করা হয় এবং Viva প্রায় ৪–৫ মিনিট স্থায়ী হয়। Sampling-এ Bias কীভাবে দূর করা যায়, Stratified Sampling-এর ব্যাখ্যা এবং r ও R²-এর Value 0.7 হলে কী বোঝায়—এসব প্রশ্ন করা হয়। বর্তমানে কোথাও চাকরিতে Join করেছেন কি না—এটিও জানতে চাওয়া হয়।"}, {"id": 128, "displayId": "128", "board": null, "topic": null, "date": "২০/০৮/২০২৬, সকাল ৮টা;", "time": null, "position": null, "university": null, "tags": [], "body": "তারিখ: ২০/০৮/২০২৬, সকাল ৮টা; বোর্ড: আনিসুর রহমান স্যার; গ্রুপ-১, সিরিয়াল-১১; বিষয়: Public Administration। Local Administration, Urban ও Rural Local Government-এর বিভিন্ন স্তর, Union ও Upazila Chairman কীভাবে নির্বাচিত হন এবং কতজন সদস্য থাকেন—এসব জানতে চাওয়া হয়। District Council-এর Chairman একইভাবে নির্বাচিত হন কি না এবং হলে কীভাবে—জিজ্ঞেস করা হয়। এরপর রাষ্ট্রপতি নির্বাচন, Electoral College, Article 70 ও Floor Crossing নিয়ে প্রশ্ন করা হয়। Mirza Fakhrul ছাড়া অন্য কেউ জিততে পারেন কি না এবং প্রতিদ্বন্দ্বী প্রার্থী কেন দাঁড়িয়েছেন—এমন Follow-up করা হয়। External সদস্য NPM ও NPA-এর পার্থক্য, Good Governance NPM না NPA এবং Good Governance-এর বৈশিষ্ট্য জানতে চান। বোর্ডের সদস্যরা আন্তরিক ছিলেন।"}, {"id": 129, "displayId": "129", "board": null, "topic": null, "date": "২০/০৮/২০২৬, সকাল ১০টা;", "time": null, "position": null, "university": null, "tags": [], "body": "তারিখ: ২০/০৮/২০২৬, সকাল ১০টা; বোর্ড: Md. Sawkatul Alam; বিষয়: Agriculture। বিশ্ববিদ্যালয় ও Department, কৃষি বিভাগ আছে কি না, Math-এর সংখ্যা, চাকরি বা পূর্বে সুপারিশপ্রাপ্ত কি না—এসব দিয়ে শুরু। তিনটি ধারাবাহিক সংখ্যার যোগফল ২১০ হলে সংখ্যা তিনটি কত—Math করা হয়। বর্তমান সরকারের কৃষিতে অবদান এবং Bangladesh Bank কৃষিখাতে সাম্প্রতিক বড় কোনো সিদ্ধান্ত নিয়েছে কি না—জিজ্ঞেস করা হয়। এরপর Intercropping ও Cropping Intensity-এর সংজ্ঞা, Formula এবং বর্তমানে Cropping Intensity কত ও কত থাকা উচিত—এসব জানতে চাওয়া হয়। Banking Sector-এর NPL কী, ব্যাংকের প্রধান সমস্যা কী এবং Reserve-এর Components কী—প্রশ্ন করা হয়। First Choice Sonali Bank কেন, গ্রামাঞ্চলে Posting হলে কী করবেন এবং গ্রামে কাজ করা কেন গুরুত্বপূর্ণ—এসবও জানতে চাওয়া হয়। শেষে বিশ্বের বৃহত্তম অর্থনীতি, দ্বিতীয় বৃহত্তম অর্থনীতি, China-এর Central Bank ও Currency সম্পর্কে প্রশ্ন করা হয়। কৃষি বিভাগের প্রার্থীদের Cropping Intensity ভালোভাবে প্রস্তুত রাখার পরামর্শ দেওয়া হয়েছে।"}, {"id": 130, "displayId": "130", "board": null, "topic": null, "date": null, "time": null, "position": null, "university": null, "tags": [], "body": "Fisheries বিভাগের প্রার্থীর ভাইভায় নামের বানান ও নামের অর্থ, মজনু শাহ কেন বিখ্যাত, BRAC Bank-এর regulator, bKash/Nagad/NGO-এর licence কে দেয়—এসব প্রশ্ন করা হয়। একটি Translation করতে বলা হয়: “খারাপ গন্ধের কারণে আমার ফ্যামিলি শুঁটকি মাছ পছন্দ করে না।” শুঁটকি মাছের English name-ও জানতে চাওয়া হয়। এরপর হালদা নদীতে কী হয়, এটি কোন উপজেলা—এসব নিয়ে বেশ কিছু Follow-up করা হয়। হালদা নদীর বিষয়ে উত্তর দিতে না পারায় প্রশ্নটি আরও ঘুরিয়ে করা হয় এবং ক্যাম্পাস থেকে ঘোরাঘুরি সম্পর্কে ব্যক্তিগত মন্তব্যও করা হয়।"}];
+</script>
+
+<script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+<script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+
+<script>
+const { useState, useMemo, useEffect } = React;
+
+// ---------- helpers ----------
+function highlight(text, query) {
+  if (!query || !query.trim()) return text;
+  const q = query.trim();
+  const parts = text.split(new RegExp('(' + q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi'));
+  return parts.map((p, i) =>
+    p.toLowerCase() === q.toLowerCase()
+      ? React.createElement('mark', { key: i }, p)
+      : p
+  );
+}
+
+function excerptFor(item, query) {
+  const body = item.body || '';
+  if (query && query.trim()) {
+    const idx = body.toLowerCase().indexOf(query.trim().toLowerCase());
+    if (idx !== -1) {
+      const start = Math.max(0, idx - 60);
+      const end = Math.min(body.length, idx + query.length + 120);
+      return (start > 0 ? '…' : '') + body.slice(start, end) + (end < body.length ? '…' : '');
+    }
+  }
+  return body.slice(0, 200) + (body.length > 200 ? '…' : '');
+}
+
+const QUICK_FILTERS = [
+  'First Choice', 'Bangladesh Bank', 'RTGS', 'Bangla QR', 'CRR', 'গণিত',
+  'Sonali Bank', 'Translation', 'বর্তমান', 'SDG', 'বাজেট', 'Inflation'
+];
+
+// ---------- Card ----------
+function Card({ item, query, onOpen }) {
+  return React.createElement('div', { className: 'card', onClick: () => onOpen(item) },
+    React.createElement('div', { className: 'card-top' },
+      React.createElement('span', { className: 'card-id mono' }, 'কেস #' + item.displayId),
+      item.tags && item.tags.length > 0
+        ? React.createElement('span', { className: 'card-tag' }, '#' + item.tags[0])
+        : null
+    ),
+    React.createElement('h3', null, 'Viva Experience ' + item.displayId),
+    React.createElement('div', { className: 'meta-line' },
+      item.board ? React.createElement('span', null, '🎓 ', item.board) : null,
+      item.topic ? React.createElement('span', null, '📘 ', item.topic) : null,
+      item.date ? React.createElement('span', null, '🗓 ', item.date) : null,
+    ),
+    React.createElement('p', { className: 'excerpt' }, highlight(excerptFor(item, query), query)),
+    React.createElement('div', { className: 'card-foot' }, 'পুরো অভিজ্ঞতা পড়ুন →')
+  );
+}
+
+// ---------- Detail modal ----------
+function Detail({ item, query, onClose }) {
+  useEffect(() => {
+    const onKey = (e) => { if (e.key === 'Escape') onClose(); };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, []);
+
+  const paragraphs = (item.body || '').split('\n').filter(Boolean);
+
+  return React.createElement('div', { className: 'overlay', onClick: onClose },
+    React.createElement('div', { className: 'detail', onClick: (e) => e.stopPropagation() },
+      React.createElement('div', { className: 'detail-head' },
+        React.createElement('div', { className: 'detail-head-left' },
+          React.createElement('div', { className: 'detail-seal' }, '#' + item.displayId),
+          React.createElement('div', null,
+            React.createElement('h2', null, 'Viva Experience ' + item.displayId),
+            React.createElement('div', { className: 'detail-tags' },
+              item.tags && item.tags.map((t, i) => React.createElement('span', { className: 'tag-pill', key: i }, '#' + t))
+            )
+          )
+        ),
+        React.createElement('button', { className: 'close-btn', onClick: onClose, 'aria-label': 'বন্ধ করুন' }, '✕')
+      ),
+      (item.board || item.topic || item.date || item.time || item.position || item.university)
+        ? React.createElement('div', { className: 'detail-meta' },
+            item.position ? React.createElement('div', null, React.createElement('b', null, 'পদ: '), item.position) : null,
+            item.board ? React.createElement('div', null, React.createElement('b', null, 'বোর্ড: '), item.board) : null,
+            item.topic ? React.createElement('div', null, React.createElement('b', null, 'বিষয়: '), item.topic) : null,
+            item.university ? React.createElement('div', null, React.createElement('b', null, 'বিশ্ববিদ্যালয়: '), item.university) : null,
+            item.date ? React.createElement('div', null, React.createElement('b', null, 'তারিখ: '), item.date) : null,
+            item.time ? React.createElement('div', null, React.createElement('b', null, 'সময়: '), item.time) : null,
+          )
+        : null,
+      React.createElement('div', { className: 'detail-body' },
+        paragraphs.map((p, i) => React.createElement('p', { key: i }, highlight(p, query)))
+      )
+    )
+  );
+}
+
+// ---------- Home page ----------
+const NO_VALUE = '__none__';
+const FACETS = [
+  { key: 'topic', label: 'বিষয় / Subject' },
+  { key: 'board', label: 'বোর্ড / Board' },
+  { key: 'university', label: 'বিশ্ববিদ্যালয়' },
+  { key: 'position', label: 'পদ / Position' },
+];
+
+function norm(t) {
+  return (t || '').trim();
+}
+
+function buildOptions(data, key) {
+  const counts = {};
+  let noneCount = 0;
+  data.forEach(item => {
+    const v = norm(item[key]);
+    if (!v) { noneCount++; return; }
+    counts[v] = (counts[v] || 0) + 1;
+  });
+  const list = Object.keys(counts).sort((a, b) => a.localeCompare(b, 'bn')).map(v => ({ value: v, label: v, count: counts[v] }));
+  if (noneCount > 0) list.push({ value: NO_VALUE, label: 'উল্লেখ নেই', count: noneCount });
+  return list;
+}
+
+const EMPTY_FILTERS = { topic: 'all', board: 'all', university: 'all', position: 'all' };
+
+function Home({ data }) {
+  const [query, setQuery] = useState('');
+  const [activeChip, setActiveChip] = useState(null);
+  const [openItem, setOpenItem] = useState(null);
+  const [filters, setFilters] = useState(EMPTY_FILTERS);
+  const [sortBy, setSortBy] = useState('id-asc');
+  const [filtersOpen, setFiltersOpen] = useState(true);
+
+  const effectiveQuery = activeChip || query;
+  const activeFacetCount = FACETS.filter(f => filters[f.key] !== 'all').length;
+
+  const facetOptions = useMemo(() => {
+    const out = {};
+    FACETS.forEach(f => { out[f.key] = buildOptions(data, f.key); });
+    return out;
+  }, [data]);
+
+  const filtered = useMemo(() => {
+    const q = effectiveQuery.trim().toLowerCase();
+    let list = data;
+    if (q) list = list.filter(item => (item.body || '').toLowerCase().includes(q));
+    FACETS.forEach(f => {
+      const val = filters[f.key];
+      if (val !== 'all') {
+        list = list.filter(item => {
+          const v = norm(item[f.key]);
+          return val === NO_VALUE ? !v : v === val;
+        });
+      }
+    });
+    const sorted = list.slice();
+    if (sortBy === 'id-asc') sorted.sort((a, b) => a.id - b.id);
+    else if (sortBy === 'id-desc') sorted.sort((a, b) => b.id - a.id);
+    else if (sortBy === 'subject-az') sorted.sort((a, b) => norm(a.topic).localeCompare(norm(b.topic), 'bn') || a.id - b.id);
+    else if (sortBy === 'board-az') sorted.sort((a, b) => norm(a.board).localeCompare(norm(b.board), 'bn') || a.id - b.id);
+    else if (sortBy === 'university-az') sorted.sort((a, b) => norm(a.university).localeCompare(norm(b.university), 'bn') || a.id - b.id);
+    return sorted;
+  }, [effectiveQuery, data, filters, sortBy]);
+
+  const boardsCount = useMemo(() => new Set(data.map(d => d.board).filter(Boolean)).size, [data]);
+  const topicsCount = useMemo(() => new Set(data.map(d => d.topic).filter(Boolean)).size, [data]);
+
+  const setFacet = (key, value) => setFilters(prev => ({ ...prev, [key]: value }));
+  const clearFacet = (key) => setFilters(prev => ({ ...prev, [key]: 'all' }));
+  const clearAll = () => { setFilters(EMPTY_FILTERS); setQuery(''); setActiveChip(null); };
+
+  const labelFor = (key, value) => {
+    if (value === NO_VALUE) return 'উল্লেখ নেই';
+    return value;
+  };
+
+  return React.createElement(React.Fragment, null,
+    React.createElement('section', { className: 'hero' },
+      React.createElement('div', { className: 'container' },
+        React.createElement('div', { className: 'hero-eyebrow' }, 'সম্মিলিত ব্যাংক নিয়োগ পরীক্ষা · সিনিয়র অফিসার (জেনারেল) — ভাইভা রেজিস্ট্রি ২০২৬'),
+        React.createElement('h1', null, 'প্রার্থীদের ', React.createElement('em', null, 'ভাইভা অভিজ্ঞতা'), ' — একত্রে সংরক্ষিত ও অনুসন্ধানযোগ্য'),
+        React.createElement('p', null, 'শত শত প্রার্থীর শেয়ার করা প্রশ্ন, বোর্ড, এবং অভিজ্ঞতা এক জায়গায়। সার্চ ও ফিল্টার দিয়ে নির্দিষ্ট বিষয়, বোর্ড বা বিশ্ববিদ্যালয়ের অভিজ্ঞতা খুঁজুন।'),
+        React.createElement('div', { className: 'stat-row' },
+          React.createElement('div', { className: 'stat' }, React.createElement('b', { className: 'mono' }, data.length), React.createElement('span', null, 'সংরক্ষিত অভিজ্ঞতা')),
+          React.createElement('div', { className: 'stat' }, React.createElement('b', { className: 'mono' }, boardsCount + '+'), React.createElement('span', null, 'ভিন্ন বোর্ড উল্লেখিত')),
+          React.createElement('div', { className: 'stat' }, React.createElement('b', { className: 'mono' }, topicsCount + '+'), React.createElement('span', null, 'পঠিত বিষয়')),
+          React.createElement('div', { className: 'stat' }, React.createElement('b', { className: 'mono' }, '২০২৬'), React.createElement('span', null, 'নিয়োগ বর্ষ')),
+        )
+      )
+    ),
+    React.createElement('section', { className: 'search-zone' },
+      React.createElement('div', { className: 'container' },
+        React.createElement('div', { className: 'search-box' },
+          React.createElement('svg', { width: 18, height: 18, viewBox: '0 0 24 24', fill: 'none', stroke: 'currentColor', strokeWidth: 2 },
+            React.createElement('circle', { cx: 11, cy: 11, r: 7 }),
+            React.createElement('line', { x1: 21, y1: 21, x2: 16.65, y2: 16.65 })
+          ),
+          React.createElement('input', {
+            type: 'text',
+            placeholder: 'যেমন: "First Choice", "RTGS", "হাবিবুর রহমান", "BUET", "গণিত"...',
+            value: query,
+            onChange: (e) => { setQuery(e.target.value); setActiveChip(null); }
+          }),
+          (query || activeChip) ? React.createElement('button', {
+            className: 'search-clear',
+            onClick: () => { setQuery(''); setActiveChip(null); }
+          }, '✕') : null
+        ),
+        React.createElement('div', { className: 'chip-row' },
+          QUICK_FILTERS.map(c => React.createElement('button', {
+            key: c,
+            className: 'chip' + (activeChip === c ? ' active' : ''),
+            onClick: () => { setActiveChip(activeChip === c ? null : c); setQuery(''); }
+          }, c))
+        ),
+
+        React.createElement('div', { className: 'filter-panel' },
+          React.createElement('button', {
+            className: 'filter-toggle',
+            onClick: () => setFiltersOpen(!filtersOpen)
+          },
+            React.createElement('span', null,
+              '🔎 বিস্তারিত ফিল্টার',
+              activeFacetCount > 0 ? React.createElement('span', { className: 'filter-count-badge' }, activeFacetCount) : null
+            ),
+            React.createElement('span', { className: 'arrow' + (filtersOpen ? ' up' : '') }, '⌄')
+          ),
+          filtersOpen ? React.createElement('div', { className: 'filter-panel-body' },
+            React.createElement('div', { className: 'filter-grid' },
+              FACETS.map(f => React.createElement('label', { className: 'filter-field', key: f.key },
+                React.createElement('span', null, f.label),
+                React.createElement('select', {
+                  className: 'select-control',
+                  value: filters[f.key],
+                  onChange: (e) => setFacet(f.key, e.target.value)
+                },
+                  React.createElement('option', { value: 'all' }, 'সব (' + data.length + ')'),
+                  facetOptions[f.key].map(o => React.createElement('option', { key: o.value, value: o.value }, o.label + ' (' + o.count + ')'))
+                )
+              )),
+              React.createElement('label', { className: 'filter-field' },
+                React.createElement('span', null, 'সাজান / Sort'),
+                React.createElement('select', {
+                  className: 'select-control',
+                  value: sortBy,
+                  onChange: (e) => setSortBy(e.target.value)
+                },
+                  React.createElement('option', { value: 'id-asc' }, 'সিরিয়াল (ছোট → বড়)'),
+                  React.createElement('option', { value: 'id-desc' }, 'সিরিয়াল (বড় → ছোট)'),
+                  React.createElement('option', { value: 'subject-az' }, 'বিষয় (ক-ঝ)'),
+                  React.createElement('option', { value: 'board-az' }, 'বোর্ড (ক-ঝ)'),
+                  React.createElement('option', { value: 'university-az' }, 'বিশ্ববিদ্যালয় (ক-ঝ)'),
+                )
+              )
+            ),
+            activeFacetCount > 0 ? React.createElement('div', { className: 'active-filters' },
+              FACETS.filter(f => filters[f.key] !== 'all').map(f => React.createElement('span', { className: 'active-pill', key: f.key },
+                f.label + ': ' + labelFor(f.key, filters[f.key]),
+                React.createElement('button', { onClick: () => clearFacet(f.key), 'aria-label': 'সরিয়ে ফেলুন' }, '✕')
+              )),
+              React.createElement('button', { className: 'filter-reset', onClick: clearAll }, 'সব ফিল্টার মুছুন')
+            ) : null
+          ) : null
+        )
+      )
+    ),
+    React.createElement('section', { className: 'container' },
+      React.createElement('div', { className: 'results-meta' },
+        React.createElement('span', null, React.createElement('b', { className: 'mono' }, filtered.length), ' টি ফলাফল পাওয়া গেছে',
+          (effectiveQuery ? ' — "' + effectiveQuery + '" এর জন্য' : ''),
+          (activeFacetCount > 0 ? ' — ' + activeFacetCount + ' টি ফিল্টার সক্রিয়' : '')
+        ),
+        React.createElement('span', null, sortBy === 'id-asc' ? 'সিরিয়াল অনুযায়ী সাজানো' : sortBy === 'id-desc' ? 'সিরিয়াল (বিপরীত) অনুযায়ী সাজানো' : sortBy === 'subject-az' ? 'বিষয় অনুযায়ী সাজানো' : sortBy === 'board-az' ? 'বোর্ড অনুযায়ী সাজানো' : 'বিশ্ববিদ্যালয় অনুযায়ী সাজানো')
+      ),
+      filtered.length === 0
+        ? React.createElement('div', { className: 'empty-state' },
+            React.createElement('h3', null, 'কোনো অভিজ্ঞতা পাওয়া যায়নি'),
+            React.createElement('p', null, 'অন্য কোনো শব্দ দিয়ে খুঁজে দেখুন, ফিল্টার শিথিল করুন, অথবা সব মুছে আবার শুরু করুন।'),
+            (activeFacetCount > 0 || effectiveQuery) ? React.createElement('button', { className: 'filter-reset', onClick: clearAll }, 'সব ফিল্টার ও সার্চ মুছুন') : null
+          )
+        : React.createElement('div', { className: 'grid' },
+            filtered.map(item => React.createElement(Card, { key: item.id + '-' + item.displayId, item, query: effectiveQuery, onOpen: setOpenItem }))
+          )
+    ),
+    openItem ? React.createElement(Detail, { item: openItem, query: effectiveQuery, onClose: () => setOpenItem(null) }) : null
+  );
+}
+
+// ---------- FAQ page ----------
+const FAQS = [
+  {
+    q: 'ভাইভা বোর্ড সাধারণত কেমন হয়, কতজন সদস্য থাকেন?',
+    a: 'প্রার্থীদের অভিজ্ঞতা অনুযায়ী সাধারণত একজন চেয়ারম্যান (প্রায়ই বাংলাদেশ ব্যাংকের ইডি/ডিজি পর্যায়ের কর্মকর্তা) এবং ২–৩ জন এক্সটার্নাল সদস্য মিলিয়ে বোর্ড গঠিত হয়। কিছু বোর্ড আনুষ্ঠানিক ও কঠোর, আবার কিছু বোর্ড বেশ বন্ধুত্বপূর্ণ (Friendly) বলে উল্লেখ করেছেন অনেকে।'
+  },
+  {
+    q: '"First Choice" নিয়ে প্রশ্ন কেন করা হয় এবং কীভাবে উত্তর দেওয়া ভালো?',
+    a: 'প্রায় প্রতিটি অভিজ্ঞতায় First Choice ও তার কারণ জিজ্ঞেস করা হয়েছে দেখা যায়। ভালো উত্তর সাধারণত প্রার্থীর একাডেমিক ব্যাকগ্রাউন্ড বা ব্যক্তিগত যুক্তির সাথে ব্যাংকটিকে সম্পর্কিত করে দেওয়া হয়েছে বলে জানা যায় — যেমন নিজের বিষয়ের সাথে রিলেট করে ব্যাখ্যা করা।'
+  },
+  {
+    q: 'ভাইভাতে ম্যাথ (গণিত) কেমন ধরনের আসে?',
+    a: 'বেশিরভাগ ক্ষেত্রেই মুখে মুখে করার মতো সহজ গণিত আসে — দশমিক গুণ/ভাগ (যেমন ০.০২ × ০.০০২), গড় নির্ণয়, শতকরা হিসাব, সাধারণ সরল অঙ্ক, এবং মাঝেমধ্যে ট্রেন/গতিবেগ সম্পর্কিত শব্দসমস্যা। খুব উচ্চস্তরের গণিত নয়, তবে দ্রুত ও নির্ভুল মৌখিক হিসাব গুরুত্বপূর্ণ বলে মনে হয়।'
+  },
+  {
+    q: 'ইংরেজি Translation বা Spoken English আসে কি?',
+    a: 'হ্যাঁ, বেশ কয়েকটি অভিজ্ঞতায় একটি বাংলা বাক্য ইংরেজিতে অনুবাদ করতে বলা হয়েছে, অথবা কোনো একটি বিষয়ে (যেমন Foreign Remittance) দুই-তিন লাইন ইংরেজিতে বলতে বলা হয়েছে। তাই মৌলিক Spoken English ও Translation প্র্যাকটিস রাখা ভালো।'
+  },
+  {
+    q: 'নিজের একাডেমিক বিষয় থেকে প্রশ্ন কতটা গুরুত্বপূর্ণ?',
+    a: 'অনেক বোর্ডই প্রার্থীর অনার্স/মাস্টার্সের বিষয়ের উপর ভিত্তি করে প্রশ্ন করে, এবং প্রায়ই জিজ্ঞেস করে যে সেই বিষয় ব্যাংকিং পেশায় কীভাবে কাজে লাগবে। তাই নিজের বিষয়ের মৌলিক ধারণাগুলো ঝালিয়ে নেওয়া এবং সেগুলোকে ব্যাংকিংয়ের সাথে যুক্ত করার একটি প্রস্তুত উত্তর রাখা উপকারী।'
+  },
+  {
+    q: 'ব্যাংকিং সাধারণ জ্ঞান (Bangladesh Bank, RTGS, CRR, SLR ইত্যাদি) কতটা আসে?',
+    a: 'খুব ঘন ঘন আসে। বাংলাদেশ ব্যাংকের কাজ, RTGS/NPSB/BEFTN-এর পার্থক্য, CRR ও SLR, Repo Rate, Bangla QR, Monetary ও Fiscal Policy — এই বিষয়গুলো বিভিন্ন অভিজ্ঞতায় বারবার এসেছে। এই মৌলিক ব্যাংকিং টার্মগুলো স্পষ্টভাবে জানা থাকা জরুরি বলে মনে হয়।'
+  },
+  {
+    q: 'সাম্প্রতিক ঘটনা বা কারেন্ট অ্যাফেয়ার্স নিয়ে প্রশ্ন হয় কি?',
+    a: 'হ্যাঁ — বর্তমান রাষ্ট্রপতি/গভর্নরের নাম, সাম্প্রতিক অর্থনৈতিক পরিবর্তন, বাজেট, এবং কখনো কখনো ক্রীড়া বা আন্তর্জাতিক ঘটনার (যেমন বিশ্বকাপ) প্রসঙ্গ উঠে এসেছে বিভিন্ন অভিজ্ঞতায়। তাই ভাইভার আগে সাম্প্রতিক সপ্তাহের বড় খবরগুলো দেখে যাওয়া ভালো।'
+  },
+  {
+    q: 'ভাইভা সাধারণত কতক্ষণ স্থায়ী হয়?',
+    a: 'অভিজ্ঞতাভেদে সময় ভিন্ন — কিছু ভাইভা মাত্র ৩–৫ মিনিটে শেষ হয়েছে, আবার কিছু বোর্ড ১৫–২০ মিনিট পর্যন্ত সময় নিয়েছে, বিশেষ করে লিখিত খাতা যাচাই করলে। তাই সময়ের উপর নির্ভর না করে প্রতিটি প্রশ্নের সংক্ষিপ্ত ও স্পষ্ট উত্তর প্রস্তুত রাখা ভালো।'
+  },
+  {
+    q: 'নিজের জেলা বা এলাকা নিয়ে প্রশ্ন কেন করা হয়?',
+    a: 'অনেক বোর্ড প্রার্থীর পরিচিতি ও সাধারণ জ্ঞান যাচাই করতে নিজ জেলার বিখ্যাত ব্যক্তি, নদী, অর্থনৈতিক অঞ্চল বা বৈশিষ্ট্য সম্পর্কে জিজ্ঞেস করে। নিজ এলাকা সম্পর্কে কিছু মৌলিক তথ্য জেনে যাওয়া তাই সহায়ক।'
+  },
+  {
+    q: 'লিখিত পরীক্ষার খাতা ভাইভায় দেখা/চেক করা হয় কি?',
+    a: 'কিছু অভিজ্ঞতায় উল্লেখ আছে যে বোর্ড লিখিত খাতা সামনে রেখে তাতে ব্যবহৃত শব্দ, quotation বা Grammar নিয়ে প্রশ্ন করেছে। তাই লিখিত পরীক্ষায় কী লিখেছেন তা মনে রাখা এবং সে বিষয়ে ব্যাখ্যা দিতে প্রস্তুত থাকা ভালো।'
+  },
+  {
+    q: 'এই ওয়েবসাইটের তথ্যগুলো কি অফিসিয়াল?',
+    a: 'না। এই সাইটটি বিভিন্ন প্রার্থীর স্বেচ্ছায় শেয়ার করা ব্যক্তিগত ভাইভা অভিজ্ঞতার একটি সংকলন মাত্র — এটি কোনো নির্দিষ্ট ব্যাংক বা বাংলাদেশ ব্যাংকের অফিসিয়াল প্রকাশনা নয়। এই নিয়োগ পরীক্ষাটি একাধিক রাষ্ট্রায়ত্ত ব্যাংকের সম্মিলিত আয়োজন, তাই বিভিন্ন অভিজ্ঞতায় ভিন্ন ভিন্ন ব্যাংকের First Choice ও প্রসঙ্গ উঠে এসেছে। তথ্যগুলো প্রস্তুতির সহায়ক রেফারেন্স হিসেবে ব্যবহার করুন, চূড়ান্ত সত্য হিসেবে নয়।'
+  },
+  {
+    q: 'সার্চ বক্সে কীভাবে সবচেয়ে ভালোভাবে খুঁজবো?',
+    a: 'নির্দিষ্ট শব্দ, টার্ম বা নাম দিয়ে খুঁজুন — যেমন কোনো বোর্ড চেয়ারম্যানের নাম, বিশ্ববিদ্যালয়ের নাম, বা কোনো টপিক (RTGS, SDG, Translation ইত্যাদি)। উপরের কুইক-ফিল্টার চিপগুলোতে ক্লিক করলেও সংশ্লিষ্ট অভিজ্ঞতাগুলো সাথে সাথে ফিল্টার হয়ে যাবে।'
+  },
+];
+
+function FaqItem({ item, index, isOpen, onToggle }) {
+  return React.createElement('div', { className: 'faq-item' + (isOpen ? ' open' : '') },
+    React.createElement('button', { className: 'faq-q', onClick: onToggle },
+      React.createElement('span', null, React.createElement('span', { className: 'idx mono' }, String(index + 1).padStart(2, '0')), item.q),
+      React.createElement('span', { className: 'arrow' }, '⌄')
+    ),
+    React.createElement('div', { className: 'faq-a' },
+      React.createElement('div', { className: 'faq-a-inner' }, item.a)
+    )
+  );
+}
+
+function FaqPage() {
+  const [openIdx, setOpenIdx] = useState(0);
+  return React.createElement(React.Fragment, null,
+    React.createElement('section', { className: 'faq-hero' },
+      React.createElement('div', { className: 'container' },
+        React.createElement('div', { className: 'hero-eyebrow' }, 'সচরাচর জিজ্ঞাসা'),
+        React.createElement('h1', null, 'ভাইভা নিয়ে ', React.createElement('em', null, 'সাধারণ প্রশ্নোত্তর')),
+        React.createElement('p', null, 'সংরক্ষিত অভিজ্ঞতাগুলো থেকে লক্ষ্য করা কিছু সাধারণ প্যাটার্ন ও প্রশ্নোত্তর — প্রস্তুতির সহায়ক রেফারেন্স হিসেবে।')
+      )
+    ),
+    React.createElement('div', { className: 'container' },
+      React.createElement('div', { className: 'faq-list' },
+        FAQS.map((item, i) => React.createElement(FaqItem, {
+          key: i, item, index: i, isOpen: openIdx === i, onToggle: () => setOpenIdx(openIdx === i ? -1 : i)
+        }))
+      ),
+      React.createElement('div', { className: 'faq-note' },
+        '⚠️ দ্রষ্টব্য: এই তথ্যগুলো প্রার্থীদের ব্যক্তিগত অভিজ্ঞতার উপর ভিত্তি করে তৈরি, এবং কোনো ব্যাংক বা কর্তৃপক্ষের অফিসিয়াল বিবৃতি নয়। ভাইভা বোর্ড, প্রশ্নের ধরন ও সময় ব্যক্তিভেদে ভিন্ন হতে পারে।'
+      )
+    )
+  );
+}
+
+// ---------- Theme ----------
+function getInitialTheme() {
+  try {
+    const saved = window.localStorage.getItem('viva-theme');
+    if (saved === 'dark' || saved === 'light') return saved;
+  } catch (e) {}
+  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) return 'dark';
+  return 'light';
+}
+
+function SunIcon() {
+  return React.createElement('svg', { viewBox: '0 0 24 24', fill: 'none', stroke: 'currentColor', strokeWidth: 2, strokeLinecap: 'round', strokeLinejoin: 'round' },
+    React.createElement('circle', { cx: 12, cy: 12, r: 4.2 }),
+    React.createElement('line', { x1: 12, y1: 1.5, x2: 12, y2: 4 }),
+    React.createElement('line', { x1: 12, y1: 20, x2: 12, y2: 22.5 }),
+    React.createElement('line', { x1: 4.2, y1: 4.2, x2: 5.9, y2: 5.9 }),
+    React.createElement('line', { x1: 18.1, y1: 18.1, x2: 19.8, y2: 19.8 }),
+    React.createElement('line', { x1: 1.5, y1: 12, x2: 4, y2: 12 }),
+    React.createElement('line', { x1: 20, y1: 12, x2: 22.5, y2: 12 }),
+    React.createElement('line', { x1: 4.2, y1: 19.8, x2: 5.9, y2: 18.1 }),
+    React.createElement('line', { x1: 18.1, y1: 5.9, x2: 19.8, y2: 4.2 })
+  );
+}
+
+function MoonIcon() {
+  return React.createElement('svg', { viewBox: '0 0 24 24', fill: 'none', stroke: 'currentColor', strokeWidth: 2, strokeLinecap: 'round', strokeLinejoin: 'round' },
+    React.createElement('path', { d: 'M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z' })
+  );
+}
+
+// ---------- App shell ----------
+function App() {
+  const [page, setPage] = useState('home');
+  const [theme, setTheme] = useState(getInitialTheme);
+  const data = window.VIVA_DATA || [];
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+    try { window.localStorage.setItem('viva-theme', theme); } catch (e) {}
+  }, [theme]);
+
+  const toggleTheme = () => setTheme(t => (t === 'dark' ? 'light' : 'dark'));
+
+  return React.createElement('div', { className: 'app' },
+    React.createElement('header', { className: 'topbar' },
+      React.createElement('div', { className: 'topbar-inner' },
+        React.createElement('div', { className: 'brand', onClick: () => setPage('home') },
+          React.createElement('div', { className: 'brand-seal' }, 'ভা'),
+          React.createElement('div', { className: 'brand-text' },
+            React.createElement('span', { className: 'brand-title' }, 'ভাইভা রেজিস্ট্রি'),
+            React.createElement('span', { className: 'brand-sub' }, 'Combined Bank Recruitment · SO · 2026')
+          )
+        ),
+        React.createElement('nav', { className: 'nav' },
+          React.createElement('button', { className: 'nav-btn' + (page === 'home' ? ' active' : ''), onClick: () => setPage('home') }, 'সব অভিজ্ঞতা'),
+          React.createElement('button', { className: 'nav-btn' + (page === 'faq' ? ' active' : ''), onClick: () => setPage('faq') }, 'FAQ'),
+          React.createElement('button', {
+            className: 'theme-toggle',
+            onClick: toggleTheme,
+            'aria-label': theme === 'dark' ? 'হালকা মোডে যান' : 'ডার্ক মোডে যান',
+            title: theme === 'dark' ? 'হালকা মোড' : 'ডার্ক মোড'
+          }, theme === 'dark' ? React.createElement(SunIcon) : React.createElement(MoonIcon))
+        )
+      )
+    ),
+    React.createElement('main', null,
+      page === 'home' ? React.createElement(Home, { data }) : React.createElement(FaqPage)
+    ),
+    React.createElement('footer', null,
+      '📚 ', data.length, ' টি ভাইভা অভিজ্ঞতার একটি অনানুষ্ঠানিক সংকলন — প্রার্থীদের প্রস্তুতির সহায়তার জন্য তৈরি।'
+    )
+  );
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(React.createElement(App));
+
+</script>
+
+</body>
+</html>
